@@ -7,7 +7,7 @@ importing of external dependencies and the one we need is `implementation 'org.m
 
 - Database
 
-  -[ ] Init database
+  -[x] Init database
   -[ ] Connect to the database
   - Test the database
   - Add lessons, Quiz, etc
