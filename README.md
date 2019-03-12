@@ -2,7 +2,7 @@
 
 ## Code
 
-We are going to have to make a gradle project to be able to do this. This is because the gradle project allows for the
+We are going to have to make a Gradle project to be able to do this. This is because the gradle project allows for the
 importing of external dependencies and the one we need is `implementation 'org.mariadb.jdbc:mariadb-java-client:2.1.2'`.
 
 - Database
@@ -13,6 +13,9 @@ importing of external dependencies and the one we need is `implementation 'org.m
   - Add lessons, Quiz, etc
     - No sql injection
   - Remove
+
+- Other Backend
+  - Score calculating
 
 - Front-end
 
