@@ -9,7 +9,20 @@
  * @author felixmayo
  */
 import java.sql.*;
+import javax.swing.JOptionPane;
 
 public class Database {
-    
+    public static Connection mariaDBConn(){
+        Connection Conn=null;
+        try{
+            Class.forName("org.mariadb.jdbc.Driver");
+            Conn = DriverManager.getConnection("jdbc:mariadb://localhost:3307/DB?user=root&password=root");
+            JOptionPane.showMessageDialog(null, "Success Login ..");
+            return Conn;
+        }
+        catch(Exception E){
+            JOptionPane.showMessageDialog(null, E);
+            return null;
+        }
+    }
 }
