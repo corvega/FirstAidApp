@@ -10,6 +10,7 @@
  */
 
 import java.sql.*;
+import java.util.Properties;
 
 public class main {
     public static final String USERNAME = "";
@@ -25,6 +26,7 @@ public class main {
     
     public static void database(){ // Driver issue 
         Connection conn = null;
+//        Class.forName("com.mysql.jdbc.Driver"); // Force drive connection
         try{
             conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
             System.out.println("Connected");
