@@ -20,6 +20,10 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        database();
+    } 
+    
+    public static void database(){ // Driver issue 
         Connection conn = null;
         try{
             conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
@@ -34,6 +38,5 @@ public class main {
         }catch (SQLException e){
             System.err.println(e);
         }
-        // TODO code application logic here
-    } 
+    }
 }
