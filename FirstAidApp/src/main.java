@@ -27,6 +27,10 @@ public class main {
             Statement stmt = (Statement) conn.createStatement();
             String insert =  "INSERT INTO USERS (ID,FName,LName) VALUES (1,'Test','Tester')";
             stmt.executeUpdate(insert);
+            String sql;
+            sql = "SELECT * FROM Users";
+            ResultSet rs = stmt.executeQuery(sql);
+            System.out.println(rs);
         }catch (SQLException e){
             System.err.println(e);
         }
