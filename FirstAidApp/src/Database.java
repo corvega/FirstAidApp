@@ -85,6 +85,24 @@ public class Database {
     }
 
     /**
+     * Will drop given table
+     * 
+     * @param tableName which is wanting to be dropped.
+     */
+    public void dropTable(String tableName) {
+        String query = String.format("DROP TABLE %s.%s", DB_NAME, tableName);
+        Connection conn = connectToDatabase();
+        try {
+            Statement stmt = conn.createStatement();
+            stmt.execute(query);
+        } catch (SQLException e) {
+            throw new Error(e.getMessage());
+        } finally {
+            closeConnectionToDatabase(conn);
+        }
+    }
+
+    /**
      * Get the results from a query
      * 
      * @param query which is wanted to be used
