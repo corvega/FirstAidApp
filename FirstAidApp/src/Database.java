@@ -21,4 +21,12 @@ public class Database {
         }
     }
 
+    private void closeConnectionToDatabase(Connection conn) {
+        try {
+            conn.close();
+        } catch (SQLException e) {
+            throw new Error(e.getMessage());
+        }
+    }
+
 }
