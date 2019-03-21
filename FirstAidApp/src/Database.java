@@ -47,4 +47,20 @@ public class Database {
         }
     }
 
+    /**
+     * Will drop the database.
+     */
+    public void dropDatabase() {
+        String query = String.format("DROP DATABASE %s", DB_NAME);
+        Connection conn = connectToDatabase();
+        try {
+            Statement stmt = conn.createStatement();
+            stmt.execute(query);
+        } catch (SQLException e) {
+            throw new Error(e.getMessage());
+        } finally {
+            closeConnectionToDatabase(conn);
+        }
+    }
+
 }
