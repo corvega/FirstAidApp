@@ -29,4 +29,22 @@ public class Database {
         }
     }
 
+    /**
+     * Will create a new database if it doesn't exist with the database name giving
+     * as a local const variable.
+     */
+    public void createNewDatabase() {
+        String query = "CREATE DATABASE IF NOT EXISTS " + DB_NAME;
+
+        Connection conn = connectToDatabase();
+        try {
+            Statement stmt = conn.createStatement();
+            stmt.execute(query);
+        } catch (SQLException e) {
+            throw new Error(e.getMessage());
+        } finally {
+            closeConnectionToDatabase(conn);
+        }
+    }
+
 }
