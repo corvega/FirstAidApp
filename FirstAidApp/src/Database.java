@@ -63,4 +63,25 @@ public class Database {
         }
     }
 
+    /**
+     * Create a new table
+     * 
+     * @param tableName the name of the table
+     * @param schema    the schema that will be inserted into the database. Example
+     *                  <code> id integer PRIMARY KEY,\n name text NOT NULL </code>
+     */
+    public void createNewTable(String tableName, String schema) {
+        Connection conn = connectToDatabase();
+        try {
+            // Uses the format string instead of the pluses
+            String parsedQuery = String.format("CREATE TABLE IF NOT EXISTS %s.%s \n (%s);", DB_NAME, tableName, schema);
+            PreparedStatement query = conn.prepareStatement(parsedQuery);
+            query.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        } finally {
+            closeConnectionToDatabase(conn);
+        }
+    }
+
 }
