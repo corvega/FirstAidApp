@@ -12,32 +12,24 @@
 import java.sql.*;
 import java.util.Properties;
 
+
 public class main {
-    public static final String USERNAME = "root";
-    public static final String PASSWORD = "";
-    public static final String CONN_STRING = "jdbc:mariadb://localhost:3306/firstAid";
     
-        /**
-     * @param args the command line arguments
-     */
+    public static Database db;
+    public static boolean firstTime = true;
     public static void main(String[] args) {
-        database();
-    } 
-    
-    public static void database(){ // Driver issue 
-        Connection conn = null;
+        String value;
+        db = new Database();
+//        if (firstTime){
+//            db.init();
+//        }
+        ResultSet rs = db.getQueryResults("select * from firstAid.Users;");
         try{
-            conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
-            System.out.println("Connected");
-            Statement stmt = (Statement) conn.createStatement();
-            String insert =  "INSERT INTO USERS (fName,lName) VALUES ('Test','Tester')";
-            stmt.executeUpdate(insert);
-            String sql;
-            sql = "SELECT * FROM Users";
-            ResultSet rs = stmt.executeQuery(sql);
-            System.out.println(rs);
-        }catch (SQLException e){
-            System.err.println(e);
+            rs.first();
+            value = rs.getString(2);
+            System.out.println(value);
+        }catch (SQLException e) {
+                throw new Error(e.toString());
+            }
         }
-    }
-}
+    } 
