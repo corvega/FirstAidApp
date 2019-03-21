@@ -13,9 +13,9 @@ import java.sql.*;
 import java.util.Properties;
 
 public class main {
-    public static final String USERNAME = "";
+    public static final String USERNAME = "root";
     public static final String PASSWORD = "";
-    public static final String CONN_STRING = "jdbc:derby://localhost:1527/firstAidAppDB";
+    public static final String CONN_STRING = "jdbc:mariadb://localhost:3306/dashboard";
     
         /**
      * @param args the command line arguments
@@ -26,7 +26,6 @@ public class main {
     
     public static void database(){ // Driver issue 
         Connection conn = null;
-//        Class.forName("com.mysql.jdbc.Driver"); // Force drive connection
         try{
             conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
             System.out.println("Connected");
