@@ -106,4 +106,45 @@ public class Database {
         }
     }
 
+    public void insertIntoTable(String tableName, String columns, String values) {
+        Connection conn = connectToDatabase();
+        int splits = columns.split(",").length;
+        String questionMarks = "";
+        for (int i = 0; i < splits; i++) {
+            questionMarks += "? ";
+        }
+        try {
+            String parsedDBTable = String.format("%s.%s", DB_NAME, tableName);
+            String query = String.format("INSERT INTO %s (columns) VALUES (%s)", parsedDBTable, columns, questionMarks);
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setString(1, values.split(",")[0]);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new Error(e.toString());
+        } finally {
+            closeConnectionToDatabase(conn);
+        }
+    }
+
+    public void insertIntoTable(String tableName, String columns, String values, String where) {
+        Connection conn = connectToDatabase();
+        int splits = columns.split(",").length;
+        String questionMarks = "";
+        for (int i = 0; i < splits; i++) {
+            questionMarks += "? ";
+        }
+        try {
+            String parsedDBTable = String.format("%s.%s", DB_NAME, tableName);
+            String query = String.format("INSERT INTO %s (columns) VALUES (%s) WHERE %s", parsedDBTable, columns,
+                    questionMarks, where);
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setString(1, values.split(",")[0]);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new Error(e.toString());
+        } finally {
+            closeConnectionToDatabase(conn);
+        }
+    }
+
 }
