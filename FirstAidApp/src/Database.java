@@ -11,6 +11,16 @@ public class Database {
     private final String DB_NAME = "inse";
 
     /**
+     * Init the database.
+     */
+    public void init() {
+        createNewDatabase();
+
+        createNewTable("lesson", "id integer PRIMARY KEY,\n title text NOT NULL,\n content text NOT NULL");
+
+    }
+
+    /**
      * This just creates a connection to the database to be used within this class.
      */
     private Connection connectToDatabase() {
