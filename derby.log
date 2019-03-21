@@ -1,7 +1,7 @@
-Wed Mar 20 11:05:44 GMT 2019 : Apache Derby Network Server - 10.11.1.2 - (1629631) started and ready to accept connections on port 1527
+Thu Mar 21 13:05:07 GMT 2019 : Apache Derby Network Server - 10.11.1.2 - (1629631) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Wed Mar 20 11:05:45 GMT 2019:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0169-9ac7-449e-ffffecea2c9f 
+Thu Mar 21 13:05:08 GMT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0169-a05a-ed9d-ffffecea2c9f 
 on database directory /Users/felixmayo/Documents/GitHub/FirstAidApp/firstAidAppDB with class loader sun.misc.Launcher$AppClassLoader@66d3c617 
 Loaded from file:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/db/lib/derby.jar
 java.vendor=Oracle Corporation
@@ -12,41 +12,9 @@ os.arch=x86_64
 os.version=10.14.3
 derby.system.home=/Users/felixmayo/Documents/GitHub/FirstAidApp
 Database Class Loader started - derby.database.classpath=''
-Wed Mar 20 11:06:02 GMT 2019 Thread[DRDAConnThread_3,5,main] (DATABASE = null), (DRDAID = null), Execution failed because of a Distributed Protocol Error:  DRDA_Proto_SYNTAXRM; CODPNT arg  = 0; Error Code Value = 3. Plaintext connection attempt from an SSL enabled client?
-Wed Mar 20 11:06:02 GMT 2019 : Execution failed because of a Distributed Protocol Error:  DRDA_Proto_SYNTAXRM; CODPNT arg  = 0; Error Code Value = 3. Plaintext connection attempt from an SSL enabled client?
-org.apache.derby.impl.drda.DRDAProtocolException: Execution failed because of a Distributed Protocol Error:  DRDA_Proto_SYNTAXRM; CODPNT arg  = 0; Error Code Value = 3. Plaintext connection attempt from an SSL enabled client?
-	at org.apache.derby.impl.drda.DRDAConnThread.throwSyntaxrm(Unknown Source)
-	at org.apache.derby.impl.drda.DDMReader.readDssHeader(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.exchangeServerAttributes(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.sessionInitialState(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Wed Mar 20 11:06:02 GMT 2019 Thread[DRDAConnThread_3,5,main] (DATABASE = null), (DRDAID = null), Execution failed because of a Distributed Protocol Error:  DRDA_Proto_SYNTAXRM; CODPNT arg  = 0; Error Code Value = 3. Plaintext connection attempt from an SSL enabled client?
-Wed Mar 20 11:06:02 GMT 2019 : Execution failed because of a Distributed Protocol Error:  DRDA_Proto_SYNTAXRM; CODPNT arg  = 0; Error Code Value = 3. Plaintext connection attempt from an SSL enabled client?
-org.apache.derby.impl.drda.DRDAProtocolException: Execution failed because of a Distributed Protocol Error:  DRDA_Proto_SYNTAXRM; CODPNT arg  = 0; Error Code Value = 3. Plaintext connection attempt from an SSL enabled client?
-	at org.apache.derby.impl.drda.DRDAConnThread.throwSyntaxrm(Unknown Source)
-	at org.apache.derby.impl.drda.DDMReader.readDssHeader(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.exchangeServerAttributes(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.sessionInitialState(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Wed Mar 20 11:06:02 GMT 2019 Thread[DRDAConnThread_4,5,main] (DATABASE = null), (DRDAID = null), Execution failed because of a Distributed Protocol Error:  DRDA_Proto_SYNTAXRM; CODPNT arg  = 0; Error Code Value = 3. Plaintext connection attempt from an SSL enabled client?
-Wed Mar 20 11:06:02 GMT 2019 : Execution failed because of a Distributed Protocol Error:  DRDA_Proto_SYNTAXRM; CODPNT arg  = 0; Error Code Value = 3. Plaintext connection attempt from an SSL enabled client?
-org.apache.derby.impl.drda.DRDAProtocolException: Execution failed because of a Distributed Protocol Error:  DRDA_Proto_SYNTAXRM; CODPNT arg  = 0; Error Code Value = 3. Plaintext connection attempt from an SSL enabled client?
-	at org.apache.derby.impl.drda.DRDAConnThread.throwSyntaxrm(Unknown Source)
-	at org.apache.derby.impl.drda.DDMReader.readDssHeader(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.exchangeServerAttributes(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.sessionInitialState(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Wed Mar 20 11:06:02 GMT 2019 Thread[DRDAConnThread_4,5,main] (DATABASE = null), (DRDAID = null), Execution failed because of a Distributed Protocol Error:  DRDA_Proto_SYNTAXRM; CODPNT arg  = 0; Error Code Value = 3. Plaintext connection attempt from an SSL enabled client?
-Wed Mar 20 11:06:02 GMT 2019 : Execution failed because of a Distributed Protocol Error:  DRDA_Proto_SYNTAXRM; CODPNT arg  = 0; Error Code Value = 3. Plaintext connection attempt from an SSL enabled client?
-org.apache.derby.impl.drda.DRDAProtocolException: Execution failed because of a Distributed Protocol Error:  DRDA_Proto_SYNTAXRM; CODPNT arg  = 0; Error Code Value = 3. Plaintext connection attempt from an SSL enabled client?
-	at org.apache.derby.impl.drda.DRDAConnThread.throwSyntaxrm(Unknown Source)
-	at org.apache.derby.impl.drda.DDMReader.readDssHeader(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.exchangeServerAttributes(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.sessionInitialState(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ----------------------------------------------------------------
-Wed Mar 20 11:45:18 GMT 2019: Shutting down Derby engine
+Thu Mar 21 13:12:46 GMT 2019: Shutting down Derby engine
 ----------------------------------------------------------------
-Wed Mar 20 11:45:18 GMT 2019:
-Shutting down instance a816c00e-0169-9ac7-449e-ffffecea2c9f on database directory /Users/felixmayo/Documents/GitHub/FirstAidApp/firstAidAppDB with class loader sun.misc.Launcher$AppClassLoader@66d3c617 
+Thu Mar 21 13:12:46 GMT 2019:
+Shutting down instance a816c00e-0169-a05a-ed9d-ffffecea2c9f on database directory /Users/felixmayo/Documents/GitHub/FirstAidApp/firstAidAppDB with class loader sun.misc.Launcher$AppClassLoader@66d3c617 
 ----------------------------------------------------------------
