@@ -12,3 +12,9 @@ os.arch=x86_64
 os.version=10.14.3
 derby.system.home=/Users/felixmayo/Documents/GitHub/FirstAidApp
 Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Thu Mar 21 14:07:14 GMT 2019: Shutting down Derby engine
+----------------------------------------------------------------
+Thu Mar 21 14:07:14 GMT 2019:
+Shutting down instance a816c00e-0169-a07b-ffd4-ffffecea2c9f on database directory /Users/felixmayo/Documents/GitHub/FirstAidApp/firstAidAppDB with class loader sun.misc.Launcher$AppClassLoader@66d3c617 
+----------------------------------------------------------------
