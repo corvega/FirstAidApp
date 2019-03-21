@@ -15,7 +15,7 @@ import java.util.Properties;
 public class main {
     public static final String USERNAME = "root";
     public static final String PASSWORD = "";
-    public static final String CONN_STRING = "jdbc:mariadb://localhost:3306/dashboard";
+    public static final String CONN_STRING = "jdbc:mariadb://localhost:3306/firstAid";
     
         /**
      * @param args the command line arguments
@@ -30,7 +30,7 @@ public class main {
             conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
             System.out.println("Connected");
             Statement stmt = (Statement) conn.createStatement();
-            String insert =  "INSERT INTO USERS (ID,FName,LName) VALUES (1,'Test','Tester')";
+            String insert =  "INSERT INTO USERS (fName,lName) VALUES ('Test','Tester')";
             stmt.executeUpdate(insert);
             String sql;
             sql = "SELECT * FROM Users";
