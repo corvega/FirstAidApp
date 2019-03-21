@@ -29,6 +29,14 @@ public class Database {
         }
     }
 
+    private void closeStatement(Statement stmt) {
+        try {
+            stmt.close();
+        } catch (SQLException e) {
+            throw new Error(e.getMessage());
+        }
+    }
+
     /**
      * Will create a new database if it doesn't exist with the database name giving
      * as a local const variable.
