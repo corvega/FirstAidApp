@@ -6,7 +6,6 @@ package firstaidapp;
  * and open the template in the editor.
  */
 import java.awt.Color;
-import javax.swing.*;
 /**
  *
  * @author up839921
