@@ -5,7 +5,7 @@
  */
 package firstaidapp;
 
-import java.awt.Color;
+import java.awt.*;
 
 /**
  *
@@ -29,6 +29,7 @@ public class Settings extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        ColourblindButtonGroup = new javax.swing.ButtonGroup();
         DefaultColours = new javax.swing.JRadioButton();
         DeuteranopiaColours = new javax.swing.JRadioButton();
         ProtanopiaColours = new javax.swing.JRadioButton();
@@ -40,14 +41,15 @@ public class Settings extends javax.swing.JFrame {
         ColourblindModeLabel = new javax.swing.JLabel();
         Seperator1 = new javax.swing.JPanel();
         AccessibilityOptionsLabel = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
+        MagnifyTextCheckBox = new javax.swing.JCheckBox();
+        CaptionImagesCheckBox = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(360, 640));
         setResizable(false);
         setSize(new java.awt.Dimension(360, 640));
 
+        ColourblindButtonGroup.add(DefaultColours);
         DefaultColours.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         DefaultColours.setSelected(true);
         DefaultColours.setText("Default");
@@ -57,6 +59,7 @@ public class Settings extends javax.swing.JFrame {
             }
         });
 
+        ColourblindButtonGroup.add(DeuteranopiaColours);
         DeuteranopiaColours.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         DeuteranopiaColours.setText("Deuteranopia");
         DeuteranopiaColours.addActionListener(new java.awt.event.ActionListener() {
@@ -65,6 +68,7 @@ public class Settings extends javax.swing.JFrame {
             }
         });
 
+        ColourblindButtonGroup.add(ProtanopiaColours);
         ProtanopiaColours.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         ProtanopiaColours.setText("Protanopia");
         ProtanopiaColours.addActionListener(new java.awt.event.ActionListener() {
@@ -73,6 +77,7 @@ public class Settings extends javax.swing.JFrame {
             }
         });
 
+        ColourblindButtonGroup.add(TritanopiaColours);
         TritanopiaColours.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         TritanopiaColours.setText("Tritanopia");
         TritanopiaColours.addActionListener(new java.awt.event.ActionListener() {
@@ -160,14 +165,19 @@ public class Settings extends javax.swing.JFrame {
         AccessibilityOptionsLabel.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         AccessibilityOptionsLabel.setText("Accessibility options");
 
-        jCheckBox1.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
-        jCheckBox1.setText("Magnify Text");
-
-        jCheckBox2.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
-        jCheckBox2.setText("Caption Images");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+        MagnifyTextCheckBox.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
+        MagnifyTextCheckBox.setText("Magnify Text");
+        MagnifyTextCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
+                MagnifyTextCheckBoxActionPerformed(evt);
+            }
+        });
+
+        CaptionImagesCheckBox.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
+        CaptionImagesCheckBox.setText("Caption Images");
+        CaptionImagesCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CaptionImagesCheckBoxActionPerformed(evt);
             }
         });
 
@@ -202,22 +212,22 @@ public class Settings extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(11, 11, 11)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox2)
-                                    .addComponent(jCheckBox1)))
+                                    .addComponent(CaptionImagesCheckBox)
+                                    .addComponent(MagnifyTextCheckBox)))
                             .addComponent(Seperator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(87, Short.MAX_VALUE)
+                .addGap(87, 87, 87)
                 .addComponent(AccessibilityOptionsLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Seperator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox1)
+                .addComponent(MagnifyTextCheckBox)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox2)
+                .addComponent(CaptionImagesCheckBox)
                 .addGap(28, 28, 28)
                 .addComponent(Seperator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -241,33 +251,88 @@ public class Settings extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void DefaultColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DefaultColoursActionPerformed
-        RedColourTest.setBackground(new Color(249, 6, 6));
-        BlueColourTest.setBackground(new Color(0, 128, 0));
-        GreenColourTest.setBackground(new Color(77, 77, 255));
+        defaultColoursSettings();
+        //defaultColoursMenu();
     }//GEN-LAST:event_DefaultColoursActionPerformed
 
     private void DeuteranopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeuteranopiaColoursActionPerformed
-        RedColourTest.setBackground(new Color(238, 43, 150));
-        BlueColourTest.setBackground(new Color(0, 155, 33));
-        GreenColourTest.setBackground(new Color(0, 64, 224));
+        DeuteranopiaColoursSettings();
+        //DeuteranopiaColoursMenu();
     }//GEN-LAST:event_DeuteranopiaColoursActionPerformed
 
     private void ProtanopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProtanopiaColoursActionPerformed
-        RedColourTest.setBackground(new Color(250, 56, 143));
-        BlueColourTest.setBackground(new Color(0, 128, 28));
-        GreenColourTest.setBackground(new Color(6, 68, 224));
+        ProtanopiaColoursSettings();
+        //ProtanopiaColoursMenu();
     }//GEN-LAST:event_ProtanopiaColoursActionPerformed
 
     private void TritanopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TritanopiaColoursActionPerformed
-        RedColourTest.setBackground(new Color(255, 0, 0));
-        BlueColourTest.setBackground(new Color(0, 179, 60));
-        GreenColourTest.setBackground(new Color(0, 0, 196));
+        TritanopiaColoursSettings();
+        //firstaidapp.Menu.TritanopiaColoursMenu();
     }//GEN-LAST:event_TritanopiaColoursActionPerformed
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+    private void CaptionImagesCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CaptionImagesCheckBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
+    }//GEN-LAST:event_CaptionImagesCheckBoxActionPerformed
 
+    private void MagnifyTextCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MagnifyTextCheckBoxActionPerformed
+        if (MagnifyTextCheckBox.isSelected()) {
+            AccessibilityOptionsLabel.setFont(new Font("Calibri", Font.PLAIN, 30));
+            MagnifyTextCheckBox.setFont(new Font("Calibri", Font.PLAIN, 30));
+            CaptionImagesCheckBox.setFont(new Font("Calibri", Font.PLAIN, 30));
+            ColourblindModeLabel.setFont(new Font("Calibri", Font.PLAIN, 30));
+            DefaultColours.setFont(new Font("Calibri", Font.PLAIN, 30));
+            DeuteranopiaColours.setFont(new Font("Calibri", Font.PLAIN, 30));
+            ProtanopiaColours.setFont(new Font("Calibri", Font.PLAIN, 30));
+            TritanopiaColours.setFont(new Font("Calibri", Font.PLAIN, 30));
+        } else {
+            AccessibilityOptionsLabel.setFont(new Font("Calibri", Font.PLAIN, 24));
+            MagnifyTextCheckBox.setFont(new Font("Calibri", Font.PLAIN, 24));
+            CaptionImagesCheckBox.setFont(new Font("Calibri", Font.PLAIN, 24));
+            ColourblindModeLabel.setFont(new Font("Calibri", Font.PLAIN, 24));
+            DefaultColours.setFont(new Font("Calibri", Font.PLAIN, 24));
+            DeuteranopiaColours.setFont(new Font("Calibri", Font.PLAIN, 24));
+            ProtanopiaColours.setFont(new Font("Calibri", Font.PLAIN, 24));
+            TritanopiaColours.setFont(new Font("Calibri", Font.PLAIN, 24));
+        }
+        
+    }//GEN-LAST:event_MagnifyTextCheckBoxActionPerformed
+
+    public void defaultColoursSettings(){
+        RedColourTest.setBackground(new Color(249, 6, 6));
+        GreenColourTest.setBackground(new Color(0, 128, 0));
+        BlueColourTest.setBackground(new Color(77, 77, 255));
+        
+        Seperator1.setBackground(new Color(249, 6, 6));
+        Seperator2.setBackground(new Color(249, 6, 6));
+    }
+    
+    public void DeuteranopiaColoursSettings(){
+        RedColourTest.setBackground(new Color(238, 43, 150));
+        GreenColourTest.setBackground(new Color(0, 155, 33));
+        BlueColourTest.setBackground(new Color(0, 64, 224));
+        
+        Seperator1.setBackground(new Color(238, 43, 150));
+        Seperator2.setBackground(new Color(238, 43, 150));
+    }
+    
+    public void ProtanopiaColoursSettings(){
+        RedColourTest.setBackground(new Color(250, 56, 143));
+        GreenColourTest.setBackground(new Color(0, 128, 28));
+        BlueColourTest.setBackground(new Color(6, 68, 224));
+        
+        Seperator1.setBackground(new Color(250, 56, 143));
+        Seperator2.setBackground(new Color(250, 56, 143));
+    }
+    
+    public void TritanopiaColoursSettings(){
+        RedColourTest.setBackground(new Color(255, 0, 0));
+        GreenColourTest.setBackground(new Color(0, 179, 60));
+        BlueColourTest.setBackground(new Color(0, 0, 196));
+        
+        Seperator1.setBackground(new Color(255, 0, 0));
+        Seperator2.setBackground(new Color(255, 0, 0));
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -307,16 +372,17 @@ public class Settings extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AccessibilityOptionsLabel;
     private javax.swing.JPanel BlueColourTest;
+    private javax.swing.JCheckBox CaptionImagesCheckBox;
+    private javax.swing.ButtonGroup ColourblindButtonGroup;
     private javax.swing.JLabel ColourblindModeLabel;
     private javax.swing.JRadioButton DefaultColours;
     private javax.swing.JRadioButton DeuteranopiaColours;
     private javax.swing.JPanel GreenColourTest;
+    private javax.swing.JCheckBox MagnifyTextCheckBox;
     private javax.swing.JRadioButton ProtanopiaColours;
     private javax.swing.JPanel RedColourTest;
     private javax.swing.JPanel Seperator1;
     private javax.swing.JPanel Seperator2;
     private javax.swing.JRadioButton TritanopiaColours;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
     // End of variables declaration//GEN-END:variables
 }
