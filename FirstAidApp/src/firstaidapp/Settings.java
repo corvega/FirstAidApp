@@ -276,28 +276,14 @@ public class Settings extends javax.swing.JFrame {
 
     private void MagnifyTextCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MagnifyTextCheckBoxActionPerformed
         if (MagnifyTextCheckBox.isSelected()) {
-            AccessibilityOptionsLabel.setFont(new Font("Calibri", Font.PLAIN, 30));
-            MagnifyTextCheckBox.setFont(new Font("Calibri", Font.PLAIN, 30));
-            CaptionImagesCheckBox.setFont(new Font("Calibri", Font.PLAIN, 30));
-            ColourblindModeLabel.setFont(new Font("Calibri", Font.PLAIN, 30));
-            DefaultColours.setFont(new Font("Calibri", Font.PLAIN, 30));
-            DeuteranopiaColours.setFont(new Font("Calibri", Font.PLAIN, 30));
-            ProtanopiaColours.setFont(new Font("Calibri", Font.PLAIN, 30));
-            TritanopiaColours.setFont(new Font("Calibri", Font.PLAIN, 30));
+            MagnifiedTextSizeSettings();
         } else {
-            AccessibilityOptionsLabel.setFont(new Font("Calibri", Font.PLAIN, 24));
-            MagnifyTextCheckBox.setFont(new Font("Calibri", Font.PLAIN, 24));
-            CaptionImagesCheckBox.setFont(new Font("Calibri", Font.PLAIN, 24));
-            ColourblindModeLabel.setFont(new Font("Calibri", Font.PLAIN, 24));
-            DefaultColours.setFont(new Font("Calibri", Font.PLAIN, 24));
-            DeuteranopiaColours.setFont(new Font("Calibri", Font.PLAIN, 24));
-            ProtanopiaColours.setFont(new Font("Calibri", Font.PLAIN, 24));
-            TritanopiaColours.setFont(new Font("Calibri", Font.PLAIN, 24));
+            NormalTextSizeSettings();
         }
         
     }//GEN-LAST:event_MagnifyTextCheckBoxActionPerformed
 
-    public void defaultColoursSettings(){
+    public void defaultColoursSettings() {
         RedColourTest.setBackground(new Color(249, 6, 6));
         GreenColourTest.setBackground(new Color(0, 128, 0));
         BlueColourTest.setBackground(new Color(77, 77, 255));
@@ -306,7 +292,7 @@ public class Settings extends javax.swing.JFrame {
         Seperator2.setBackground(new Color(249, 6, 6));
     }
     
-    public void DeuteranopiaColoursSettings(){
+    public void DeuteranopiaColoursSettings() {
         RedColourTest.setBackground(new Color(238, 43, 150));
         GreenColourTest.setBackground(new Color(0, 155, 33));
         BlueColourTest.setBackground(new Color(0, 64, 224));
@@ -315,7 +301,7 @@ public class Settings extends javax.swing.JFrame {
         Seperator2.setBackground(new Color(238, 43, 150));
     }
     
-    public void ProtanopiaColoursSettings(){
+    public void ProtanopiaColoursSettings() {
         RedColourTest.setBackground(new Color(250, 56, 143));
         GreenColourTest.setBackground(new Color(0, 128, 28));
         BlueColourTest.setBackground(new Color(6, 68, 224));
@@ -324,13 +310,35 @@ public class Settings extends javax.swing.JFrame {
         Seperator2.setBackground(new Color(250, 56, 143));
     }
     
-    public void TritanopiaColoursSettings(){
+    public void TritanopiaColoursSettings() {
         RedColourTest.setBackground(new Color(255, 0, 0));
         GreenColourTest.setBackground(new Color(0, 179, 60));
         BlueColourTest.setBackground(new Color(0, 0, 196));
         
         Seperator1.setBackground(new Color(255, 0, 0));
         Seperator2.setBackground(new Color(255, 0, 0));
+    }
+    
+    public void MagnifiedTextSizeSettings() {
+        AccessibilityOptionsLabel.setFont(new Font("Calibri", Font.PLAIN, 30));
+        MagnifyTextCheckBox.setFont(new Font("Calibri", Font.PLAIN, 30));
+        CaptionImagesCheckBox.setFont(new Font("Calibri", Font.PLAIN, 30));
+        ColourblindModeLabel.setFont(new Font("Calibri", Font.PLAIN, 30));
+        DefaultColours.setFont(new Font("Calibri", Font.PLAIN, 30));
+        DeuteranopiaColours.setFont(new Font("Calibri", Font.PLAIN, 30));
+        ProtanopiaColours.setFont(new Font("Calibri", Font.PLAIN, 30));
+        TritanopiaColours.setFont(new Font("Calibri", Font.PLAIN, 30));
+    }
+    
+    public void NormalTextSizeSettings() {
+        AccessibilityOptionsLabel.setFont(new Font("Calibri", Font.PLAIN, 24));
+        MagnifyTextCheckBox.setFont(new Font("Calibri", Font.PLAIN, 24));
+        CaptionImagesCheckBox.setFont(new Font("Calibri", Font.PLAIN, 24));
+        ColourblindModeLabel.setFont(new Font("Calibri", Font.PLAIN, 24));
+        DefaultColours.setFont(new Font("Calibri", Font.PLAIN, 24));
+        DeuteranopiaColours.setFont(new Font("Calibri", Font.PLAIN, 24));
+        ProtanopiaColours.setFont(new Font("Calibri", Font.PLAIN, 24));
+        TritanopiaColours.setFont(new Font("Calibri", Font.PLAIN, 24));    
     }
     
     /**
