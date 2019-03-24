@@ -148,6 +148,8 @@ public class Menu extends javax.swing.JFrame {
 
     private void SettingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SettingsButtonActionPerformed
         // TODO add your handling code here:
+        new Settings().setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_SettingsButtonActionPerformed
 
     public void defaultColoursMenu(){
