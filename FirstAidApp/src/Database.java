@@ -125,21 +125,21 @@ public class Database {
      * @param query which is wanted to be used
      * @return ResultSet which contains the results
      */
-    public ResultSet getQueryResults(String query) {
-        Connection conn = connectToDatabase();
-        try {
-            Statement stmt = conn.createStatement();
-            try {
-                return stmt.executeQuery(query);
-            } catch (SQLException e) {
-                throw new Error(e.toString());
-            }
-        } catch (SQLException e) {
-            throw new Error(e.toString());
-        } finally {
-            closeConnectionToDatabase(conn);
-        }
-    }
+//    public ResultSet getQueryResults(String query) {
+//        Connection conn = connectToDatabase();
+//        try {
+//            Statement stmt = conn.createStatement();
+//            try {
+//                return stmt.executeQuery(query);
+//            } catch (SQLException e) {
+//                throw new Error(e.toString());
+//            }
+//        } catch (SQLException e) {
+//            throw new Error(e.toString());
+//        } finally {
+//            closeConnectionToDatabase(conn);
+//        }
+//    }
 
     public void insertIntoTable(String tableName, String columns, String values) {
         Connection conn = connectToDatabase();

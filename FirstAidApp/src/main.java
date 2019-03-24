@@ -23,7 +23,7 @@ public class main {
 //        if (firstTime){
 //            db.init();
 //        }
-        ResultSet rs = db.getQueryResults("select * from firstAid.Users;");
+        //ResultSet rs = db.getQueryResults("select * from firstAid.Users;");
         try{
             rs.first();
             value = rs.getString(2);
