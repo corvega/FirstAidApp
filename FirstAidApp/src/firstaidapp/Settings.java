@@ -43,6 +43,7 @@ public class Settings extends javax.swing.JFrame {
         AccessibilityOptionsLabel = new javax.swing.JLabel();
         MagnifyTextCheckBox = new javax.swing.JCheckBox();
         CaptionImagesCheckBox = new javax.swing.JCheckBox();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(360, 640));
@@ -181,6 +182,13 @@ public class Settings extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -214,13 +222,18 @@ public class Settings extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(CaptionImagesCheckBox)
                                     .addComponent(MagnifyTextCheckBox)))
-                            .addComponent(Seperator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(Seperator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addComponent(jButton1)))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(87, 87, 87)
+                .addContainerGap()
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addComponent(AccessibilityOptionsLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Seperator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -239,6 +252,7 @@ public class Settings extends javax.swing.JFrame {
                     .addComponent(BlueColourTest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(DefaultColours)
+                .addGap(0, 0, 0)
                 .addComponent(DeuteranopiaColours)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ProtanopiaColours)
@@ -257,7 +271,9 @@ public class Settings extends javax.swing.JFrame {
 
     private void DeuteranopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeuteranopiaColoursActionPerformed
         DeuteranopiaColoursSettings();
-        //DeuteranopiaColoursMenu();
+        Utility DeuteranopiaObj = new Utility();
+        DeuteranopiaObj.Deuteranopia();
+//DeuteranopiaColoursMenu();
     }//GEN-LAST:event_DeuteranopiaColoursActionPerformed
 
     private void ProtanopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProtanopiaColoursActionPerformed
@@ -282,6 +298,11 @@ public class Settings extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_MagnifyTextCheckBoxActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new Menu().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public void defaultColoursSettings() {
         RedColourTest.setBackground(new Color(249, 6, 6));
@@ -392,5 +413,6 @@ public class Settings extends javax.swing.JFrame {
     private javax.swing.JPanel Seperator1;
     private javax.swing.JPanel Seperator2;
     private javax.swing.JRadioButton TritanopiaColours;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
