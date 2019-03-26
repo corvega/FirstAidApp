@@ -5,7 +5,7 @@ import java.sql.*;
  */
 public class Database {
 
-    private final String URL = "jdbc:mariadb://localhost:3306/firstAid";
+    private final String URL = "jdbc:mariadb://localhost:3306/";
     private final String USER = "root";
     private final String PASSWORD = "";
     private final String DB_NAME = "firstAid";
