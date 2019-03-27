@@ -159,7 +159,7 @@ public class Quiz extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         try {
             String input = "INSERT INTO users (answers) VALUES (?);";
-            con = DriverManager.getConnection("");
+            con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/firstAid");
             pst = con.prepareStatement(input);
             pst.setString(1, userAnswer);
             pst.executeUpdate();
