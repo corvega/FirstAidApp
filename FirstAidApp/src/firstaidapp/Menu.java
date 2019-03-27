@@ -131,20 +131,25 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_EmergencyButtonActionPerformed
 
     private void PreviewResultsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreviewResultsButtonActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_PreviewResultsButtonActionPerformed
 
     private void FirstAidLessonButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstAidLessonButtonActionPerformed
-        // TODO add your handling code here:
+        Lesson l = new Lesson();
+        l.setLocationRelativeTo(null);
+        l.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_FirstAidLessonButtonActionPerformed
 
     private void QuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuizButtonActionPerformed
-        new Quiz().setVisible(true);
+        Quiz q = new Quiz();
+        q.setLocationRelativeTo(null);
+        q.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_QuizButtonActionPerformed
 
     private void ScoresButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScoresButtonActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_ScoresButtonActionPerformed
 
     private void SettingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SettingsButtonActionPerformed
