@@ -10,14 +10,15 @@ package firstaidapp;
  * @author up839921
  */
 public class Utility {
+
+    Settings s = new Settings();
+    Menu m = new Menu();
     
     public void Deuteranopia() {
-        Menu DeuteranopiaMenuObj = new Menu();
-        DeuteranopiaMenuObj.DeuteranopiaColoursMenu();      
+        m.DeuteranopiaColoursMenu();
     }
     
-     public void SettingsVisibility() {
-        Settings MakeVisible = new Settings();
-        MakeVisible.setVisible(true);
+     public void SettingsVisibility() {   
+        s.setVisible(true);
     }   
 }
