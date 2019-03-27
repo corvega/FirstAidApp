@@ -17,7 +17,7 @@ public class Utility {
     }
     
      public void SettingsVisibility() {
-        Settings MakeVisible = new  Settings();
+        Settings MakeVisible = new Settings();
         MakeVisible.setVisible(true);
     }   
 }
