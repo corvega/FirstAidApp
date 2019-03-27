@@ -11,9 +11,13 @@ package firstaidapp;
  */
 public class Utility {
     
-    public void Deuteranopia(){
+    public void Deuteranopia() {
         Menu DeuteranopiaMenuObj = new Menu();
-        DeuteranopiaMenuObj.DeuteranopiaColoursMenu();
-}
-        
+        DeuteranopiaMenuObj.DeuteranopiaColoursMenu();      
+    }
+    
+     public void SettingsVisibility() {
+        Settings MakeVisible = new  Settings();
+        MakeVisible.setVisible(true);
+    }   
 }
