@@ -6,6 +6,7 @@ package firstaidapp;
  * and open the template in the editor.
  */
 import java.awt.Color;
+
 /**
  *
  * @author up839921
@@ -13,12 +14,14 @@ import java.awt.Color;
 public class Menu extends javax.swing.JFrame {
 
     /**
-     * Creates new form SplashScreen
+     * Creates new form Menu
      */
     public Menu() {
         initComponents();
+        radiobuttons();
     }
-
+   
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -36,6 +39,7 @@ public class Menu extends javax.swing.JFrame {
         ScoresButton = new javax.swing.JButton();
         EmergencyButton = new javax.swing.JButton();
         SettingsButton = new javax.swing.JButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
 
         jScrollPane1.setViewportView(jEditorPane1);
 
@@ -88,6 +92,13 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
+        jRadioButton1.setText("jRadioButton1");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -104,11 +115,17 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(ScoresButton, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SettingsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(92, 92, 92)
+                .addComponent(jRadioButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
+                .addGap(16, 16, 16)
+                .addComponent(jRadioButton1)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(FirstAidLessonButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(QuizButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -153,40 +170,55 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_ScoresButtonActionPerformed
 
     private void SettingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SettingsButtonActionPerformed
-        // TODO add your handling code here:
         Utility Settings = new Utility();
         Settings.SettingsVisibility();
         this.setVisible(false);
     }//GEN-LAST:event_SettingsButtonActionPerformed
 
-    public void defaultColoursMenu(){
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    
+    public void radiobuttons() {
+        jRadioButton1.setVisible(false);
+    }
+    
+    
+    //SettingsButton.addActionListener(new ActionListener() {
+    //   public void actionPerformed(ActionEvent e) {
+    //       s.setVisible(true);
+    //   } 
+    //});
+    
+    public void defaultColoursMenu() {
         FirstAidLessonButton.setBackground(new Color(249, 6, 6));
         QuizButton.setBackground(new Color(249, 6, 6));
         PreviewResultsButton.setBackground(new Color(249, 6, 6));
         ScoresButton.setBackground(new Color(249, 6, 6));
         EmergencyButton.setBackground(new Color(249, 6, 6));
-        SettingsButton.setBackground(new Color(249, 6, 6));  
+        SettingsButton.setBackground(new Color(249, 6, 6));
     }
-    
-    public void DeuteranopiaColoursMenu(){
+
+    public void DeuteranopiaColoursMenu() {
         FirstAidLessonButton.setBackground(new Color(238, 43, 150));
         QuizButton.setBackground(new Color(238, 43, 150));
         PreviewResultsButton.setBackground(new Color(238, 43, 150));
         ScoresButton.setBackground(new Color(238, 43, 150));
         EmergencyButton.setBackground(new Color(238, 43, 150));
-        SettingsButton.setBackground(new Color(238, 43, 150));  
+        SettingsButton.setBackground(new Color(238, 43, 150));
     }
-    
-    public void ProtanopiaColoursMenu(){
+
+    public void ProtanopiaColoursMenu() {
         FirstAidLessonButton.setBackground(new Color(250, 56, 143));
         QuizButton.setBackground(new Color(250, 56, 143));
         PreviewResultsButton.setBackground(new Color(250, 56, 143));
         ScoresButton.setBackground(new Color(250, 56, 143));
         EmergencyButton.setBackground(new Color(250, 56, 143));
-        SettingsButton.setBackground(new Color(250, 56, 143));  
+        SettingsButton.setBackground(new Color(250, 56, 143));
     }
-    
-    public void TritanopiaColoursMenu(){
+
+    public void TritanopiaColoursMenu() {
         FirstAidLessonButton.setBackground(new Color(255, 0, 0));
         QuizButton.setBackground(new Color(255, 0, 0));
         PreviewResultsButton.setBackground(new Color(255, 0, 0));
@@ -194,9 +226,7 @@ public class Menu extends javax.swing.JFrame {
         EmergencyButton.setBackground(new Color(255, 0, 0));
         SettingsButton.setBackground(new Color(255, 0, 0));
     }
-        
-    
-    
+
     /**
      * @param args the command line arguments
      */
@@ -243,8 +273,8 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton ScoresButton;
     private javax.swing.JButton SettingsButton;
     private javax.swing.JEditorPane jEditorPane1;
+    private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
-
 
 }

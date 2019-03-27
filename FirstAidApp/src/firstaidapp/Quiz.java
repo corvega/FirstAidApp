@@ -6,15 +6,20 @@
 package firstaidapp;
 
 import java.sql.Connection;
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  *
  * @author up873711
  */
 public class Quiz extends javax.swing.JFrame {
+
+    Connection con = null;
+    PreparedStatement pst = null;
+    ResultSet rs = null;
+    String userAnswer;
 
     /**
      * Creates new form Quiz
@@ -136,32 +141,30 @@ public class Quiz extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-       userAnswer="Answer 1";
+        userAnswer = "Answer 1";
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        userAnswer="Answer 2";
+        userAnswer = "Answer 2";
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
-        userAnswer="Answer 3";
+        userAnswer = "Answer 3";
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
-        userAnswer="Answer 4";
+        userAnswer = "Answer 4";
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        try{
-        String input = "INSERT INTO users (answers) VALUES (?);";
-        //pst=conn.prepareStatement(input);
-        //PreparedStatement pst = connection.prepareStatement(input);
-        
-        //pst.setString(1, userAnswer);
-        //pst.execute();
-        }
-            catch(Exception e){
-         
+        try {
+            String input = "INSERT INTO users (answers) VALUES (?);";
+            con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/firstAid");
+            pst = con.prepareStatement(input);
+            pst.setString(1, userAnswer);
+            pst.executeUpdate();
+        } catch (Exception e) {
+
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -210,8 +213,5 @@ public class Quiz extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton4;
     // End of variables declaration//GEN-END:variables
 
-private String userAnswer;
-String value;
-        
 
 }

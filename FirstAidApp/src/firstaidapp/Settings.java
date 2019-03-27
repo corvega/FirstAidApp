@@ -12,7 +12,7 @@ import java.awt.*;
  * @author up839921
  */
 public class Settings extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form Settings
      */
@@ -301,7 +301,7 @@ public class Settings extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         new Menu().setVisible(true);
-        this.setVisible(false);
+        //this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public void defaultColoursSettings() {

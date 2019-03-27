@@ -10,5 +10,6 @@ package firstaidapp;
  * @author felixmayo
  */
 public class FirstAidApp {
-
+    //Settings s = new Settings();
+    //Menu m = new Menu();
 }
