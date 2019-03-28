@@ -62,4 +62,12 @@ public class Lesson {
     public void setDescription(ArrayList<String> descriptions) {
         this.descriptions = descriptions;
     }
+
+    public void removeImage(int index) {
+        this.images.remove(index);
+    }
+
+    public void removeDescription(int index) {
+        this.descriptions.remove(index);
+    }
 }
