@@ -11,7 +11,9 @@
  * @author felixmayo
  */
 
+import java.io.File;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Properties;
 
 
@@ -34,4 +36,9 @@ public class main {
                 throw new Error(e.toString());
             }
         }
+    
+        public static void populateLesson(String title, ArrayList<String> descriptions, ArrayList<File> images){
+            
+        }
+    
     } 
