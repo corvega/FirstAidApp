@@ -5,10 +5,8 @@
  */
 package firstaidapp;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -43,7 +41,7 @@ public class Quiz extends javax.swing.JFrame {
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
         jRadioButton4 = new javax.swing.JRadioButton();
-        jButton2 = new javax.swing.JButton();
+        submitAnswer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -86,10 +84,10 @@ public class Quiz extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Submit");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        submitAnswer.setText("Submit");
+        submitAnswer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                submitAnswerActionPerformed(evt);
             }
         });
 
@@ -108,28 +106,26 @@ public class Quiz extends javax.swing.JFrame {
                             .addComponent(jRadioButton2)
                             .addComponent(jRadioButton1)
                             .addComponent(jRadioButton3)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jRadioButton4)
-                                .addGap(87, 87, 87)
-                                .addComponent(jButton2)))))
-                .addContainerGap(101, Short.MAX_VALUE))
+                            .addComponent(jRadioButton4)
+                            .addComponent(submitAnswer))))
+                .addContainerGap(262, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 382, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 385, Short.MAX_VALUE)
                 .addComponent(jRadioButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRadioButton2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRadioButton3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jButton2))
-                .addGap(106, 106, 106))
+                .addComponent(jRadioButton4)
+                .addGap(45, 45, 45)
+                .addComponent(submitAnswer)
+                .addGap(33, 33, 33))
         );
 
         pack();
@@ -156,17 +152,18 @@ public class Quiz extends javax.swing.JFrame {
         userAnswer = "Answer 4";
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void submitAnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitAnswerActionPerformed
         try {
-            String input = "INSERT INTO users (answers) VALUES (?);";
-            con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/firstAid");
-            pst = con.prepareStatement(input);
+            String submitQuery = "INSERT INTO firstaid.question_answer (answers) VALUES (?)";
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/firstaid", "root", "Password$");
+            pst = con.prepareStatement(submitQuery);
             pst.setString(1, userAnswer);
             pst.executeUpdate();
-        } catch (Exception e) {
-
+            JOptionPane.showMessageDialog(this, "Your answer is submitted successfully");
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_submitAnswerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -206,11 +203,11 @@ public class Quiz extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JButton submitAnswer;
     // End of variables declaration//GEN-END:variables
 
 
