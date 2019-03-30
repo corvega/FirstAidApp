@@ -9,7 +9,7 @@ import java.sql.*;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import net.proteanit.sql.DbUtils;
+//import net.proteanit.sql.DbUtils;
 
 /**
  *
@@ -234,7 +234,7 @@ public class Lesson extends javax.swing.JFrame {
                     con = DriverManager.getConnection("jdbc:mysql://localhost:3306/firstaid", "root", "Password$");
                     pst = con.prepareStatement(displayData);
                     rs = pst.executeQuery();
-                    jTable2.setModel(DbUtils.resultSetToTableModel(rs));
+                    //jTable2.setModel(DbUtils.resultSetToTableModel(rs));
 
                 } catch (SQLException ex) {
                     Logger.getLogger(Lesson.class.getName()).log(Level.SEVERE, null, ex);
