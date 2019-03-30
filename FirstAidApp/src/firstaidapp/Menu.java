@@ -6,7 +6,6 @@ package firstaidapp;
  * and open the template in the editor.
  */
 import java.awt.Color;
-
 /**
  *
  * @author up839921
@@ -130,7 +129,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_PreviewResultsButtonActionPerformed
 
     private void FirstAidLessonButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstAidLessonButtonActionPerformed
-        new LessonsList().setVisible(true);
+        new Lesson().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_FirstAidLessonButtonActionPerformed
 
