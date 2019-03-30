@@ -12,10 +12,14 @@ package firstaidapp;
 public class Utility {
 
     Settings s = new Settings();
-    Menu m = new Menu();
+    
     
     public void Deuteranopia() {
-        m.DeuteranopiaColoursMenu();
+        //m.DeuteranopiaColours.setSelected(true);
+        Menu.DefaultColoursRadio(false);
+        Menu.DeuteranopiaColoursRadio(true);
+        Menu.ProtanopiaColoursRadio(false);
+        Menu.TritanopiaColoursRadio(false);
     }
     
      public void SettingsVisibility() {   
