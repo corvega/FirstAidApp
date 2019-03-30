@@ -17,10 +17,8 @@ public class Menu extends javax.swing.JFrame {
      * Creates new form Menu
      */
     public Menu() {
-        initComponents();
-        radiobuttons();
+        initComponents(); 
     }
-   
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,28 +29,22 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jEditorPane1 = new javax.swing.JEditorPane();
-        ColourBlindButtonGroup = new javax.swing.ButtonGroup();
         QuizButton = new javax.swing.JButton();
         FirstAidLessonButton = new javax.swing.JButton();
         PreviewResultsButton = new javax.swing.JButton();
         ScoresButton = new javax.swing.JButton();
         EmergencyButton = new javax.swing.JButton();
-        SettingsButton = new javax.swing.JButton();
-        DefaultColours = new javax.swing.JRadioButton();
-        DeuteranopiaColours = new javax.swing.JRadioButton();
-        ProtanopiaColours = new javax.swing.JRadioButton();
-        TritanopiaColours = new javax.swing.JRadioButton();
-
-        jScrollPane1.setViewportView(jEditorPane1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLocationByPlatform(true);
         setMinimumSize(new java.awt.Dimension(360, 640));
         setResizable(false);
         setSize(new java.awt.Dimension(360, 640));
 
         QuizButton.setBackground(new java.awt.Color(249, 6, 6));
+        QuizButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFile/iconQuiz_transparent.png"))); // NOI18N
         QuizButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 QuizButtonActionPerformed(evt);
@@ -60,6 +52,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         FirstAidLessonButton.setBackground(new java.awt.Color(249, 6, 6));
+        FirstAidLessonButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFile/iconLessons_transparent.png"))); // NOI18N
         FirstAidLessonButton.setMaximumSize(new java.awt.Dimension(159, 169));
         FirstAidLessonButton.setMinimumSize(new java.awt.Dimension(159, 169));
         FirstAidLessonButton.addActionListener(new java.awt.event.ActionListener() {
@@ -69,6 +62,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         PreviewResultsButton.setBackground(new java.awt.Color(249, 6, 6));
+        PreviewResultsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFile/iconResults_transparent.png"))); // NOI18N
         PreviewResultsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PreviewResultsButtonActionPerformed(evt);
@@ -76,6 +70,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         ScoresButton.setBackground(new java.awt.Color(249, 6, 6));
+        ScoresButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFile/iconScores_transparent.png"))); // NOI18N
         ScoresButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ScoresButtonActionPerformed(evt);
@@ -83,49 +78,10 @@ public class Menu extends javax.swing.JFrame {
         });
 
         EmergencyButton.setBackground(new java.awt.Color(249, 6, 6));
+        EmergencyButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFile/iconEmergency_transparent.png"))); // NOI18N
         EmergencyButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EmergencyButtonActionPerformed(evt);
-            }
-        });
-
-        SettingsButton.setBackground(new java.awt.Color(249, 6, 6));
-        SettingsButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SettingsButtonActionPerformed(evt);
-            }
-        });
-
-        ColourBlindButtonGroup.add(DefaultColours);
-        DefaultColours.setSelected(true);
-        DefaultColours.setText("Hidden DefaultColours");
-        DefaultColours.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DefaultColoursActionPerformed(evt);
-            }
-        });
-
-        ColourBlindButtonGroup.add(DeuteranopiaColours);
-        DeuteranopiaColours.setText("Hidden DeuteranopiaColours");
-        DeuteranopiaColours.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DeuteranopiaColoursActionPerformed(evt);
-            }
-        });
-
-        ColourBlindButtonGroup.add(ProtanopiaColours);
-        ProtanopiaColours.setText("Hidden ProtanopiaColours");
-        ProtanopiaColours.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProtanopiaColoursActionPerformed(evt);
-            }
-        });
-
-        ColourBlindButtonGroup.add(TritanopiaColours);
-        TritanopiaColours.setText("Hidden TritanopiaColours");
-        TritanopiaColours.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TritanopiaColoursActionPerformed(evt);
             }
         });
 
@@ -136,37 +92,22 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(PreviewResultsButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                    .addComponent(EmergencyButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
+                    .addComponent(PreviewResultsButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, Short.MAX_VALUE)
                     .addComponent(FirstAidLessonButton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(QuizButton, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ScoresButton, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SettingsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ScoresButton, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(DeuteranopiaColours)
-                            .addComponent(DefaultColours)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TritanopiaColours)
-                            .addComponent(ProtanopiaColours))))
+                .addGap(126, 126, 126)
+                .addComponent(EmergencyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(DefaultColours)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(DeuteranopiaColours)
-                .addGap(6, 6, 6)
+                .addGap(68, 68, 68)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(FirstAidLessonButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(QuizButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -175,113 +116,40 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(PreviewResultsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ScoresButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(SettingsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(EmergencyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(ProtanopiaColours)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(TritanopiaColours)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addComponent(EmergencyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void EmergencyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmergencyButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EmergencyButtonActionPerformed
-
     private void PreviewResultsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreviewResultsButtonActionPerformed
-        
+        //new PreviewResults().setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_PreviewResultsButtonActionPerformed
 
     private void FirstAidLessonButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstAidLessonButtonActionPerformed
-        Lesson l = new Lesson();
-        l.setLocationRelativeTo(null);
-        l.setVisible(true);
+        new LessonsList().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_FirstAidLessonButtonActionPerformed
 
     private void QuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuizButtonActionPerformed
-        Quiz q = new Quiz();
-        q.setLocationRelativeTo(null);
-        q.setVisible(true);
+        new Quiz().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_QuizButtonActionPerformed
 
     private void ScoresButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScoresButtonActionPerformed
-        
+        //new Scores().setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_ScoresButtonActionPerformed
 
-    private void SettingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SettingsButtonActionPerformed
-        Utility Settings = new Utility();
-        Settings.SettingsVisibility();
+    private void EmergencyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmergencyButtonActionPerformed
+        new Emergency().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_SettingsButtonActionPerformed
+    }//GEN-LAST:event_EmergencyButtonActionPerformed
+    
 
-    private void DefaultColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DefaultColoursActionPerformed
-        FirstAidLessonButton.setBackground(new Color(249, 6, 6));
-        QuizButton.setBackground(new Color(249, 6, 6));
-        PreviewResultsButton.setBackground(new Color(249, 6, 6));
-        ScoresButton.setBackground(new Color(249, 6, 6));
-        EmergencyButton.setBackground(new Color(249, 6, 6));
-        SettingsButton.setBackground(new Color(249, 6, 6));
-    }//GEN-LAST:event_DefaultColoursActionPerformed
-
-    private void DeuteranopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeuteranopiaColoursActionPerformed
-        FirstAidLessonButton.setBackground(new Color(238, 43, 150));
-        QuizButton.setBackground(new Color(238, 43, 150));
-        PreviewResultsButton.setBackground(new Color(238, 43, 150));
-        ScoresButton.setBackground(new Color(238, 43, 150));
-        EmergencyButton.setBackground(new Color(238, 43, 150));
-        SettingsButton.setBackground(new Color(238, 43, 150));
-    }//GEN-LAST:event_DeuteranopiaColoursActionPerformed
-
-    private void ProtanopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProtanopiaColoursActionPerformed
-        FirstAidLessonButton.setBackground(new Color(250, 56, 143));
-        QuizButton.setBackground(new Color(250, 56, 143));
-        PreviewResultsButton.setBackground(new Color(250, 56, 143));
-        ScoresButton.setBackground(new Color(250, 56, 143));
-        EmergencyButton.setBackground(new Color(250, 56, 143));
-        SettingsButton.setBackground(new Color(250, 56, 143));
-    }//GEN-LAST:event_ProtanopiaColoursActionPerformed
-
-    private void TritanopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TritanopiaColoursActionPerformed
-        FirstAidLessonButton.setBackground(new Color(255, 0, 0));
-        QuizButton.setBackground(new Color(255, 0, 0));
-        PreviewResultsButton.setBackground(new Color(255, 0, 0));
-        ScoresButton.setBackground(new Color(255, 0, 0));
-        EmergencyButton.setBackground(new Color(255, 0, 0));
-        SettingsButton.setBackground(new Color(255, 0, 0));
-    }//GEN-LAST:event_TritanopiaColoursActionPerformed
-
-    
-    public void radiobuttons() {
-        DefaultColours.setVisible(false);
-        DeuteranopiaColours.setVisible(false);
-        ProtanopiaColours.setVisible(false);
-        TritanopiaColours.setVisible(false);
-    }
-    
-    public static boolean DefaultColoursRadio(boolean a) {
-        return a;
-    }
-    
-    public static boolean DeuteranopiaColoursRadio(boolean b) {
-        return b;
-    }
-    
-    public static boolean ProtanopiaColoursRadio(boolean c) {
-        return c;
-    }
-    
-    public static boolean TritanopiaColoursRadio(boolean d) {
-        return d;
-    }
-    
-    
-    
     
 
     /**
@@ -323,19 +191,11 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup ColourBlindButtonGroup;
-    public javax.swing.JRadioButton DefaultColours;
-    public javax.swing.JRadioButton DeuteranopiaColours;
     private javax.swing.JButton EmergencyButton;
     private javax.swing.JButton FirstAidLessonButton;
     private javax.swing.JButton PreviewResultsButton;
-    public javax.swing.JRadioButton ProtanopiaColours;
     private javax.swing.JButton QuizButton;
     private javax.swing.JButton ScoresButton;
-    private javax.swing.JButton SettingsButton;
-    public javax.swing.JRadioButton TritanopiaColours;
-    private javax.swing.JEditorPane jEditorPane1;
-    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 
 }
