@@ -9,7 +9,6 @@ public class LessonsList extends javax.swing.JFrame {
      */
     public LessonsList() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(255, 255, 255));
     }
 
     /**
@@ -23,13 +22,11 @@ public class LessonsList extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         FirstAidLessonButton3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         CPRButton = new javax.swing.JButton();
         UnresponsiveBreathingButton = new javax.swing.JButton();
         HeavyBleedingButton = new javax.swing.JButton();
         BurnsButton = new javax.swing.JButton();
         ChokingButton = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -56,20 +53,8 @@ public class LessonsList extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(360, 640));
-        setMinimumSize(new java.awt.Dimension(360, 640));
         setName("LessonsList"); // NOI18N
         setUndecorated(true);
-        getContentPane().setLayout(null);
-
-        jButton1.setBackground(new java.awt.Color(255, 51, 51));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFile/back.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(10, 13, 30, 60);
 
         CPRButton.setBackground(new java.awt.Color(249, 6, 6));
         CPRButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFile/CPR LessonList.png"))); // NOI18N
@@ -81,8 +66,6 @@ public class LessonsList extends javax.swing.JFrame {
                 CPRButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(CPRButton);
-        CPRButton.setBounds(34, 101, 290, 90);
 
         UnresponsiveBreathingButton.setBackground(new java.awt.Color(249, 6, 6));
         UnresponsiveBreathingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFile/Unresponsive-Breathing LessonList.png"))); // NOI18N
@@ -94,8 +77,6 @@ public class LessonsList extends javax.swing.JFrame {
                 UnresponsiveBreathingButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(UnresponsiveBreathingButton);
-        UnresponsiveBreathingButton.setBounds(34, 202, 290, 90);
 
         HeavyBleedingButton.setBackground(new java.awt.Color(249, 6, 6));
         HeavyBleedingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFile/Heavy-Bleeding LessonList.png"))); // NOI18N
@@ -107,8 +88,6 @@ public class LessonsList extends javax.swing.JFrame {
                 HeavyBleedingButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(HeavyBleedingButton);
-        HeavyBleedingButton.setBounds(34, 303, 290, 90);
 
         BurnsButton.setBackground(new java.awt.Color(249, 6, 6));
         BurnsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFile/Burns LessonList.png"))); // NOI18N
@@ -120,8 +99,6 @@ public class LessonsList extends javax.swing.JFrame {
                 BurnsButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(BurnsButton);
-        BurnsButton.setBounds(34, 411, 290, 90);
 
         ChokingButton.setBackground(new java.awt.Color(249, 6, 6));
         ChokingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFile/Choking LessonList.png"))); // NOI18N
@@ -133,12 +110,36 @@ public class LessonsList extends javax.swing.JFrame {
                 ChokingButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(ChokingButton);
-        ChokingButton.setBounds(34, 519, 290, 90);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFile/lessonScreen.png"))); // NOI18N
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(-20, 0, 380, 140);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ChokingButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BurnsButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(HeavyBleedingButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(UnresponsiveBreathingButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CPRButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(101, 101, 101)
+                .addComponent(CPRButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(UnresponsiveBreathingButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(HeavyBleedingButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(BurnsButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(ChokingButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -167,11 +168,6 @@ public class LessonsList extends javax.swing.JFrame {
     private void ChokingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChokingButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ChokingButtonActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new Menu().setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -215,8 +211,6 @@ public class LessonsList extends javax.swing.JFrame {
     private javax.swing.JButton FirstAidLessonButton3;
     private javax.swing.JButton HeavyBleedingButton;
     private javax.swing.JButton UnresponsiveBreathingButton;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
