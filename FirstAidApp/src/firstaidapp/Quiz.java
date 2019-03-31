@@ -106,11 +106,11 @@ public class Quiz extends javax.swing.JFrame {
             }
         });
         getContentPane().add(submitAnswer);
-        submitAnswer.setBounds(30, 550, 65, 23);
+        submitAnswer.setBounds(30, 550, 74, 32);
 
         nextQuestion.setText("Next");
         getContentPane().add(nextQuestion);
-        nextQuestion.setBounds(260, 550, 55, 23);
+        nextQuestion.setBounds(260, 550, 60, 32);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);

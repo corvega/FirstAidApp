@@ -58,7 +58,7 @@ public class Emergency extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel2.setText("Let's deteremine what to do while we wait for the ambulance");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(10, 170, 343, 31);
+        jLabel2.setBounds(10, 170, 329, 31);
 
         Seperator1.setBackground(new java.awt.Color(255, 0, 51));
         Seperator1.setPreferredSize(new java.awt.Dimension(300, 3));

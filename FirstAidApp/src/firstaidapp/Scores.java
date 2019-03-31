@@ -92,17 +92,17 @@ public class Scores extends javax.swing.JFrame {
         Session1Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session1Label.setText("Quiz - Session 1");
         getContentPane().add(Session1Label);
-        Session1Label.setBounds(27, 131, 300, 44);
+        Session1Label.setBounds(27, 131, 300, 43);
 
         Session3Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session3Label.setText("Quiz - Session 3");
         getContentPane().add(Session3Label);
-        Session3Label.setBounds(27, 435, 300, 44);
+        Session3Label.setBounds(27, 435, 300, 43);
 
         Session2Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session2Label.setText("Quiz - Session 2");
         getContentPane().add(Session2Label);
-        Session2Label.setBounds(27, 283, 227, 44);
+        Session2Label.setBounds(27, 283, 287, 43);
 
         Session3Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session3Panel.setMaximumSize(new java.awt.Dimension(300, 30));
