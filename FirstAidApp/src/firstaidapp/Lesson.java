@@ -3,7 +3,7 @@ package firstaidapp;
 
 import java.sql.*;
 import javax.swing.JOptionPane;
-import net.proteanit.sql.DbUtils;
+//import net.proteanit.sql.DbUtils;
 
 public class Lesson extends javax.swing.JFrame {
 
@@ -16,6 +16,7 @@ public class Lesson extends javax.swing.JFrame {
      */
     public Lesson() {
         initComponents();
+        getContentPane().setBackground(new java.awt.Color(255, 255, 255));
         populateCPRData();
         populateNonBreathingData();
         populateBleedingData();
@@ -27,7 +28,7 @@ public class Lesson extends javax.swing.JFrame {
                     con = DriverManager.getConnection("jdbc:mysql://localhost:3306/firstaid", "root", "Password$");
                     pst = con.prepareStatement(displayData);
                     rs = pst.executeQuery();
-                    jTable2.setModel(DbUtils.resultSetToTableModel(rs));
+                    //jTable2.setModel(DbUtils.resultSetToTableModel(rs));
 
                 } catch (SQLException ex) {
                     JOptionPane.showMessageDialog(this, ex);
@@ -41,7 +42,7 @@ public class Lesson extends javax.swing.JFrame {
                     con = DriverManager.getConnection("jdbc:mysql://localhost:3306/firstaid", "root", "Password$");
                     pst = con.prepareStatement(displayData);
                     rs = pst.executeQuery();
-                    jTable4.setModel(DbUtils.resultSetToTableModel(rs));
+                   // jTable4.setModel(DbUtils.resultSetToTableModel(rs));
 
                 } catch (SQLException ex) {
                     JOptionPane.showMessageDialog(this, ex);
@@ -55,7 +56,7 @@ public class Lesson extends javax.swing.JFrame {
                     con = DriverManager.getConnection("jdbc:mysql://localhost:3306/firstaid", "root", "Password$");
                     pst = con.prepareStatement(displayData);
                     rs = pst.executeQuery();
-                    jTable3.setModel(DbUtils.resultSetToTableModel(rs));
+                    //jTable3.setModel(DbUtils.resultSetToTableModel(rs));
 
                 } catch (SQLException ex) {
                     JOptionPane.showMessageDialog(this, ex);
