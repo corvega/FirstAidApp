@@ -1,6 +1,7 @@
 
 package firstaidapp;
 
+import java.awt.Color;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
@@ -17,6 +18,7 @@ public class Quiz extends javax.swing.JFrame {
      */
     public Quiz() {
         initComponents();
+        getContentPane().setBackground(new java.awt.Color(255, 255, 255));
     }
 
     /**
@@ -29,7 +31,7 @@ public class Quiz extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
@@ -38,15 +40,24 @@ public class Quiz extends javax.swing.JFrame {
         nextQuestion = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setMaximumSize(new java.awt.Dimension(370, 640));
+        setMinimumSize(new java.awt.Dimension(370, 640));
+        setPreferredSize(new java.awt.Dimension(370, 640));
+        getContentPane().setLayout(null);
 
-        jButton1.setText("Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.setBackground(new java.awt.Color(255, 51, 51));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFile/back.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(10, 13, 30, 60);
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("Answer 1");
@@ -55,6 +66,8 @@ public class Quiz extends javax.swing.JFrame {
                 jRadioButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jRadioButton1);
+        jRadioButton1.setBounds(30, 360, 90, 30);
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("Answer 2");
@@ -63,6 +76,8 @@ public class Quiz extends javax.swing.JFrame {
                 jRadioButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jRadioButton2);
+        jRadioButton2.setBounds(30, 390, 90, 30);
 
         buttonGroup1.add(jRadioButton3);
         jRadioButton3.setText("Answer 3");
@@ -71,6 +86,8 @@ public class Quiz extends javax.swing.JFrame {
                 jRadioButton3ActionPerformed(evt);
             }
         });
+        getContentPane().add(jRadioButton3);
+        jRadioButton3.setBounds(30, 420, 90, 30);
 
         buttonGroup1.add(jRadioButton4);
         jRadioButton4.setText("Answer 4");
@@ -79,6 +96,8 @@ public class Quiz extends javax.swing.JFrame {
                 jRadioButton4ActionPerformed(evt);
             }
         });
+        getContentPane().add(jRadioButton4);
+        jRadioButton4.setBounds(30, 450, 90, 30);
 
         submitAnswer.setText("Submit");
         submitAnswer.addActionListener(new java.awt.event.ActionListener() {
@@ -86,71 +105,27 @@ public class Quiz extends javax.swing.JFrame {
                 submitAnswerActionPerformed(evt);
             }
         });
+        getContentPane().add(submitAnswer);
+        submitAnswer.setBounds(30, 550, 65, 23);
 
         nextQuestion.setText("Next");
+        getContentPane().add(nextQuestion);
+        nextQuestion.setBounds(260, 550, 55, 23);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("A member of your family has accidentally cut their hand on\na knife in the sink while washing up. They are now \nbleeding heavily from a large wound. What should you do?\n\tChoose 1.......");
+        jTextArea1.setText("A member of your family has accidentally cut their hand on\na knife in the sink while washing up. They are now \nbleeding heavily from a large wound. What should you do?\nChoose 1.......");
         jScrollPane1.setViewportView(jTextArea1);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(submitAnswer)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 177, Short.MAX_VALUE)
-                        .addComponent(nextQuestion))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton2)
-                            .addComponent(jRadioButton1)
-                            .addComponent(jRadioButton3)
-                            .addComponent(jRadioButton4))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(27, 27, 27))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 259, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(jRadioButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton4)
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(submitAnswer)
-                    .addComponent(nextQuestion))
-                .addGap(33, 33, 33))
-        );
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(10, 170, 340, 140);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFile/quizScreen.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(-20, -10, 420, 150);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new Menu().setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         userAnswer = "1";
@@ -180,6 +155,11 @@ public class Quiz extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_submitAnswerActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        new Menu().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -218,7 +198,8 @@ public class Quiz extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;

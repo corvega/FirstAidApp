@@ -9,7 +9,8 @@ public class Menu extends javax.swing.JFrame {
      * Creates new form Menu
      */
     public Menu() {
-        initComponents(); 
+        initComponents();
+        getContentPane().setBackground(new java.awt.Color(255, 255, 255));
     }
     
     /**
@@ -116,11 +117,6 @@ public class Menu extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void PreviewResultsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreviewResultsButtonActionPerformed
-        //new PreviewResults().setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_PreviewResultsButtonActionPerformed
-
     private void FirstAidLessonButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstAidLessonButtonActionPerformed
         new Lesson().setVisible(true);
         this.setVisible(false);
@@ -140,6 +136,11 @@ public class Menu extends javax.swing.JFrame {
         new Emergency().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_EmergencyButtonActionPerformed
+
+    private void PreviewResultsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreviewResultsButtonActionPerformed
+        //new PreviewResults().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_PreviewResultsButtonActionPerformed
     
 
     
