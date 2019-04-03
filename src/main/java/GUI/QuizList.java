@@ -36,18 +36,47 @@ public class QuizList extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        CPRButton.setBackground(new java.awt.Color(249, 6, 6));
         CPRButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/CPR LessonList.png"))); // NOI18N
-        CPRButton.setLabel("");
         CPRButton.setMaximumSize(new java.awt.Dimension(159, 169));
         CPRButton.setMinimumSize(new java.awt.Dimension(159, 169));
+        CPRButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CPRButtonActionPerformed(evt);
+            }
+        });
 
+        UnresponsiveBreathingButton.setBackground(new java.awt.Color(249, 6, 6));
         UnresponsiveBreathingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Unresponsive-Breathing LessonList.png"))); // NOI18N
+        UnresponsiveBreathingButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UnresponsiveBreathingButtonActionPerformed(evt);
+            }
+        });
 
+        HeavyBleedingButton.setBackground(new java.awt.Color(249, 6, 6));
         HeavyBleedingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Heavy-Bleeding LessonList.png"))); // NOI18N
+        HeavyBleedingButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HeavyBleedingButtonActionPerformed(evt);
+            }
+        });
 
+        BurnsButton.setBackground(new java.awt.Color(249, 6, 6));
         BurnsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Burns LessonList.png"))); // NOI18N
+        BurnsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BurnsButtonActionPerformed(evt);
+            }
+        });
 
+        ChokingButton.setBackground(new java.awt.Color(249, 6, 6));
         ChokingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Choking LessonList.png"))); // NOI18N
+        ChokingButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChokingButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -84,6 +113,31 @@ public class QuizList extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void CPRButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CPRButtonActionPerformed
+        //new Quiz().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_CPRButtonActionPerformed
+
+    private void UnresponsiveBreathingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnresponsiveBreathingButtonActionPerformed
+        //new Quiz().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_UnresponsiveBreathingButtonActionPerformed
+
+    private void HeavyBleedingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeavyBleedingButtonActionPerformed
+        //new Quiz().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_HeavyBleedingButtonActionPerformed
+
+    private void BurnsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BurnsButtonActionPerformed
+        //new Quiz().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BurnsButtonActionPerformed
+
+    private void ChokingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChokingButtonActionPerformed
+        //new Quiz().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_ChokingButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -91,7 +145,7 @@ public class QuizList extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
