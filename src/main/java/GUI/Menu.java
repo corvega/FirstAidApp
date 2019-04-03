@@ -31,6 +31,7 @@ public class Menu extends javax.swing.JFrame {
         ScoresButton = new javax.swing.JButton();
         EmergencyButton = new javax.swing.JButton();
         SettingsButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
@@ -39,6 +40,7 @@ public class Menu extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(360, 640));
         setResizable(false);
         setSize(new java.awt.Dimension(360, 640));
+        getContentPane().setLayout(null);
 
         LessonButton.setBackground(new java.awt.Color(249, 6, 6));
         LessonButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lesson/iconLessons_transparent.png"))); // NOI18N
@@ -50,6 +52,8 @@ public class Menu extends javax.swing.JFrame {
                 LessonButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(LessonButton);
+        LessonButton.setBounds(42, 68, 108, 129);
 
         QuizButton.setBackground(new java.awt.Color(249, 6, 6));
         QuizButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Quiz/iconQuiz_transparent.png"))); // NOI18N
@@ -59,6 +63,8 @@ public class Menu extends javax.swing.JFrame {
                 QuizButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(QuizButton);
+        QuizButton.setBounds(210, 68, 108, 129);
 
         PreviewResultsButton.setBackground(new java.awt.Color(249, 6, 6));
         PreviewResultsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Results/iconResults_transparent.png"))); // NOI18N
@@ -68,6 +74,8 @@ public class Menu extends javax.swing.JFrame {
                 PreviewResultsButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(PreviewResultsButton);
+        PreviewResultsButton.setBounds(42, 247, 108, 129);
 
         ScoresButton.setBackground(new java.awt.Color(249, 6, 6));
         ScoresButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Scores/iconScores_transparent.png"))); // NOI18N
@@ -76,6 +84,8 @@ public class Menu extends javax.swing.JFrame {
                 ScoresButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(ScoresButton);
+        ScoresButton.setBounds(210, 247, 108, 129);
 
         EmergencyButton.setBackground(new java.awt.Color(249, 6, 6));
         EmergencyButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Emergency/iconEmergency_transparent.png"))); // NOI18N
@@ -84,6 +94,8 @@ public class Menu extends javax.swing.JFrame {
                 EmergencyButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(EmergencyButton);
+        EmergencyButton.setBounds(42, 426, 108, 129);
 
         SettingsButton.setBackground(new java.awt.Color(249, 6, 6));
         SettingsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/iconSettings_transparent.png"))); // NOI18N
@@ -92,41 +104,12 @@ public class Menu extends javax.swing.JFrame {
                 SettingsButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(SettingsButton);
+        SettingsButton.setBounds(210, 426, 108, 129);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PreviewResultsButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LessonButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(EmergencyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(QuizButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ScoresButton, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SettingsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LessonButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(QuizButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PreviewResultsButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ScoresButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(EmergencyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SettingsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(85, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/menuHeader.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(-20, 0, 380, 30);
 
         pack();
         setLocationRelativeTo(null);
@@ -148,7 +131,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_ScoresButtonActionPerformed
 
     private void EmergencyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmergencyButtonActionPerformed
-        //new Emergency().setVisible(true);
+        new Emergency().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_EmergencyButtonActionPerformed
 
@@ -162,7 +145,7 @@ public class Menu extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_SettingsButtonActionPerformed
     
-    public void defaultColoursMenu(){
+    public void defaultColoursSettings(){
         LessonButton.setBackground(new Color(249, 6, 6));
         QuizButton.setBackground(new Color(249, 6, 6));
         PreviewResultsButton.setBackground(new Color(249, 6, 6));
@@ -171,7 +154,7 @@ public class Menu extends javax.swing.JFrame {
         SettingsButton.setBackground(new Color(249, 6, 6));
     }
     
-    public void DeuteranopiaColoursMenu(){
+    public void DeuteranopiaColoursSettings(){
         LessonButton.setBackground(new Color(238, 43, 150));
         QuizButton.setBackground(new Color(238, 43, 150));
         PreviewResultsButton.setBackground(new Color(238, 43, 150));
@@ -181,7 +164,7 @@ public class Menu extends javax.swing.JFrame {
 
     }
     
-    public void ProtanopiaColoursMenu(){
+    public void ProtanopiaColoursSettings(){
         LessonButton.setBackground(new Color(250, 56, 143));
         QuizButton.setBackground(new Color(250, 56, 143));
         PreviewResultsButton.setBackground(new Color(250, 56, 143));
@@ -190,7 +173,7 @@ public class Menu extends javax.swing.JFrame {
         SettingsButton.setBackground(new Color(250, 56, 143));
     }
     
-    public void TritanopiaColoursMenu(){
+    public void TritanopiaColoursSettings(){
         LessonButton.setBackground(new Color(255, 0, 0));
         QuizButton.setBackground(new Color(255, 0, 0));
         PreviewResultsButton.setBackground(new Color(255, 0, 0));
@@ -249,6 +232,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton QuizButton;
     private javax.swing.JButton ScoresButton;
     private javax.swing.JButton SettingsButton;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 
 }

@@ -28,9 +28,9 @@ public class Scores extends javax.swing.JFrame {
         Session1Panel.setSize(new Dimension((QuizValue*3), 30));
         Session1ScoreLabel.setText(QuizValue+"%");
         if (QuizValue<40) {
-            //Session1Panel.setBackground(colourChecker("red"));
+            Session1Panel.setBackground(new Color(249, 6, 6));
         } else if (QuizValue>80) {
-            //Session1Panel.setBackground(colourChecker("red"));
+            Session1Panel.setBackground(new Color(0, 128, 0));
         } else {
             Session1Panel.setBackground(new Color(255, 255, 102));
         }
@@ -40,9 +40,9 @@ public class Scores extends javax.swing.JFrame {
         Session2Panel.setSize(new Dimension((QuizValue*3), 30));
         Session2ScoreLabel.setText(QuizValue+"%");
         if (QuizValue<40) {
-            //Session2Panel.setBackground(colourChecker("red"));
+            Session2Panel.setBackground(new Color(249, 6, 6));
         } else if (QuizValue>80) {
-            //Session2Panel.setBackground(colourChecker("green"));
+            Session2Panel.setBackground(new Color(0, 128, 0));
         } else {
             Session2Panel.setBackground(new Color(255, 255, 102));
         }
@@ -52,9 +52,9 @@ public class Scores extends javax.swing.JFrame {
         Session3Panel.setSize(new Dimension((QuizValue*3), 30));
         Session3ScoreLabel.setText(QuizValue+"%");
         if (QuizValue<40) {
-            //Session3Panel.setBackground(colourChecker("red"));
+            Session3Panel.setBackground(new Color(249, 6, 6));
         } else if (QuizValue>80) {
-            //Session3Panel.setBackground(colourChecker("green"));
+            Session3Panel.setBackground(new Color(0, 128, 0));
         } else {
             Session3Panel.setBackground(new Color(255, 255, 102));
         }
@@ -81,18 +81,15 @@ public class Scores extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setLocationByPlatform(true);
-        setPreferredSize(new java.awt.Dimension(360, 640));
-        setSize(new java.awt.Dimension(360, 640));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
             }
         });
-        getContentPane().setLayout(null);
 
         Session1Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session1Label.setText("Quiz - Session 1");
+<<<<<<< HEAD
         getContentPane().add(Session1Label);
         Session1Label.setBounds(15, 161, 300, 43);
 
@@ -105,6 +102,14 @@ public class Scores extends javax.swing.JFrame {
         Session2Label.setText("Quiz - Session 2");
         getContentPane().add(Session2Label);
         Session2Label.setBounds(15, 316, 287, 43);
+=======
+
+        Session3Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
+        Session3Label.setText("Quiz - Session 3");
+
+        Session2Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
+        Session2Label.setText("Quiz - Session 2");
+>>>>>>> a6d2bebc1e2a882cd4e7be24d1eeb0dfc2d3f94e
 
         Session3Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session3Panel.setMaximumSize(new java.awt.Dimension(300, 30));
@@ -126,9 +131,12 @@ public class Scores extends javax.swing.JFrame {
             .addComponent(Session3ScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
+<<<<<<< HEAD
         getContentPane().add(Session3Panel);
         Session3Panel.setBounds(18, 535, 300, 30);
 
+=======
+>>>>>>> a6d2bebc1e2a882cd4e7be24d1eeb0dfc2d3f94e
         Session1Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session1Panel.setMaximumSize(new java.awt.Dimension(300, 30));
         Session1Panel.setMinimumSize(new java.awt.Dimension(0, 30));
@@ -149,9 +157,12 @@ public class Scores extends javax.swing.JFrame {
             .addComponent(Session1ScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
+<<<<<<< HEAD
         getContentPane().add(Session1Panel);
         Session1Panel.setBounds(18, 211, 300, 30);
 
+=======
+>>>>>>> a6d2bebc1e2a882cd4e7be24d1eeb0dfc2d3f94e
         Session2Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session2Panel.setMaximumSize(new java.awt.Dimension(300, 30));
         Session2Panel.setMinimumSize(new java.awt.Dimension(0, 30));
@@ -172,8 +183,50 @@ public class Scores extends javax.swing.JFrame {
             .addComponent(Session2ScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
+<<<<<<< HEAD
         getContentPane().add(Session2Panel);
         Session2Panel.setBounds(18, 374, 300, 30);
+=======
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(Session1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(Session1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(Session2Label))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(Session2Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(Session3Label, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(Session3Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addComponent(Session1Label)
+                .addGap(6, 6, 6)
+                .addComponent(Session1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73)
+                .addComponent(Session2Label)
+                .addGap(14, 14, 14)
+                .addComponent(Session2Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65)
+                .addComponent(Session3Label)
+                .addGap(12, 12, 12)
+                .addComponent(Session3Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+>>>>>>> a6d2bebc1e2a882cd4e7be24d1eeb0dfc2d3f94e
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -184,6 +237,7 @@ public class Scores extends javax.swing.JFrame {
         ProgressBar3(32);
     }//GEN-LAST:event_formWindowActivated
 
+<<<<<<< HEAD
     
     
     
@@ -244,6 +298,8 @@ public class Scores extends javax.swing.JFrame {
         }
     }
     
+=======
+>>>>>>> a6d2bebc1e2a882cd4e7be24d1eeb0dfc2d3f94e
     /**
      * @param args the command line arguments
      */

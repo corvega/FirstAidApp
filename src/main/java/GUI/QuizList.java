@@ -5,8 +5,6 @@
  */
 package GUI;
 
-import java.awt.Color;
-
 /**
  *
  * @author up839921
@@ -30,16 +28,11 @@ public class QuizList extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        CPRButton = new javax.swing.JButton();
-        UnresponsiveBreathingButton = new javax.swing.JButton();
-        HeavyBleedingButton = new javax.swing.JButton();
-        BurnsButton = new javax.swing.JButton();
-        ChokingButton = new javax.swing.JButton();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setLocationByPlatform(true);
 
+<<<<<<< HEAD
         CPRButton.setBackground(new java.awt.Color(249, 6, 6));
         CPRButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/CPR LessonList.png"))); // NOI18N
         CPRButton.setMaximumSize(new java.awt.Dimension(159, 169));
@@ -95,10 +88,13 @@ public class QuizList extends javax.swing.JFrame {
             }
         });
 
+=======
+>>>>>>> a6d2bebc1e2a882cd4e7be24d1eeb0dfc2d3f94e
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,82 +119,18 @@ public class QuizList extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ChokingButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52))
+=======
+            .addGap(0, 360, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 640, Short.MAX_VALUE)
+>>>>>>> a6d2bebc1e2a882cd4e7be24d1eeb0dfc2d3f94e
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CPRButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CPRButtonActionPerformed
-        //new Quiz().setVisible(true);
-        //Set which quiz to go to here
-        this.setVisible(false);
-    }//GEN-LAST:event_CPRButtonActionPerformed
-
-    private void UnresponsiveBreathingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnresponsiveBreathingButtonActionPerformed
-        //new Quiz().setVisible(true);
-        //Set which quiz to go to here
-        this.setVisible(false);
-    }//GEN-LAST:event_UnresponsiveBreathingButtonActionPerformed
-
-    private void HeavyBleedingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeavyBleedingButtonActionPerformed
-        //new Quiz().setVisible(true);
-        //Set which quiz to go to here
-        this.setVisible(false);
-    }//GEN-LAST:event_HeavyBleedingButtonActionPerformed
-
-    private void BurnsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BurnsButtonActionPerformed
-        //new Quiz().setVisible(true);
-        //Set which quiz to go to here
-        this.setVisible(false);
-    }//GEN-LAST:event_BurnsButtonActionPerformed
-
-    private void ChokingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChokingButtonActionPerformed
-        //new Quiz().setVisible(true);
-        //Set which quiz to go to here
-        this.setVisible(false);
-    }//GEN-LAST:event_ChokingButtonActionPerformed
-
-    
-    
-    
-    
-    public void defaultColoursQuizList(){
-        //Header.setBackground(new Color(249, 6, 6));
-        CPRButton.setBackground(new Color(249, 6, 6));
-        UnresponsiveBreathingButton.setBackground(new Color(249, 6, 6));
-        HeavyBleedingButton.setBackground(new Color(249, 6, 6));
-        BurnsButton.setBackground(new Color(249, 6, 6));
-        ChokingButton.setBackground(new Color(249, 6, 6));
-    }
-    
-    public void DeuteranopiaColoursQuizList(){
-        //Header.setBackground(new Color(238, 43, 150));
-        CPRButton.setBackground(new Color(238, 43, 150));
-        UnresponsiveBreathingButton.setBackground(new Color(238, 43, 150));
-        HeavyBleedingButton.setBackground(new Color(238, 43, 150));
-        BurnsButton.setBackground(new Color(238, 43, 150));
-        ChokingButton.setBackground(new Color(238, 43, 150));
-    }
-    
-    public void ProtanopiaColoursQuizList(){
-        //Header.setBackground(new Color(250, 56, 143));
-        CPRButton.setBackground(new Color(250, 56, 143));
-        UnresponsiveBreathingButton.setBackground(new Color(250, 56, 143));
-        HeavyBleedingButton.setBackground(new Color(250, 56, 143));
-        BurnsButton.setBackground(new Color(250, 56, 143));
-        ChokingButton.setBackground(new Color(250, 56, 143));
-    }
-    
-    public void TritanopiaColoursQuizList(){
-        //Header.setBackground(new Color(255, 0, 0));
-        CPRButton.setBackground(new Color(255, 0, 0));
-        UnresponsiveBreathingButton.setBackground(new Color(255, 0, 0));
-        HeavyBleedingButton.setBackground(new Color(255, 0, 0));
-        BurnsButton.setBackground(new Color(255, 0, 0));
-        ChokingButton.setBackground(new Color(255, 0, 0));
-    }
-    
-    
     /**
      * @param args the command line arguments
      */
@@ -235,10 +167,5 @@ public class QuizList extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BurnsButton;
-    private javax.swing.JButton CPRButton;
-    private javax.swing.JButton ChokingButton;
-    private javax.swing.JButton HeavyBleedingButton;
-    private javax.swing.JButton UnresponsiveBreathingButton;
     // End of variables declaration//GEN-END:variables
 }

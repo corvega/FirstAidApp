@@ -27,6 +27,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -38,10 +39,14 @@
               </Group>
               <EmptySpace pref="37" max="32767" attributes="0"/>
           </Group>
+=======
+          <EmptySpace min="0" pref="360" max="32767" attributes="0"/>
+>>>>>>> a6d2bebc1e2a882cd4e7be24d1eeb0dfc2d3f94e
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace pref="64" max="32767" attributes="0"/>
               <Component id="CPRButton" min="-2" max="-2" attributes="0"/>
@@ -170,4 +175,10 @@
       </Events>
     </Component>
   </SubComponents>
+=======
+          <EmptySpace min="0" pref="640" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+>>>>>>> a6d2bebc1e2a882cd4e7be24d1eeb0dfc2d3f94e
 </Form>
