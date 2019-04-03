@@ -10,6 +10,7 @@ public class Emergency extends javax.swing.JFrame {
     public Emergency() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255, 255, 255));
+        setLocationRelativeTo(null);
     }
 
     /**

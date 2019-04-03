@@ -16,6 +16,7 @@ public class Splashscreen extends javax.swing.JFrame {
      */
     public Splashscreen() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -61,7 +62,7 @@ public class Splashscreen extends javax.swing.JFrame {
                     
                 }
         this.dispose();
-        
+        new Menu().setVisible(true);
         
     }//GEN-LAST:event_formWindowActivated
 
