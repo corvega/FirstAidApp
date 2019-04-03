@@ -3,6 +3,7 @@ package GUI;
 
 import java.awt.Color;
 import java.sql.*;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 
@@ -32,19 +33,24 @@ public class Quiz extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         jButton2 = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        quizAnswer1 = new javax.swing.JRadioButton();
+        quizAnswer2 = new javax.swing.JRadioButton();
+        quizAnswer3 = new javax.swing.JRadioButton();
+        quizAnswer4 = new javax.swing.JRadioButton();
         submitAnswer = new javax.swing.JButton();
         nextQuestion = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
+        quizImage = new javax.swing.JLabel();
+        quizQuestion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(370, 640));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
         getContentPane().setLayout(null);
 
         jButton2.setBackground(new java.awt.Color(255, 51, 51));
@@ -57,45 +63,45 @@ public class Quiz extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(20, 40, 30, 60);
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("Answer 1");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(quizAnswer1);
+        quizAnswer1.setText("Answer 1");
+        quizAnswer1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                quizAnswer1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(30, 360, 130, 30);
+        getContentPane().add(quizAnswer1);
+        quizAnswer1.setBounds(30, 410, 130, 30);
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Answer 2");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(quizAnswer2);
+        quizAnswer2.setText("Answer 2");
+        quizAnswer2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                quizAnswer2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(30, 390, 130, 30);
+        getContentPane().add(quizAnswer2);
+        quizAnswer2.setBounds(30, 440, 130, 30);
 
-        buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setText("Answer 3");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(quizAnswer3);
+        quizAnswer3.setText("Answer 3");
+        quizAnswer3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                quizAnswer3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButton3);
-        jRadioButton3.setBounds(30, 420, 130, 30);
+        getContentPane().add(quizAnswer3);
+        quizAnswer3.setBounds(30, 470, 130, 30);
 
-        buttonGroup1.add(jRadioButton4);
-        jRadioButton4.setText("Answer 4");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(quizAnswer4);
+        quizAnswer4.setText("Answer 4");
+        quizAnswer4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                quizAnswer4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButton4);
-        jRadioButton4.setBounds(30, 450, 130, 30);
+        getContentPane().add(quizAnswer4);
+        quizAnswer4.setBounds(30, 500, 130, 30);
 
         submitAnswer.setText("Submit");
         submitAnswer.addActionListener(new java.awt.event.ActionListener() {
@@ -110,36 +116,37 @@ public class Quiz extends javax.swing.JFrame {
         getContentPane().add(nextQuestion);
         nextQuestion.setBounds(260, 550, 65, 29);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("A member of your family has accidentally cut their hand on\na knife in the sink while washing up. They are now \nbleeding heavily from a large wound. What should you do?\nChoose 1.......");
-        jScrollPane1.setViewportView(jTextArea1);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 170, 340, 140);
-
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Quiz/quizScreen.png"))); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(-20, -10, 420, 190);
 
+        quizImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        quizImage.setText("insert image here");
+        getContentPane().add(quizImage);
+        quizImage.setBounds(70, 140, 210, 130);
+
+        quizQuestion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(quizQuestion);
+        quizQuestion.setBounds(20, 220, 310, 160);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void quizAnswer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quizAnswer1ActionPerformed
         userAnswer = "1";
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_quizAnswer1ActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void quizAnswer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quizAnswer2ActionPerformed
         userAnswer = "2";
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_quizAnswer2ActionPerformed
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    private void quizAnswer3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quizAnswer3ActionPerformed
         userAnswer = "3";
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    }//GEN-LAST:event_quizAnswer3ActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void quizAnswer4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quizAnswer4ActionPerformed
         userAnswer = "4";
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    }//GEN-LAST:event_quizAnswer4ActionPerformed
 
     private void submitAnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitAnswerActionPerformed
         try {
@@ -155,9 +162,18 @@ public class Quiz extends javax.swing.JFrame {
     }//GEN-LAST:event_submitAnswerActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-    //    new Menu().setVisible(true);
+        new Menu().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        //quizImage.setIcon(new ImageIcon(getClass().getResource(insert imagefile path here)));  //remove the texts within the label to remove the generated code
+        //quizQuestion.setText(insert question here);
+        //quizAnswer1.setText("Answer 1");
+        //quizAnswer2.setText("Answer 2");
+        //quizAnswer3.setText("Answer 3");
+        //quizAnswer4.setText("Answer 4");
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
@@ -199,13 +215,13 @@ public class Quiz extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton nextQuestion;
+    private javax.swing.JRadioButton quizAnswer1;
+    private javax.swing.JRadioButton quizAnswer2;
+    private javax.swing.JRadioButton quizAnswer3;
+    private javax.swing.JRadioButton quizAnswer4;
+    private javax.swing.JLabel quizImage;
+    private javax.swing.JLabel quizQuestion;
     private javax.swing.JButton submitAnswer;
     // End of variables declaration//GEN-END:variables
 
