@@ -39,7 +39,7 @@ public class LessonList extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         CPRButton.setBackground(new java.awt.Color(249, 6, 6));
-        CPRButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFiles/CPR LessonList.png"))); // NOI18N
+        CPRButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/CPR LessonList.png"))); // NOI18N
         CPRButton.setMaximumSize(new java.awt.Dimension(159, 169));
         CPRButton.setMinimumSize(new java.awt.Dimension(159, 169));
         CPRButton.setPreferredSize(new java.awt.Dimension(290, 90));
@@ -50,7 +50,7 @@ public class LessonList extends javax.swing.JFrame {
         });
 
         UnresponsiveBreathingButton.setBackground(new java.awt.Color(249, 6, 6));
-        UnresponsiveBreathingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFiles/Unresponsive-Breathing LessonList.png"))); // NOI18N
+        UnresponsiveBreathingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Unresponsive-Breathing LessonList.png"))); // NOI18N
         UnresponsiveBreathingButton.setMaximumSize(new java.awt.Dimension(159, 169));
         UnresponsiveBreathingButton.setMinimumSize(new java.awt.Dimension(159, 169));
         UnresponsiveBreathingButton.setPreferredSize(new java.awt.Dimension(290, 90));
@@ -61,7 +61,7 @@ public class LessonList extends javax.swing.JFrame {
         });
 
         HeavyBleedingButton.setBackground(new java.awt.Color(249, 6, 6));
-        HeavyBleedingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFiles/Heavy-Bleeding LessonList.png"))); // NOI18N
+        HeavyBleedingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Heavy-Bleeding LessonList.png"))); // NOI18N
         HeavyBleedingButton.setMaximumSize(new java.awt.Dimension(159, 169));
         HeavyBleedingButton.setMinimumSize(new java.awt.Dimension(159, 169));
         HeavyBleedingButton.setPreferredSize(new java.awt.Dimension(290, 90));
@@ -72,7 +72,7 @@ public class LessonList extends javax.swing.JFrame {
         });
 
         BurnsButton.setBackground(new java.awt.Color(249, 6, 6));
-        BurnsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFiles/Burns LessonList.png"))); // NOI18N
+        BurnsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Burns LessonList.png"))); // NOI18N
         BurnsButton.setMaximumSize(new java.awt.Dimension(159, 169));
         BurnsButton.setMinimumSize(new java.awt.Dimension(159, 169));
         BurnsButton.setPreferredSize(new java.awt.Dimension(290, 90));
@@ -83,7 +83,7 @@ public class LessonList extends javax.swing.JFrame {
         });
 
         ChokingButton.setBackground(new java.awt.Color(249, 6, 6));
-        ChokingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFiles/Choking LessonList.png"))); // NOI18N
+        ChokingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Choking LessonList.png"))); // NOI18N
         ChokingButton.setMaximumSize(new java.awt.Dimension(159, 169));
         ChokingButton.setMinimumSize(new java.awt.Dimension(159, 169));
         ChokingButton.setPreferredSize(new java.awt.Dimension(290, 90));

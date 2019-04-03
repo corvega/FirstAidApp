@@ -61,7 +61,7 @@
           <Color blue="6" green="6" red="f9" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/ImageFiles/CPR LessonList.png"/>
+          <Image iconType="3" name="/LessonList/CPR LessonList.png"/>
         </Property>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[159, 169]"/>
@@ -83,7 +83,7 @@
           <Color blue="6" green="6" red="f9" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/ImageFiles/Unresponsive-Breathing LessonList.png"/>
+          <Image iconType="3" name="/LessonList/Unresponsive-Breathing LessonList.png"/>
         </Property>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[159, 169]"/>
@@ -105,7 +105,7 @@
           <Color blue="6" green="6" red="f9" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/ImageFiles/Heavy-Bleeding LessonList.png"/>
+          <Image iconType="3" name="/LessonList/Heavy-Bleeding LessonList.png"/>
         </Property>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[159, 169]"/>
@@ -127,7 +127,7 @@
           <Color blue="6" green="6" red="f9" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/ImageFiles/Burns LessonList.png"/>
+          <Image iconType="3" name="/LessonList/Burns LessonList.png"/>
         </Property>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[159, 169]"/>
@@ -149,7 +149,7 @@
           <Color blue="6" green="6" red="f9" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/ImageFiles/Choking LessonList.png"/>
+          <Image iconType="3" name="/LessonList/Choking LessonList.png"/>
         </Property>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[159, 169]"/>
