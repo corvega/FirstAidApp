@@ -161,7 +161,7 @@ public class Menu extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_SettingsButtonActionPerformed
     
-    public void defaultColoursSettings(){
+    public void defaultColoursMenu(){
         LessonButton.setBackground(new Color(249, 6, 6));
         QuizButton.setBackground(new Color(249, 6, 6));
         PreviewResultsButton.setBackground(new Color(249, 6, 6));
@@ -170,7 +170,7 @@ public class Menu extends javax.swing.JFrame {
         SettingsButton.setBackground(new Color(249, 6, 6));
     }
     
-    public void DeuteranopiaColoursSettings(){
+    public void DeuteranopiaColoursMenu(){
         LessonButton.setBackground(new Color(238, 43, 150));
         QuizButton.setBackground(new Color(238, 43, 150));
         PreviewResultsButton.setBackground(new Color(238, 43, 150));
@@ -180,7 +180,7 @@ public class Menu extends javax.swing.JFrame {
 
     }
     
-    public void ProtanopiaColoursSettings(){
+    public void ProtanopiaColoursMenu(){
         LessonButton.setBackground(new Color(250, 56, 143));
         QuizButton.setBackground(new Color(250, 56, 143));
         PreviewResultsButton.setBackground(new Color(250, 56, 143));
@@ -189,7 +189,7 @@ public class Menu extends javax.swing.JFrame {
         SettingsButton.setBackground(new Color(250, 56, 143));
     }
     
-    public void TritanopiaColoursSettings(){
+    public void TritanopiaColoursMenu(){
         LessonButton.setBackground(new Color(255, 0, 0));
         QuizButton.setBackground(new Color(255, 0, 0));
         PreviewResultsButton.setBackground(new Color(255, 0, 0));

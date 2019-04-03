@@ -5,6 +5,8 @@
  */
 package GUI;
 
+import java.awt.Color;
+
 /**
  *
  * @author up839921
@@ -126,29 +128,75 @@ public class LessonList extends javax.swing.JFrame {
 
     private void CPRButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CPRButtonActionPerformed
         //new Lesson().setVisible(true);
+        //Set which lesson to go to here
         this.setVisible(false);
     }//GEN-LAST:event_CPRButtonActionPerformed
 
     private void UnresponsiveBreathingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnresponsiveBreathingButtonActionPerformed
         //new Lesson().setVisible(true);
+        //Set which lesson to go to here
         this.setVisible(false);
     }//GEN-LAST:event_UnresponsiveBreathingButtonActionPerformed
 
     private void HeavyBleedingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeavyBleedingButtonActionPerformed
         //new Lesson().setVisible(true);
+        //Set which lesson to go to here
         this.setVisible(false);
     }//GEN-LAST:event_HeavyBleedingButtonActionPerformed
 
     private void BurnsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BurnsButtonActionPerformed
         //new Lesson().setVisible(true);
+        //Set which lesson to go to here
         this.setVisible(false);
     }//GEN-LAST:event_BurnsButtonActionPerformed
 
     private void ChokingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChokingButtonActionPerformed
         //new Lesson().setVisible(true);
+        //Set which lesson to go to here
         this.setVisible(false);
     }//GEN-LAST:event_ChokingButtonActionPerformed
 
+    
+    
+    
+    
+    public void defaultColoursLessonList(){
+        //Header.setBackground(new Color(249, 6, 6));
+        CPRButton.setBackground(new Color(249, 6, 6));
+        UnresponsiveBreathingButton.setBackground(new Color(249, 6, 6));
+        HeavyBleedingButton.setBackground(new Color(249, 6, 6));
+        BurnsButton.setBackground(new Color(249, 6, 6));
+        ChokingButton.setBackground(new Color(249, 6, 6));
+    }
+    
+    public void DeuteranopiaColoursLessonList(){
+        //Header.setBackground(new Color(238, 43, 150));
+        CPRButton.setBackground(new Color(238, 43, 150));
+        UnresponsiveBreathingButton.setBackground(new Color(238, 43, 150));
+        HeavyBleedingButton.setBackground(new Color(238, 43, 150));
+        BurnsButton.setBackground(new Color(238, 43, 150));
+        ChokingButton.setBackground(new Color(238, 43, 150));
+    }
+    
+    public void ProtanopiaColoursLessonList(){
+        //Header.setBackground(new Color(250, 56, 143));
+        CPRButton.setBackground(new Color(250, 56, 143));
+        UnresponsiveBreathingButton.setBackground(new Color(250, 56, 143));
+        HeavyBleedingButton.setBackground(new Color(250, 56, 143));
+        BurnsButton.setBackground(new Color(250, 56, 143));
+        ChokingButton.setBackground(new Color(250, 56, 143));
+    }
+    
+    public void TritanopiaColoursLessonList(){
+        //Header.setBackground(new Color(255, 0, 0));
+        CPRButton.setBackground(new Color(255, 0, 0));
+        UnresponsiveBreathingButton.setBackground(new Color(255, 0, 0));
+        HeavyBleedingButton.setBackground(new Color(255, 0, 0));
+        BurnsButton.setBackground(new Color(255, 0, 0));
+        ChokingButton.setBackground(new Color(255, 0, 0));
+    }
+    
+    
     /**
      * @param args the command line arguments
      */

@@ -28,9 +28,9 @@ public class Scores extends javax.swing.JFrame {
         Session1Panel.setSize(new Dimension((QuizValue*3), 30));
         Session1ScoreLabel.setText(QuizValue+"%");
         if (QuizValue<40) {
-            Session1Panel.setBackground(new Color(249, 6, 6));
+            //Session1Panel.setBackground(colourChecker("red"));
         } else if (QuizValue>80) {
-            Session1Panel.setBackground(new Color(0, 128, 0));
+            //Session1Panel.setBackground(colourChecker("red"));
         } else {
             Session1Panel.setBackground(new Color(255, 255, 102));
         }
@@ -40,9 +40,9 @@ public class Scores extends javax.swing.JFrame {
         Session2Panel.setSize(new Dimension((QuizValue*3), 30));
         Session2ScoreLabel.setText(QuizValue+"%");
         if (QuizValue<40) {
-            Session2Panel.setBackground(new Color(249, 6, 6));
+            //Session2Panel.setBackground(colourChecker("red"));
         } else if (QuizValue>80) {
-            Session2Panel.setBackground(new Color(0, 128, 0));
+            //Session2Panel.setBackground(colourChecker("green"));
         } else {
             Session2Panel.setBackground(new Color(255, 255, 102));
         }
@@ -52,9 +52,9 @@ public class Scores extends javax.swing.JFrame {
         Session3Panel.setSize(new Dimension((QuizValue*3), 30));
         Session3ScoreLabel.setText(QuizValue+"%");
         if (QuizValue<40) {
-            Session3Panel.setBackground(new Color(249, 6, 6));
+            //Session3Panel.setBackground(colourChecker("red"));
         } else if (QuizValue>80) {
-            Session3Panel.setBackground(new Color(0, 128, 0));
+            //Session3Panel.setBackground(colourChecker("green"));
         } else {
             Session3Panel.setBackground(new Color(255, 255, 102));
         }
@@ -81,20 +81,30 @@ public class Scores extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setLocationByPlatform(true);
+        setPreferredSize(new java.awt.Dimension(360, 640));
+        setSize(new java.awt.Dimension(360, 640));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
             }
         });
+        getContentPane().setLayout(null);
 
         Session1Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session1Label.setText("Quiz - Session 1");
+        getContentPane().add(Session1Label);
+        Session1Label.setBounds(15, 161, 300, 44);
 
         Session3Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session3Label.setText("Quiz - Session 3");
+        getContentPane().add(Session3Label);
+        Session3Label.setBounds(15, 479, 300, 44);
 
         Session2Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session2Label.setText("Quiz - Session 2");
+        getContentPane().add(Session2Label);
+        Session2Label.setBounds(15, 316, 227, 44);
 
         Session3Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session3Panel.setMaximumSize(new java.awt.Dimension(300, 30));
@@ -116,6 +126,9 @@ public class Scores extends javax.swing.JFrame {
             .addComponent(Session3ScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
+        getContentPane().add(Session3Panel);
+        Session3Panel.setBounds(18, 535, 291, 30);
+
         Session1Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session1Panel.setMaximumSize(new java.awt.Dimension(300, 30));
         Session1Panel.setMinimumSize(new java.awt.Dimension(0, 30));
@@ -135,6 +148,9 @@ public class Scores extends javax.swing.JFrame {
             Session1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(Session1ScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
+
+        getContentPane().add(Session1Panel);
+        Session1Panel.setBounds(18, 211, 291, 30);
 
         Session2Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session2Panel.setMaximumSize(new java.awt.Dimension(300, 30));
@@ -156,45 +172,8 @@ public class Scores extends javax.swing.JFrame {
             .addComponent(Session2ScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(Session1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(Session1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(Session2Label))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(Session2Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(Session3Label, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(Session3Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(131, 131, 131)
-                .addComponent(Session1Label)
-                .addGap(6, 6, 6)
-                .addComponent(Session1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(73, 73, 73)
-                .addComponent(Session2Label)
-                .addGap(14, 14, 14)
-                .addComponent(Session2Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65)
-                .addComponent(Session3Label)
-                .addGap(12, 12, 12)
-                .addComponent(Session3Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        getContentPane().add(Session2Panel);
+        Session2Panel.setBounds(18, 374, 291, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -205,10 +184,70 @@ public class Scores extends javax.swing.JFrame {
         ProgressBar3(32);
     }//GEN-LAST:event_formWindowActivated
 
+    
+    
+    
+//    public void colourChecker(String colour) {
+//        if (defaultColours=true) {
+//            defaultColoursScores(colour);
+//        } else if (DeutranaopiaColours=true) {
+//            DeutranopiaColoursScores(colour);
+//        } else if (ProtanopiaColours=true) {
+//            ProtanopiaColoursScores(colour);
+//        } else if (TritanopiaColours=true)
+//            TritanopiaColoursScores(colour);
+//        }
+//    }
+    
+    
+    public void defaultColoursScores(String colour){
+        switch (colour) {
+            case "Red":
+                System.out.println("new Color(249, 0, 0)");
+            case "Green":
+                System.out.println("new Color(0, 128, 0)");
+            case "Blue":
+                System.out.println("new Color(77, 77, 255)");
+        }
+    }
+    
+    public void DeuteranopiaColoursScores(String colour){
+        switch (colour) {
+            case "Red":
+                System.out.println("new Color(238, 43, 150)");
+            case "Green":
+                System.out.println("new Color(0, 155, 33)");
+            case "Blue":
+                System.out.println("new Color(0, 64, 224)");
+        }
+    }
+    
+    public void ProtanopiaColoursScores(String colour){
+        switch (colour) {
+            case "Red":
+                System.out.println("new Color(250, 56, 143)");
+            case "Green":
+                System.out.println("new Color(0, 128, 28)");
+            case "Blue":
+                System.out.println("new Color(6, 68, 224)");
+        }
+    }
+
+    public void TritanopiaColoursScores(String colour){
+        switch (colour) {
+            case "Red":
+                System.out.println("new Color(255, 0, 0)");
+            case "Green":
+                System.out.println("new Color(0, 179, 60)");
+            case "Blue":
+                System.out.println("new Color(0, 0, 196)");
+        }
+
+    
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    //public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
