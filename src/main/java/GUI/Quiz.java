@@ -155,13 +155,8 @@ public class Quiz extends javax.swing.JFrame {
     }//GEN-LAST:event_submitAnswerActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-<<<<<<< HEAD
         //new Menu().setVisible(true);
         //this.setVisible(false);
-=======
-    //    new Menu().setVisible(true);
-        this.setVisible(false);
->>>>>>> fde9afd99ac6c8177aa3421558ace4531c5bd100
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -171,7 +166,7 @@ public class Quiz extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
