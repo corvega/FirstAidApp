@@ -1,19 +1,17 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package GUI;
 
-import java.awt.Color;
-import java.sql.*;
-import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
-
-
+/**
+ *
+ * @author usman
+ */
 public class Quiz extends javax.swing.JFrame {
 
-    Connection con = null;
-    PreparedStatement pst = null;
-    ResultSet rs = null;
     String userAnswer;
-
     /**
      * Creates new form Quiz
      */
@@ -32,194 +30,134 @@ public class Quiz extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-<<<<<<< HEAD
+        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        quizAnswer1 = new javax.swing.JRadioButton();
-        quizAnswer2 = new javax.swing.JRadioButton();
-        quizAnswer3 = new javax.swing.JRadioButton();
-        quizAnswer4 = new javax.swing.JRadioButton();
-=======
-        Back = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
->>>>>>> 98fa3d6f36dafbc805f526a327bfbe5690bf37ac
-        submitAnswer = new javax.swing.JButton();
-        nextQuestion = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-<<<<<<< HEAD
-        quizImage = new javax.swing.JLabel();
-        quizQuestion = new javax.swing.JLabel();
-=======
-        HeaderBackground = new javax.swing.JLabel();
->>>>>>> 98fa3d6f36dafbc805f526a327bfbe5690bf37ac
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        userAnswer1 = new javax.swing.JRadioButton();
+        userAnswer2 = new javax.swing.JRadioButton();
+        userAnswer3 = new javax.swing.JRadioButton();
+        userAnswer4 = new javax.swing.JRadioButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(370, 640));
-        addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowActivated(java.awt.event.WindowEvent evt) {
-                formWindowActivated(evt);
-            }
-        });
-        getContentPane().setLayout(null);
 
-        Back.setBackground(new java.awt.Color(255, 51, 51));
-        Back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/back.png"))); // NOI18N
-        Back.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("Submit");
+
+        jButton2.setText("Next");
+
+        jScrollPane1.setEnabled(false);
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        buttonGroup1.add(userAnswer1);
+        userAnswer1.setText("Answer 1");
+        userAnswer1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BackActionPerformed(evt);
+                userAnswer1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Back);
-        Back.setBounds(20, 40, 30, 60);
 
-        buttonGroup1.add(quizAnswer1);
-        quizAnswer1.setText("Answer 1");
-        quizAnswer1.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(userAnswer2);
+        userAnswer2.setText("Answer 2");
+        userAnswer2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quizAnswer1ActionPerformed(evt);
+                userAnswer2ActionPerformed(evt);
             }
         });
-        getContentPane().add(quizAnswer1);
-        quizAnswer1.setBounds(30, 410, 130, 30);
 
-        buttonGroup1.add(quizAnswer2);
-        quizAnswer2.setText("Answer 2");
-        quizAnswer2.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(userAnswer3);
+        userAnswer3.setText("Answer 3");
+        userAnswer3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quizAnswer2ActionPerformed(evt);
+                userAnswer3ActionPerformed(evt);
             }
         });
-        getContentPane().add(quizAnswer2);
-        quizAnswer2.setBounds(30, 440, 130, 30);
 
-        buttonGroup1.add(quizAnswer3);
-        quizAnswer3.setText("Answer 3");
-        quizAnswer3.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(userAnswer4);
+        userAnswer4.setText("Answer 4");
+        userAnswer4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quizAnswer3ActionPerformed(evt);
+                userAnswer4ActionPerformed(evt);
             }
         });
-        getContentPane().add(quizAnswer3);
-        quizAnswer3.setBounds(30, 470, 130, 30);
 
-        buttonGroup1.add(quizAnswer4);
-        quizAnswer4.setText("Answer 4");
-        quizAnswer4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quizAnswer4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(quizAnswer4);
-        quizAnswer4.setBounds(30, 500, 130, 30);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Quiz/quizScreen.png"))); // NOI18N
 
-        submitAnswer.setText("Submit");
-        submitAnswer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitAnswerActionPerformed(evt);
-            }
-        });
-        getContentPane().add(submitAnswer);
-        submitAnswer.setBounds(30, 550, 83, 29);
-
-        nextQuestion.setText("Next");
-        getContentPane().add(nextQuestion);
-        nextQuestion.setBounds(260, 550, 65, 29);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Quiz/quizScreen.png"))); // NOI18N
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(-20, -10, 420, 190);
-
-<<<<<<< HEAD
-        quizImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        quizImage.setText("insert image here");
-        getContentPane().add(quizImage);
-        quizImage.setBounds(70, 140, 210, 130);
-
-        quizQuestion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(quizQuestion);
-        quizQuestion.setBounds(20, 220, 310, 160);
-=======
-        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
-        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
-        getContentPane().add(HeaderBackground);
-        HeaderBackground.setBounds(0, 0, 360, 110);
->>>>>>> 98fa3d6f36dafbc805f526a327bfbe5690bf37ac
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(userAnswer1)
+                                    .addComponent(userAnswer2)
+                                    .addComponent(userAnswer3))
+                                .addGap(275, 275, 275))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(userAnswer4)
+                                    .addComponent(jButton1))
+                                .addGap(200, 200, 200)
+                                .addComponent(jButton2)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 4, Short.MAX_VALUE))))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addComponent(userAnswer1)
+                .addGap(18, 18, 18)
+                .addComponent(userAnswer2)
+                .addGap(18, 18, 18)
+                .addComponent(userAnswer3)
+                .addGap(18, 18, 18)
+                .addComponent(userAnswer4)
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addGap(56, 56, 56))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void quizAnswer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quizAnswer1ActionPerformed
+    private void userAnswer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userAnswer1ActionPerformed
+        // TODO add your handling code here:
         userAnswer = "1";
-    }//GEN-LAST:event_quizAnswer1ActionPerformed
+    }//GEN-LAST:event_userAnswer1ActionPerformed
 
-    private void quizAnswer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quizAnswer2ActionPerformed
+    private void userAnswer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userAnswer2ActionPerformed
+        // TODO add your handling code here:
         userAnswer = "2";
-    }//GEN-LAST:event_quizAnswer2ActionPerformed
+    }//GEN-LAST:event_userAnswer2ActionPerformed
 
-    private void quizAnswer3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quizAnswer3ActionPerformed
+    private void userAnswer3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userAnswer3ActionPerformed
+        // TODO add your handling code here:
         userAnswer = "3";
-    }//GEN-LAST:event_quizAnswer3ActionPerformed
+    }//GEN-LAST:event_userAnswer3ActionPerformed
 
-    private void quizAnswer4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quizAnswer4ActionPerformed
+    private void userAnswer4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userAnswer4ActionPerformed
+        // TODO add your handling code here:
         userAnswer = "4";
-    }//GEN-LAST:event_quizAnswer4ActionPerformed
+    }//GEN-LAST:event_userAnswer4ActionPerformed
 
-    private void submitAnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitAnswerActionPerformed
-        try {
-            String submitQuery = "INSERT INTO firstaid.submittedanswer (answers) VALUES (?)";
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/firstaid", "root", "Password$");
-            pst = con.prepareStatement(submitQuery);
-            pst.setString(1, userAnswer);
-            pst.executeUpdate();
-            JOptionPane.showMessageDialog(this, "Your answer is submitted successfully");
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-    }//GEN-LAST:event_submitAnswerActionPerformed
-
-<<<<<<< HEAD
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-=======
-    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
->>>>>>> 98fa3d6f36dafbc805f526a327bfbe5690bf37ac
-        new Menu().setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_BackActionPerformed
-
-<<<<<<< HEAD
-    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        //quizImage.setIcon(new ImageIcon(getClass().getResource(insert imagefile path here)));  //remove the texts within the label to remove the generated code
-        //quizQuestion.setText(insert question here);
-        //quizAnswer1.setText("Answer 1");
-        //quizAnswer2.setText("Answer 2");
-        //quizAnswer3.setText("Answer 3");
-        //quizAnswer4.setText("Answer 4");
-    }//GEN-LAST:event_formWindowActivated
-
-=======
-    
-    
-    
-    public void defaultColoursSettings(){
-        HeaderBackground.setBackground(new Color(249, 6, 6));
-    }
-    
-    public void DeuteranopiaColoursSettings(){
-        HeaderBackground.setBackground(new Color(238, 43, 150));
-    }
-    
-    public void ProtanopiaColoursSettings(){
-        HeaderBackground.setBackground(new Color(250, 56, 143));
-    }
-    
-    public void TritanopiaColoursSettings(){
-        HeaderBackground.setBackground(new Color(255, 0, 0));
-    }
-    
->>>>>>> 98fa3d6f36dafbc805f526a327bfbe5690bf37ac
     /**
      * @param args the command line arguments
      */
@@ -227,7 +165,7 @@ public class Quiz extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -246,7 +184,6 @@ public class Quiz extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Quiz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -257,19 +194,15 @@ public class Quiz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Back;
-    private javax.swing.JLabel HeaderBackground;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JButton nextQuestion;
-    private javax.swing.JRadioButton quizAnswer1;
-    private javax.swing.JRadioButton quizAnswer2;
-    private javax.swing.JRadioButton quizAnswer3;
-    private javax.swing.JRadioButton quizAnswer4;
-    private javax.swing.JLabel quizImage;
-    private javax.swing.JLabel quizQuestion;
-    private javax.swing.JButton submitAnswer;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JRadioButton userAnswer1;
+    private javax.swing.JRadioButton userAnswer2;
+    private javax.swing.JRadioButton userAnswer3;
+    private javax.swing.JRadioButton userAnswer4;
     // End of variables declaration//GEN-END:variables
-
-
 }

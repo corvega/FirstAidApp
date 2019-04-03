@@ -121,7 +121,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_LessonButtonActionPerformed
 
     private void QuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuizButtonActionPerformed
-        new Quiz().setVisible(true);
+        //new Quiz().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_QuizButtonActionPerformed
 

@@ -89,27 +89,12 @@ public class Scores extends javax.swing.JFrame {
 
         Session1Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session1Label.setText("Quiz - Session 1");
-<<<<<<< HEAD
-        getContentPane().add(Session1Label);
-        Session1Label.setBounds(15, 161, 300, 43);
-
-        Session3Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
-        Session3Label.setText("Quiz - Session 3");
-        getContentPane().add(Session3Label);
-        Session3Label.setBounds(15, 479, 300, 43);
-
-        Session2Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
-        Session2Label.setText("Quiz - Session 2");
-        getContentPane().add(Session2Label);
-        Session2Label.setBounds(15, 316, 287, 43);
-=======
 
         Session3Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session3Label.setText("Quiz - Session 3");
 
         Session2Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session2Label.setText("Quiz - Session 2");
->>>>>>> a6d2bebc1e2a882cd4e7be24d1eeb0dfc2d3f94e
 
         Session3Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session3Panel.setMaximumSize(new java.awt.Dimension(300, 30));
@@ -131,12 +116,6 @@ public class Scores extends javax.swing.JFrame {
             .addComponent(Session3ScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-<<<<<<< HEAD
-        getContentPane().add(Session3Panel);
-        Session3Panel.setBounds(18, 535, 300, 30);
-
-=======
->>>>>>> a6d2bebc1e2a882cd4e7be24d1eeb0dfc2d3f94e
         Session1Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session1Panel.setMaximumSize(new java.awt.Dimension(300, 30));
         Session1Panel.setMinimumSize(new java.awt.Dimension(0, 30));
@@ -157,12 +136,6 @@ public class Scores extends javax.swing.JFrame {
             .addComponent(Session1ScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-<<<<<<< HEAD
-        getContentPane().add(Session1Panel);
-        Session1Panel.setBounds(18, 211, 300, 30);
-
-=======
->>>>>>> a6d2bebc1e2a882cd4e7be24d1eeb0dfc2d3f94e
         Session2Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session2Panel.setMaximumSize(new java.awt.Dimension(300, 30));
         Session2Panel.setMinimumSize(new java.awt.Dimension(0, 30));
@@ -183,10 +156,6 @@ public class Scores extends javax.swing.JFrame {
             .addComponent(Session2ScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-<<<<<<< HEAD
-        getContentPane().add(Session2Panel);
-        Session2Panel.setBounds(18, 374, 300, 30);
-=======
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -226,7 +195,6 @@ public class Scores extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addComponent(Session3Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
->>>>>>> a6d2bebc1e2a882cd4e7be24d1eeb0dfc2d3f94e
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -236,8 +204,6 @@ public class Scores extends javax.swing.JFrame {
         ProgressBar2(67);
         ProgressBar3(32);
     }//GEN-LAST:event_formWindowActivated
-
-<<<<<<< HEAD
     
     
     
@@ -297,9 +263,7 @@ public class Scores extends javax.swing.JFrame {
                 System.out.println("new Color(0, 0, 196)");
         }
     }
-    
-=======
->>>>>>> a6d2bebc1e2a882cd4e7be24d1eeb0dfc2d3f94e
+
     /**
      * @param args the command line arguments
      */

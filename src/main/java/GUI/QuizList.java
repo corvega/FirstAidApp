@@ -7,7 +7,7 @@ package GUI;
 
 /**
  *
- * @author up839921
+ * @author usman
  */
 public class QuizList extends javax.swing.JFrame {
 
@@ -16,7 +16,7 @@ public class QuizList extends javax.swing.JFrame {
      */
     public QuizList() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(255,255,255));
+        getContentPane().setBackground(new java.awt.Color(255, 255, 255));
     }
 
     /**
@@ -28,104 +28,57 @@ public class QuizList extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
-        setLocationByPlatform(true);
+        CPRButton = new javax.swing.JButton();
+        UnresponsiveBreathingButton = new javax.swing.JButton();
+        HeavyBleedingButton = new javax.swing.JButton();
+        BurnsButton = new javax.swing.JButton();
+        ChokingButton = new javax.swing.JButton();
 
-<<<<<<< HEAD
-        CPRButton.setBackground(new java.awt.Color(249, 6, 6));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
         CPRButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/CPR LessonList.png"))); // NOI18N
+        CPRButton.setLabel("");
         CPRButton.setMaximumSize(new java.awt.Dimension(159, 169));
         CPRButton.setMinimumSize(new java.awt.Dimension(159, 169));
-        CPRButton.setPreferredSize(new java.awt.Dimension(290, 90));
-        CPRButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CPRButtonActionPerformed(evt);
-            }
-        });
 
-        UnresponsiveBreathingButton.setBackground(new java.awt.Color(249, 6, 6));
         UnresponsiveBreathingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Unresponsive-Breathing LessonList.png"))); // NOI18N
-        UnresponsiveBreathingButton.setMaximumSize(new java.awt.Dimension(159, 169));
-        UnresponsiveBreathingButton.setMinimumSize(new java.awt.Dimension(159, 169));
-        UnresponsiveBreathingButton.setPreferredSize(new java.awt.Dimension(290, 90));
-        UnresponsiveBreathingButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UnresponsiveBreathingButtonActionPerformed(evt);
-            }
-        });
 
-        HeavyBleedingButton.setBackground(new java.awt.Color(249, 6, 6));
         HeavyBleedingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Heavy-Bleeding LessonList.png"))); // NOI18N
-        HeavyBleedingButton.setMaximumSize(new java.awt.Dimension(159, 169));
-        HeavyBleedingButton.setMinimumSize(new java.awt.Dimension(159, 169));
-        HeavyBleedingButton.setPreferredSize(new java.awt.Dimension(290, 90));
-        HeavyBleedingButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HeavyBleedingButtonActionPerformed(evt);
-            }
-        });
 
-        BurnsButton.setBackground(new java.awt.Color(249, 6, 6));
         BurnsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Burns LessonList.png"))); // NOI18N
-        BurnsButton.setMaximumSize(new java.awt.Dimension(159, 169));
-        BurnsButton.setMinimumSize(new java.awt.Dimension(159, 169));
-        BurnsButton.setPreferredSize(new java.awt.Dimension(290, 90));
-        BurnsButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BurnsButtonActionPerformed(evt);
-            }
-        });
 
-        ChokingButton.setBackground(new java.awt.Color(249, 6, 6));
         ChokingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Choking LessonList.png"))); // NOI18N
-        ChokingButton.setMaximumSize(new java.awt.Dimension(159, 169));
-        ChokingButton.setMinimumSize(new java.awt.Dimension(159, 169));
-        ChokingButton.setPreferredSize(new java.awt.Dimension(290, 90));
-        ChokingButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ChokingButtonActionPerformed(evt);
-            }
-        });
 
-=======
->>>>>>> a6d2bebc1e2a882cd4e7be24d1eeb0dfc2d3f94e
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ChokingButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BurnsButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(HeavyBleedingButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(UnresponsiveBreathingButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CPRButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(37, Short.MAX_VALUE))
+                    .addComponent(CPRButton, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ChokingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(UnresponsiveBreathingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(HeavyBleedingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(BurnsButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(64, Short.MAX_VALUE)
-                .addComponent(CPRButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(UnresponsiveBreathingButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(HeavyBleedingButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BurnsButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ChokingButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52))
-=======
-            .addGap(0, 360, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 640, Short.MAX_VALUE)
->>>>>>> a6d2bebc1e2a882cd4e7be24d1eeb0dfc2d3f94e
+            .addGroup(layout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addComponent(CPRButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(UnresponsiveBreathingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(HeavyBleedingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(BurnsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(ChokingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         pack();
@@ -161,11 +114,16 @@ public class QuizList extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new QuizList().setVisible(true);
+                 new QuizList().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BurnsButton;
+    private javax.swing.JButton CPRButton;
+    private javax.swing.JButton ChokingButton;
+    private javax.swing.JButton HeavyBleedingButton;
+    private javax.swing.JButton UnresponsiveBreathingButton;
     // End of variables declaration//GEN-END:variables
 }
