@@ -1,5 +1,5 @@
 
-package FirstAidApp.GUI;
+package GUI;
 
 import java.awt.Color;
 import java.sql.*;
@@ -106,11 +106,11 @@ public class Quiz extends javax.swing.JFrame {
             }
         });
         getContentPane().add(submitAnswer);
-        submitAnswer.setBounds(30, 550, 78, 32);
+        submitAnswer.setBounds(30, 550, 83, 29);
 
         nextQuestion.setText("Next");
         getContentPane().add(nextQuestion);
-        nextQuestion.setBounds(260, 550, 61, 32);
+        nextQuestion.setBounds(260, 550, 65, 29);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
