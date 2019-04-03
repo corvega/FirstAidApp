@@ -41,7 +41,7 @@ public class Menu extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(360, 640));
 
         LessonButton.setBackground(new java.awt.Color(249, 6, 6));
-        LessonButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFiles/iconLessons_transparent.png"))); // NOI18N
+        LessonButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lesson/iconLessons_transparent.png"))); // NOI18N
         LessonButton.setMaximumSize(new java.awt.Dimension(159, 169));
         LessonButton.setMinimumSize(new java.awt.Dimension(159, 169));
         LessonButton.setPreferredSize(new java.awt.Dimension(108, 129));
@@ -52,7 +52,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         QuizButton.setBackground(new java.awt.Color(249, 6, 6));
-        QuizButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFiles/iconQuiz_transparent.png"))); // NOI18N
+        QuizButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Quiz/iconQuiz_transparent.png"))); // NOI18N
         QuizButton.setPreferredSize(new java.awt.Dimension(108, 129));
         QuizButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,7 +61,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         PreviewResultsButton.setBackground(new java.awt.Color(249, 6, 6));
-        PreviewResultsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFiles/iconResults_transparent.png"))); // NOI18N
+        PreviewResultsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Results/iconResults_transparent.png"))); // NOI18N
         PreviewResultsButton.setPreferredSize(new java.awt.Dimension(108, 129));
         PreviewResultsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,7 +70,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         ScoresButton.setBackground(new java.awt.Color(249, 6, 6));
-        ScoresButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFiles/iconScores_transparent.png"))); // NOI18N
+        ScoresButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Scores/iconScores_transparent.png"))); // NOI18N
         ScoresButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ScoresButtonActionPerformed(evt);
@@ -78,7 +78,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         EmergencyButton.setBackground(new java.awt.Color(249, 6, 6));
-        EmergencyButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFiles/iconEmergency_transparent.png"))); // NOI18N
+        EmergencyButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Emergency/iconEmergency_transparent.png"))); // NOI18N
         EmergencyButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EmergencyButtonActionPerformed(evt);
@@ -86,6 +86,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         SettingsButton.setBackground(new java.awt.Color(249, 6, 6));
+        SettingsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/iconSettings_transparent.png"))); // NOI18N
         SettingsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SettingsButtonActionPerformed(evt);
@@ -137,7 +138,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_LessonButtonActionPerformed
 
     private void QuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuizButtonActionPerformed
-        new QuizList().setVisible(true);
+        new Quiz().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_QuizButtonActionPerformed
 

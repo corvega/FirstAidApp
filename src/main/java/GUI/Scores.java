@@ -94,17 +94,17 @@ public class Scores extends javax.swing.JFrame {
         Session1Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session1Label.setText("Quiz - Session 1");
         getContentPane().add(Session1Label);
-        Session1Label.setBounds(15, 161, 300, 44);
+        Session1Label.setBounds(15, 161, 300, 43);
 
         Session3Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session3Label.setText("Quiz - Session 3");
         getContentPane().add(Session3Label);
-        Session3Label.setBounds(15, 479, 300, 44);
+        Session3Label.setBounds(15, 479, 300, 43);
 
         Session2Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session2Label.setText("Quiz - Session 2");
         getContentPane().add(Session2Label);
-        Session2Label.setBounds(15, 316, 227, 44);
+        Session2Label.setBounds(15, 316, 287, 43);
 
         Session3Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session3Panel.setMaximumSize(new java.awt.Dimension(300, 30));
@@ -127,7 +127,7 @@ public class Scores extends javax.swing.JFrame {
         );
 
         getContentPane().add(Session3Panel);
-        Session3Panel.setBounds(18, 535, 291, 30);
+        Session3Panel.setBounds(18, 535, 300, 30);
 
         Session1Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session1Panel.setMaximumSize(new java.awt.Dimension(300, 30));
@@ -150,7 +150,7 @@ public class Scores extends javax.swing.JFrame {
         );
 
         getContentPane().add(Session1Panel);
-        Session1Panel.setBounds(18, 211, 291, 30);
+        Session1Panel.setBounds(18, 211, 300, 30);
 
         Session2Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session2Panel.setMaximumSize(new java.awt.Dimension(300, 30));
@@ -173,7 +173,7 @@ public class Scores extends javax.swing.JFrame {
         );
 
         getContentPane().add(Session2Panel);
-        Session2Panel.setBounds(18, 374, 291, 30);
+        Session2Panel.setBounds(18, 374, 300, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -242,12 +242,12 @@ public class Scores extends javax.swing.JFrame {
             case "Blue":
                 System.out.println("new Color(0, 0, 196)");
         }
-
+    }
     
     /**
      * @param args the command line arguments
      */
-    //public static void main(String args[]) {
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
