@@ -31,7 +31,7 @@ public class Quiz extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jButton2 = new javax.swing.JButton();
+        Back = new javax.swing.JButton();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
@@ -41,21 +41,22 @@ public class Quiz extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
+        HeaderBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(370, 640));
         getContentPane().setLayout(null);
 
-        jButton2.setBackground(new java.awt.Color(255, 51, 51));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/back.png"))); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Back.setBackground(new java.awt.Color(255, 51, 51));
+        Back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/back.png"))); // NOI18N
+        Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BackActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(20, 40, 30, 60);
+        getContentPane().add(Back);
+        Back.setBounds(20, 40, 30, 60);
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("Answer 1");
@@ -122,6 +123,11 @@ public class Quiz extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(-20, -10, 420, 190);
 
+        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
+        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
+        getContentPane().add(HeaderBackground);
+        HeaderBackground.setBounds(0, 0, 360, 110);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -154,11 +160,30 @@ public class Quiz extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_submitAnswerActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         new Menu().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_BackActionPerformed
 
+    
+    
+    
+    public void defaultColoursSettings(){
+        HeaderBackground.setBackground(new Color(249, 6, 6));
+    }
+    
+    public void DeuteranopiaColoursSettings(){
+        HeaderBackground.setBackground(new Color(238, 43, 150));
+    }
+    
+    public void ProtanopiaColoursSettings(){
+        HeaderBackground.setBackground(new Color(250, 56, 143));
+    }
+    
+    public void TritanopiaColoursSettings(){
+        HeaderBackground.setBackground(new Color(255, 0, 0));
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -196,8 +221,9 @@ public class Quiz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Back;
+    private javax.swing.JLabel HeaderBackground;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;

@@ -20,6 +20,7 @@ public class Settings extends javax.swing.JFrame {
     public Settings() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255,255,255));
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -45,6 +46,7 @@ public class Settings extends javax.swing.JFrame {
         Seperator2 = new javax.swing.JPanel();
         ColourblindModeLabel = new javax.swing.JLabel();
         Seperator1 = new javax.swing.JPanel();
+        HeaderBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -180,6 +182,9 @@ public class Settings extends javax.swing.JFrame {
             .addGap(0, 5, Short.MAX_VALUE)
         );
 
+        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
+        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -214,12 +219,16 @@ public class Settings extends javax.swing.JFrame {
                                     .addComponent(CaptionImagesCheckBox)
                                     .addComponent(MagnifyTextCheckBox)))
                             .addComponent(Seperator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(HeaderBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(131, Short.MAX_VALUE)
+                .addComponent(HeaderBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addComponent(AccessibilityOptionsLabel)
                 .addGap(2, 2, 2)
                 .addComponent(Seperator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -287,6 +296,7 @@ public class Settings extends javax.swing.JFrame {
         GreenColourTest.setBackground(new Color(0, 128, 0));
         BlueColourTest.setBackground(new Color(77, 77, 255));
         
+        HeaderBackground.setBackground(new Color(249, 6, 6));
         Seperator1.setBackground(new Color(249, 6, 6));
         Seperator2.setBackground(new Color(249, 6, 6));
     }
@@ -296,6 +306,7 @@ public class Settings extends javax.swing.JFrame {
         GreenColourTest.setBackground(new Color(0, 155, 33));
         BlueColourTest.setBackground(new Color(0, 64, 224));
         
+        HeaderBackground.setBackground(new Color(238, 43, 150));
         Seperator1.setBackground(new Color(238, 43, 150));
         Seperator2.setBackground(new Color(238, 43, 150));
     }
@@ -305,6 +316,7 @@ public class Settings extends javax.swing.JFrame {
         GreenColourTest.setBackground(new Color(0, 128, 28));
         BlueColourTest.setBackground(new Color(6, 68, 224));
         
+        HeaderBackground.setBackground(new Color(250, 56, 143));
         Seperator1.setBackground(new Color(250, 56, 143));
         Seperator2.setBackground(new Color(250, 56, 143));
     }
@@ -314,6 +326,7 @@ public class Settings extends javax.swing.JFrame {
         GreenColourTest.setBackground(new Color(0, 179, 60));
         BlueColourTest.setBackground(new Color(0, 0, 196));
         
+        HeaderBackground.setBackground(new Color(255, 0, 0));
         Seperator1.setBackground(new Color(255, 0, 0));
         Seperator2.setBackground(new Color(255, 0, 0));
     }
@@ -386,6 +399,7 @@ public class Settings extends javax.swing.JFrame {
     private javax.swing.JRadioButton DefaultColours;
     private javax.swing.JRadioButton DeuteranopiaColours;
     private javax.swing.JPanel GreenColourTest;
+    private javax.swing.JLabel HeaderBackground;
     private javax.swing.JCheckBox MagnifyTextCheckBox;
     private javax.swing.JRadioButton ProtanopiaColours;
     private javax.swing.JPanel RedColourTest;

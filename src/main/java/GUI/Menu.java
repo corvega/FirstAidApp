@@ -14,6 +14,7 @@ public class Menu extends javax.swing.JFrame {
     public Menu() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255, 255, 255));
+        setLocationRelativeTo(null);
     }
     
     /**

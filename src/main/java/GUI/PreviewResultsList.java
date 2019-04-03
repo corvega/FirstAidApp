@@ -19,6 +19,7 @@ public class PreviewResultsList extends javax.swing.JFrame {
     public PreviewResultsList() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255,255,255));
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -35,6 +36,7 @@ public class PreviewResultsList extends javax.swing.JFrame {
         HeavyBleedingButton = new javax.swing.JButton();
         BurnsButton = new javax.swing.JButton();
         ChokingButton = new javax.swing.JButton();
+        HeaderBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -95,6 +97,9 @@ public class PreviewResultsList extends javax.swing.JFrame {
             }
         });
 
+        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
+        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -107,12 +112,16 @@ public class PreviewResultsList extends javax.swing.JFrame {
                     .addComponent(HeavyBleedingButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(UnresponsiveBreathingButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CPRButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(HeaderBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(110, Short.MAX_VALUE)
+                .addComponent(HeaderBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(CPRButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(UnresponsiveBreathingButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -122,7 +131,7 @@ public class PreviewResultsList extends javax.swing.JFrame {
                 .addComponent(BurnsButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ChokingButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(6, 6, 6))
         );
 
         pack();
@@ -162,7 +171,7 @@ public class PreviewResultsList extends javax.swing.JFrame {
     
     
     public void defaultColoursPreviewResultsList(){
-        //Header.setBackground(new Color(249, 6, 6));
+        HeaderBackground.setBackground(new Color(249, 6, 6));
         CPRButton.setBackground(new Color(249, 6, 6));
         UnresponsiveBreathingButton.setBackground(new Color(249, 6, 6));
         HeavyBleedingButton.setBackground(new Color(249, 6, 6));
@@ -171,7 +180,7 @@ public class PreviewResultsList extends javax.swing.JFrame {
     }
     
     public void DeuteranopiaColoursPreviewResultsList(){
-        //Header.setBackground(new Color(238, 43, 150));
+        HeaderBackground.setBackground(new Color(238, 43, 150));
         CPRButton.setBackground(new Color(238, 43, 150));
         UnresponsiveBreathingButton.setBackground(new Color(238, 43, 150));
         HeavyBleedingButton.setBackground(new Color(238, 43, 150));
@@ -180,7 +189,7 @@ public class PreviewResultsList extends javax.swing.JFrame {
     }
     
     public void ProtanopiaColoursPreviewResultsList(){
-        //Header.setBackground(new Color(250, 56, 143));
+        HeaderBackground.setBackground(new Color(250, 56, 143));
         CPRButton.setBackground(new Color(250, 56, 143));
         UnresponsiveBreathingButton.setBackground(new Color(250, 56, 143));
         HeavyBleedingButton.setBackground(new Color(250, 56, 143));
@@ -189,7 +198,7 @@ public class PreviewResultsList extends javax.swing.JFrame {
     }
     
     public void TritanopiaColoursPreviewResultsList(){
-        //Header.setBackground(new Color(255, 0, 0));
+        HeaderBackground.setBackground(new Color(255, 0, 0));
         CPRButton.setBackground(new Color(255, 0, 0));
         UnresponsiveBreathingButton.setBackground(new Color(255, 0, 0));
         HeavyBleedingButton.setBackground(new Color(255, 0, 0));
@@ -236,6 +245,7 @@ public class PreviewResultsList extends javax.swing.JFrame {
     private javax.swing.JButton BurnsButton;
     private javax.swing.JButton CPRButton;
     private javax.swing.JButton ChokingButton;
+    private javax.swing.JLabel HeaderBackground;
     private javax.swing.JButton HeavyBleedingButton;
     private javax.swing.JButton UnresponsiveBreathingButton;
     // End of variables declaration//GEN-END:variables

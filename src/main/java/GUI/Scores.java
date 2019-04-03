@@ -21,44 +21,45 @@ public class Scores extends javax.swing.JFrame {
     public Scores() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255,255,255));
+        setLocationRelativeTo(null);
     }
     
     
-    public void ProgressBar1(int QuizValue) {
-        Session1Panel.setSize(new Dimension((QuizValue*3), 30));
-        Session1ScoreLabel.setText(QuizValue+"%");
-        if (QuizValue<40) {
-            //Session1Panel.setBackground(colourChecker("red"));
-        } else if (QuizValue>80) {
-            //Session1Panel.setBackground(colourChecker("red"));
-        } else {
-            Session1Panel.setBackground(new Color(255, 255, 102));
-        }
-    }
-    
-    public void ProgressBar2(int QuizValue) {
-        Session2Panel.setSize(new Dimension((QuizValue*3), 30));
-        Session2ScoreLabel.setText(QuizValue+"%");
-        if (QuizValue<40) {
-            //Session2Panel.setBackground(colourChecker("red"));
-        } else if (QuizValue>80) {
-            //Session2Panel.setBackground(colourChecker("green"));
-        } else {
-            Session2Panel.setBackground(new Color(255, 255, 102));
-        }
-    }
-    
-    public void ProgressBar3(int QuizValue) {
-        Session3Panel.setSize(new Dimension((QuizValue*3), 30));
-        Session3ScoreLabel.setText(QuizValue+"%");
-        if (QuizValue<40) {
-            //Session3Panel.setBackground(colourChecker("red"));
-        } else if (QuizValue>80) {
-            //Session3Panel.setBackground(colourChecker("green"));
-        } else {
-            Session3Panel.setBackground(new Color(255, 255, 102));
-        }
-    }
+//    public void ProgressBar1(int QuizValue) {
+//        Session1Panel.setSize(new Dimension((QuizValue*3), 30));
+//        Session1ScoreLabel.setText(QuizValue+"%");
+//        if (QuizValue<40) {
+//            //Session1Panel.setBackground(colourChecker("red"));
+//        } else if (QuizValue>80) {
+//            //Session1Panel.setBackground(colourChecker("green"));
+//        } else {
+//            Session1Panel.setBackground(new Color(255, 255, 102));
+//        }    
+//    }
+//    
+//    public void ProgressBar2(int QuizValue) {
+//        Session2Panel.setSize(new Dimension((QuizValue*3), 30));
+//        Session2ScoreLabel.setText(QuizValue+"%");
+//        if (QuizValue<40) {
+//            //Session2Panel.setBackground(colourChecker("red"));
+//        } else if (QuizValue>80) {
+//            //Session2Panel.setBackground(colourChecker("green"));
+//        } else {
+//            Session2Panel.setBackground(new Color(255, 255, 102));
+//        }
+//    }
+//    
+//    public void ProgressBar3(int QuizValue) {
+//        Session3Panel.setSize(new Dimension((QuizValue*3), 30));
+//        Session3ScoreLabel.setText(QuizValue+"%");
+//        if (QuizValue<40) {
+//            //Session3Panel.setBackground(colourChecker("red"));
+//        } else if (QuizValue>80) {
+//            //Session3Panel.setBackground(colourChecker("green"));
+//        } else {
+//            Session3Panel.setBackground(new Color(255, 255, 102));
+//        }
+//    }
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -78,6 +79,7 @@ public class Scores extends javax.swing.JFrame {
         Session1ScoreLabel = new javax.swing.JLabel();
         Session2Panel = new javax.swing.JPanel();
         Session2ScoreLabel = new javax.swing.JLabel();
+        HeaderBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -175,13 +177,18 @@ public class Scores extends javax.swing.JFrame {
         getContentPane().add(Session2Panel);
         Session2Panel.setBounds(18, 374, 291, 30);
 
+        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
+        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
+        getContentPane().add(HeaderBackground);
+        HeaderBackground.setBounds(0, 0, 360, 110);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        ProgressBar1(86);
-        ProgressBar2(67);
-        ProgressBar3(32);
+//        ProgressBar1(86);
+//        ProgressBar2(67);
+//        ProgressBar3(32);
     }//GEN-LAST:event_formWindowActivated
 
     
@@ -189,65 +196,65 @@ public class Scores extends javax.swing.JFrame {
     
 //    public void colourChecker(String colour) {
 //        if (defaultColours=true) {
-//            defaultColoursScores(colour);
+//            switch (colour) {
+//            case "Red":
+//                System.out.println("new Color(249, 6, 6)");
+//            case "Green":
+//                System.out.println("new Color(0, 128, 0)");
+//            case "Blue":
+//                System.out.println("new Color(77, 77, 255)");
+//            }
 //        } else if (DeutranaopiaColours=true) {
-//            DeutranopiaColoursScores(colour);
+//            switch (colour) {
+//            case "Red":
+//                System.out.println("new Color(238, 43, 150)");
+//            case "Green":
+//                System.out.println("new Color(0, 155, 33)");
+//            case "Blue":
+//                System.out.println("new Color(0, 64, 224)");
+//            }
 //        } else if (ProtanopiaColours=true) {
-//            ProtanopiaColoursScores(colour);
+//            switch (colour) {
+//            case "Red":
+//                System.out.println("new Color(250, 56, 143)");
+//            case "Green":
+//                System.out.println("new Color(0, 128, 28)");
+//            case "Blue":
+//                System.out.println("new Color(6, 68, 224)");
+//            }
 //        } else if (TritanopiaColours=true)
-//            TritanopiaColoursScores(colour);
+//            switch (colour) {
+//            case "Red":
+//                System.out.println("new Color(255, 0, 0)");
+//            case "Green":
+//                System.out.println("new Color(0, 179, 60)");
+//            case "Blue":
+//                System.out.println("new Color(0, 0, 196)");
+//            }
 //        }
 //    }
     
     
     public void defaultColoursScores(String colour){
-        switch (colour) {
-            case "Red":
-                System.out.println("new Color(249, 0, 0)");
-            case "Green":
-                System.out.println("new Color(0, 128, 0)");
-            case "Blue":
-                System.out.println("new Color(77, 77, 255)");
-        }
+        HeaderBackground.setBackground(new Color(249, 6, 6));
     }
     
     public void DeuteranopiaColoursScores(String colour){
-        switch (colour) {
-            case "Red":
-                System.out.println("new Color(238, 43, 150)");
-            case "Green":
-                System.out.println("new Color(0, 155, 33)");
-            case "Blue":
-                System.out.println("new Color(0, 64, 224)");
-        }
+        HeaderBackground.setBackground(new Color(238, 43, 150));
     }
     
     public void ProtanopiaColoursScores(String colour){
-        switch (colour) {
-            case "Red":
-                System.out.println("new Color(250, 56, 143)");
-            case "Green":
-                System.out.println("new Color(0, 128, 28)");
-            case "Blue":
-                System.out.println("new Color(6, 68, 224)");
-        }
+        HeaderBackground.setBackground(new Color(250, 56, 143));
     }
 
     public void TritanopiaColoursScores(String colour){
-        switch (colour) {
-            case "Red":
-                System.out.println("new Color(255, 0, 0)");
-            case "Green":
-                System.out.println("new Color(0, 179, 60)");
-            case "Blue":
-                System.out.println("new Color(0, 0, 196)");
-        }
-
+        HeaderBackground.setBackground(new Color(255, 0, 0));
+    }
     
     /**
      * @param args the command line arguments
      */
-    //public static void main(String args[]) {
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -281,6 +288,7 @@ public class Scores extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel HeaderBackground;
     private javax.swing.JLabel Session1Label;
     private javax.swing.JPanel Session1Panel;
     private javax.swing.JLabel Session1ScoreLabel;

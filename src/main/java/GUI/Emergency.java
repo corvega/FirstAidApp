@@ -1,6 +1,8 @@
 
 package GUI;
 
+import java.awt.Color;
+
 
 public class Emergency extends javax.swing.JFrame {
 
@@ -31,6 +33,7 @@ public class Emergency extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        HeaderBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setForeground(new java.awt.Color(0, 0, 0));
@@ -101,6 +104,11 @@ public class Emergency extends javax.swing.JFrame {
         getContentPane().add(jLabel8);
         jLabel8.setBounds(50, 370, 270, 80);
 
+        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
+        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
+        getContentPane().add(HeaderBackground);
+        HeaderBackground.setBounds(0, 0, 360, 110);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -109,6 +117,38 @@ public class Emergency extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    
+    
+    
+        public void defaultColoursSettings(){
+        HeaderBackground.setBackground(new Color(249, 6, 6));
+//        RedColourTest.setBackground(new Color(249, 6, 6));
+//        GreenColourTest.setBackground(new Color(0, 128, 0));
+//        BlueColourTest.setBackground(new Color(77, 77, 255));
+    }
+    
+    public void DeuteranopiaColoursSettings(){
+        HeaderBackground.setBackground(new Color(238, 43, 150));
+//        RedColourTest.setBackground(new Color(238, 43, 150));
+//        GreenColourTest.setBackground(new Color(0, 155, 33));
+//        BlueColourTest.setBackground(new Color(0, 64, 224));
+    }
+    
+    public void ProtanopiaColoursSettings(){
+        HeaderBackground.setBackground(new Color(250, 56, 143));
+//        RedColourTest.setBackground(new Color(250, 56, 143));
+//        GreenColourTest.setBackground(new Color(0, 128, 28));
+//        BlueColourTest.setBackground(new Color(6, 68, 224));
+    }
+    
+    public void TritanopiaColoursSettings(){
+        HeaderBackground.setBackground(new Color(255, 0, 0));
+//        RedColourTest.setBackground(new Color(255, 0, 0));
+//        GreenColourTest.setBackground(new Color(0, 179, 60));
+//        BlueColourTest.setBackground(new Color(0, 0, 196));
+    }
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -146,6 +186,7 @@ public class Emergency extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel HeaderBackground;
     private javax.swing.JPanel Seperator1;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
