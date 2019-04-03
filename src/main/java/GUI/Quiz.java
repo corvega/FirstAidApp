@@ -1,5 +1,5 @@
 
-package FirstAidApp.GUI;
+package GUI;
 
 import java.awt.Color;
 import java.sql.*;
@@ -44,20 +44,18 @@ public class Quiz extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setMaximumSize(new java.awt.Dimension(370, 640));
         setMinimumSize(new java.awt.Dimension(370, 640));
-        setPreferredSize(new java.awt.Dimension(370, 640));
         getContentPane().setLayout(null);
 
         jButton2.setBackground(new java.awt.Color(255, 51, 51));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFiles/back.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/back.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(10, 13, 30, 60);
+        jButton2.setBounds(20, 40, 30, 60);
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("Answer 1");
@@ -67,7 +65,7 @@ public class Quiz extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(30, 360, 90, 30);
+        jRadioButton1.setBounds(30, 360, 130, 30);
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("Answer 2");
@@ -77,7 +75,7 @@ public class Quiz extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(30, 390, 90, 30);
+        jRadioButton2.setBounds(30, 390, 130, 30);
 
         buttonGroup1.add(jRadioButton3);
         jRadioButton3.setText("Answer 3");
@@ -87,7 +85,7 @@ public class Quiz extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jRadioButton3);
-        jRadioButton3.setBounds(30, 420, 90, 30);
+        jRadioButton3.setBounds(30, 420, 130, 30);
 
         buttonGroup1.add(jRadioButton4);
         jRadioButton4.setText("Answer 4");
@@ -97,7 +95,7 @@ public class Quiz extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jRadioButton4);
-        jRadioButton4.setBounds(30, 450, 90, 30);
+        jRadioButton4.setBounds(30, 450, 130, 30);
 
         submitAnswer.setText("Submit");
         submitAnswer.addActionListener(new java.awt.event.ActionListener() {
@@ -106,11 +104,11 @@ public class Quiz extends javax.swing.JFrame {
             }
         });
         getContentPane().add(submitAnswer);
-        submitAnswer.setBounds(30, 550, 78, 32);
+        submitAnswer.setBounds(30, 550, 83, 29);
 
         nextQuestion.setText("Next");
         getContentPane().add(nextQuestion);
-        nextQuestion.setBounds(260, 550, 61, 32);
+        nextQuestion.setBounds(260, 550, 65, 29);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -120,9 +118,9 @@ public class Quiz extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(10, 170, 340, 140);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageFiles/quizScreen.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Quiz/quizScreen.png"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(-20, -10, 420, 150);
+        jLabel2.setBounds(-20, -10, 420, 190);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -157,8 +155,13 @@ public class Quiz extends javax.swing.JFrame {
     }//GEN-LAST:event_submitAnswerActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+<<<<<<< HEAD
         //new Menu().setVisible(true);
         //this.setVisible(false);
+=======
+    //    new Menu().setVisible(true);
+        this.setVisible(false);
+>>>>>>> fde9afd99ac6c8177aa3421558ace4531c5bd100
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -186,6 +189,7 @@ public class Quiz extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Quiz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
