@@ -134,7 +134,7 @@ public class QuizList extends javax.swing.JFrame {
     }//GEN-LAST:event_BurnsButtonActionPerformed
 
     private void ChokingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChokingButtonActionPerformed
-        //new Quiz().setVisible(true);
+        new ChokingQuiz().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_ChokingButtonActionPerformed
 
