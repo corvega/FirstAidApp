@@ -32,6 +32,7 @@ public class Emergency extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        HeaderBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setForeground(new java.awt.Color(0, 0, 0));
@@ -102,6 +103,11 @@ public class Emergency extends javax.swing.JFrame {
         getContentPane().add(jLabel8);
         jLabel8.setBounds(50, 370, 270, 80);
 
+        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
+        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
+        getContentPane().add(HeaderBackground);
+        HeaderBackground.setBounds(0, 0, 360, 110);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -147,6 +153,7 @@ public class Emergency extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel HeaderBackground;
     private javax.swing.JPanel Seperator1;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;

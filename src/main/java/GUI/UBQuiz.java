@@ -501,7 +501,7 @@ public class UBQuiz extends javax.swing.JFrame {
         this.calPoint();
         Scores obj=new Scores();
         obj.setVisible(true);
-        obj.getPoints(this.Points);
+        //obj.getPoints(this.Points);
         this.dispose();
         }
         catch(Exception e){
