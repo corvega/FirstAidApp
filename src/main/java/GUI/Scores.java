@@ -13,7 +13,6 @@ import java.awt.Dimension;
  * @author up839921
  */
 public class Scores extends javax.swing.JFrame {
-    
 
 
     /**
@@ -22,9 +21,7 @@ public class Scores extends javax.swing.JFrame {
     public Scores() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255,255,255));
-        setLocationRelativeTo(null);
     }
-   double gp=0.0;
     
     
     public void ProgressBar1(int QuizValue) {
@@ -34,16 +31,12 @@ public class Scores extends javax.swing.JFrame {
             Session1Panel.setBackground(new Color(249, 6, 6));
         } else if (QuizValue>80) {
             Session1Panel.setBackground(new Color(0, 128, 0));
-        } else {
+        } else if (QuizValue>40) {
             Session1Panel.setBackground(new Color(255, 255, 102));
+        } else {
+            Session1Panel.setBackground(null);
         }
-        ProBar.setValue((int)this.gp);
-    }   
-
-public void getPoints(double pts){
-   gp=pts;
-}
-    
+    }
     
     public void ProgressBar2(int QuizValue) {
         Session2Panel.setSize(new Dimension((QuizValue*3), 30));
@@ -78,8 +71,6 @@ public void getPoints(double pts){
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        header = new javax.swing.JLabel();
-        HeaderBackground = new javax.swing.JLabel();
         Session1Label = new javax.swing.JLabel();
         Session3Label = new javax.swing.JLabel();
         Session2Label = new javax.swing.JLabel();
@@ -87,47 +78,25 @@ public void getPoints(double pts){
         Session3ScoreLabel = new javax.swing.JLabel();
         Session1Panel = new javax.swing.JPanel();
         Session1ScoreLabel = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         Session2Panel = new javax.swing.JPanel();
         Session2ScoreLabel = new javax.swing.JLabel();
-        ProBar = new javax.swing.JProgressBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setMaximumSize(new java.awt.Dimension(370, 680));
-        setMinimumSize(new java.awt.Dimension(370, 680));
-        setPreferredSize(new java.awt.Dimension(370, 680));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
             }
         });
-        getContentPane().setLayout(null);
-
-        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Scores/scoreScreen.png"))); // NOI18N
-        getContentPane().add(header);
-        header.setBounds(-10, 0, 370, 170);
-
-        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
-        HeaderBackground.setOpaque(true);
-        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
-        getContentPane().add(HeaderBackground);
-        HeaderBackground.setBounds(0, 0, 360, 110);
 
         Session1Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session1Label.setText("Quiz - Session 1");
-        getContentPane().add(Session1Label);
-        Session1Label.setBounds(27, 131, 300, 44);
 
         Session3Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session3Label.setText("Quiz - Session 3");
-        getContentPane().add(Session3Label);
-        Session3Label.setBounds(27, 437, 300, 44);
 
         Session2Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session2Label.setText("Quiz - Session 2");
-        getContentPane().add(Session2Label);
-        Session2Label.setBounds(27, 284, 227, 44);
 
         Session3Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session3Panel.setMaximumSize(new java.awt.Dimension(300, 30));
@@ -149,9 +118,6 @@ public void getPoints(double pts){
             .addComponent(Session3ScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        getContentPane().add(Session3Panel);
-        Session3Panel.setBounds(30, 493, 291, 30);
-
         Session1Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session1Panel.setMaximumSize(new java.awt.Dimension(300, 30));
         Session1Panel.setMinimumSize(new java.awt.Dimension(0, 30));
@@ -159,27 +125,18 @@ public void getPoints(double pts){
         Session1ScoreLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         Session1ScoreLabel.setText("No Data");
 
-        jLabel1.setText("jLabel1");
-
         javax.swing.GroupLayout Session1PanelLayout = new javax.swing.GroupLayout(Session1Panel);
         Session1Panel.setLayout(Session1PanelLayout);
         Session1PanelLayout.setHorizontalGroup(
             Session1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Session1PanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
+                .addGap(0, 230, Short.MAX_VALUE)
                 .addComponent(Session1ScoreLabel))
         );
         Session1PanelLayout.setVerticalGroup(
             Session1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Session1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(Session1ScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                .addComponent(jLabel1))
+            .addComponent(Session1ScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
-
-        getContentPane().add(Session1Panel);
-        Session1Panel.setBounds(30, 181, 291, 30);
 
         Session2Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session2Panel.setMaximumSize(new java.awt.Dimension(300, 30));
@@ -201,13 +158,45 @@ public void getPoints(double pts){
             .addComponent(Session2ScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        getContentPane().add(Session2Panel);
-        Session2Panel.setBounds(30, 342, 291, 30);
-
-        ProBar.setMaximum(300);
-        ProBar.setStringPainted(true);
-        getContentPane().add(ProBar);
-        ProBar.setBounds(30, 222, 297, 30);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(Session1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(Session1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(Session2Label))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(Session2Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(Session3Label, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(Session3Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addComponent(Session1Label)
+                .addGap(6, 6, 6)
+                .addComponent(Session1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73)
+                .addComponent(Session2Label)
+                .addGap(14, 14, 14)
+                .addComponent(Session2Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65)
+                .addComponent(Session3Label)
+                .addGap(12, 12, 12)
+                .addComponent(Session3Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -217,65 +206,6 @@ public void getPoints(double pts){
         ProgressBar2(67);
         ProgressBar3(32);
     }//GEN-LAST:event_formWindowActivated
-    
-    
-    
-//    public void colourChecker(String colour) {
-//        if (defaultColours=true) {
-//            defaultColoursScores(colour);
-//        } else if (DeutranaopiaColours=true) {
-//            DeutranopiaColoursScores(colour);
-//        } else if (ProtanopiaColours=true) {
-//            ProtanopiaColoursScores(colour);
-//        } else if (TritanopiaColours=true)
-//            TritanopiaColoursScores(colour);
-//        }
-//    }
-    
-    
-    public void defaultColoursScores(String colour){
-        switch (colour) {
-            case "Red":
-                System.out.println("new Color(249, 0, 0)");
-            case "Green":
-                System.out.println("new Color(0, 128, 0)");
-            case "Blue":
-                System.out.println("new Color(77, 77, 255)");
-        }
-    }
-    
-    public void DeuteranopiaColoursScores(String colour){
-        switch (colour) {
-            case "Red":
-                System.out.println("new Color(238, 43, 150)");
-            case "Green":
-                System.out.println("new Color(0, 155, 33)");
-            case "Blue":
-                System.out.println("new Color(0, 64, 224)");
-        }
-    }
-    
-    public void ProtanopiaColoursScores(String colour){
-        switch (colour) {
-            case "Red":
-                System.out.println("new Color(250, 56, 143)");
-            case "Green":
-                System.out.println("new Color(0, 128, 28)");
-            case "Blue":
-                System.out.println("new Color(6, 68, 224)");
-        }
-    }
-
-    public void TritanopiaColoursScores(String colour){
-        switch (colour) {
-            case "Red":
-                System.out.println("new Color(255, 0, 0)");
-            case "Green":
-                System.out.println("new Color(0, 179, 60)");
-            case "Blue":
-                System.out.println("new Color(0, 0, 196)");
-        }
-    }
 
     /**
      * @param args the command line arguments
@@ -303,7 +233,6 @@ public void getPoints(double pts){
             java.util.logging.Logger.getLogger(Scores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -314,8 +243,6 @@ public void getPoints(double pts){
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel HeaderBackground;
-    private javax.swing.JProgressBar ProBar;
     private javax.swing.JLabel Session1Label;
     private javax.swing.JPanel Session1Panel;
     private javax.swing.JLabel Session1ScoreLabel;
@@ -325,7 +252,5 @@ public void getPoints(double pts){
     private javax.swing.JLabel Session3Label;
     private javax.swing.JPanel Session3Panel;
     private javax.swing.JLabel Session3ScoreLabel;
-    private javax.swing.JLabel header;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
