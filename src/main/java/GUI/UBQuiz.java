@@ -29,12 +29,12 @@ public class UBQuiz extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        question1Button = new javax.swing.JButton();
+        question5Button = new javax.swing.JButton();
+        question2Button = new javax.swing.JButton();
+        question4Button = new javax.swing.JButton();
+        question3Button = new javax.swing.JButton();
+        submitButton = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -63,40 +63,40 @@ public class UBQuiz extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jButton1.setText("q1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        question1Button.setText("q1");
+        question1Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                question1ButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setText("q5");
+        question5Button.setText("q5");
 
-        jButton3.setText("q2");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        question2Button.setText("q2");
+        question2Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                question2ButtonActionPerformed(evt);
             }
         });
 
-        jButton4.setText("q4");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        question4Button.setText("q4");
+        question4Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                question4ButtonActionPerformed(evt);
             }
         });
 
-        jButton5.setText("q3");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        question3Button.setText("q3");
+        question3Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                question3ButtonActionPerformed(evt);
             }
         });
 
-        jButton6.setText("Submit");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        submitButton.setText("Submit");
+        submitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                submitButtonActionPerformed(evt);
             }
         });
 
@@ -107,29 +107,29 @@ public class UBQuiz extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(question5Button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(question4Button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(question3Button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(question2Button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(question1Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(submitButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(question1Button, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(question2Button, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(question3Button, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(question4Button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(question5Button, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(submitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jLabel1.setText("Why is it important to move someone who is unresponsive and breathing onto their  side?");
@@ -191,7 +191,7 @@ public class UBQuiz extends javax.swing.JFrame {
                 .addComponent(userAnswer4)
                 .addGap(18, 18, 18)
                 .addComponent(userAnswer3)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 87, Short.MAX_VALUE))
         );
 
         jTextArea1.setColumns(20);
@@ -310,8 +310,9 @@ public class UBQuiz extends javax.swing.JFrame {
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(7, 7, 7)
                 .addComponent(userAnswer9)
                 .addGap(18, 18, 18)
                 .addComponent(userAnswer10)
@@ -394,9 +395,9 @@ public class UBQuiz extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void question4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_question4ButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_question4ButtonActionPerformed
 
     private void userAnswer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userAnswer1ActionPerformed
         // TODO add your handling code here:
@@ -418,7 +419,7 @@ public class UBQuiz extends javax.swing.JFrame {
         userAnswer = "4";
     }//GEN-LAST:event_userAnswer4ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void question1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_question1ButtonActionPerformed
         // TODO add your handling code here:
         jPanel3.removeAll();
         jPanel3.repaint();
@@ -427,9 +428,9 @@ public class UBQuiz extends javax.swing.JFrame {
         jPanel3.add(jPanel4);
         jPanel3.repaint();
         jPanel3.revalidate();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_question1ButtonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void question2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_question2ButtonActionPerformed
         // TODO add your handling code here:
         jPanel3.removeAll();
         jPanel3.repaint();
@@ -440,9 +441,9 @@ public class UBQuiz extends javax.swing.JFrame {
         jPanel3.repaint();
         jPanel3.revalidate();
         
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_question2ButtonActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void question3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_question3ButtonActionPerformed
         jPanel3.removeAll();
         jPanel3.repaint();
         jPanel3.revalidate();
@@ -451,7 +452,7 @@ public class UBQuiz extends javax.swing.JFrame {
        
         jPanel3.repaint();
         jPanel3.revalidate();
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_question3ButtonActionPerformed
 
     private void userAnswer5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userAnswer5ActionPerformed
         // TODO add your handling code here:
@@ -493,7 +494,7 @@ public class UBQuiz extends javax.swing.JFrame {
         userAnswer = "4";
     }//GEN-LAST:event_userAnswer12ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
         // TODO add your handling code here:
         
           try{
@@ -507,20 +508,20 @@ public class UBQuiz extends javax.swing.JFrame {
             e.printStackTrace();
         }
         
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_submitButtonActionPerformed
 public  double marks=0.0;
       
        public double Points=0.0;
        public void calPoint(){
            marks=0.0;
            if(userAnswer4.isSelected()==true){
-               marks+=30.0;
+               marks+=33.33;
            }
            if(userAnswer6.isSelected()==true){
-               marks+=30.0;
+               marks+=33.33;
            }
            if(userAnswer10.isSelected()==true){
-              marks+=30.0;
+              marks+=33.34;
            }
            Points=marks;
        }
@@ -560,37 +561,23 @@ public  double marks=0.0;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
-    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JButton question1Button;
+    private javax.swing.JButton question2Button;
+    private javax.swing.JButton question3Button;
+    private javax.swing.JButton question4Button;
+    private javax.swing.JButton question5Button;
+    private javax.swing.JButton submitButton;
     private javax.swing.JRadioButton userAnswer1;
     private javax.swing.JRadioButton userAnswer10;
     private javax.swing.JRadioButton userAnswer11;
