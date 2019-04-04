@@ -24,10 +24,11 @@ public class Lesson extends javax.swing.JFrame {
     }
 
     public void CPR() {
-        lessonTitle.setText("CPR");
+        lessonTitle.setFont(new java.awt.Font("Calibri", 0, 40));
+        lessonTitle.setText("<html>CPR</html>");
+        lessonDescription.setText("<html>1) Open their airway<br />2) Check their breathing<br />3) Call for help and start CPR<br />4) Start giving chest compressions<br />5) Start giving rescue breaths</html>");
         lessonImage.setText("");
-        lessonImage.setIcon(new ImageIcon(getClass().getResource("/Resources/lesson/how-to-do-CPR.png")));
-        lessonDescription.setText("<html>1) Open their airway</br>2) Check their breathing</br>3) Call for help and start CPR</BR>4) Start giving chest compressions</br>5) Start giving rescue breaths</html>");
+        lessonImage.setIcon(new ImageIcon(getClass().getResource("/Lesson/CPR (1).png")));
     }
     
     
@@ -41,9 +42,9 @@ public class Lesson extends javax.swing.JFrame {
     private void initComponents() {
 
         back = new javax.swing.JButton();
+        lessonTitle = new javax.swing.JLabel();
         header = new javax.swing.JLabel();
         HeaderBackground = new javax.swing.JLabel();
-        lessonTitle = new javax.swing.JLabel();
         lessonDescription = new javax.swing.JLabel();
         lessonImage = new javax.swing.JLabel();
 
@@ -66,6 +67,13 @@ public class Lesson extends javax.swing.JFrame {
         getContentPane().add(back);
         back.setBounds(20, 40, 30, 60);
 
+        lessonTitle.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
+        lessonTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lessonTitle.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lessonTitle.setText("<insert title here>");
+        getContentPane().add(lessonTitle);
+        lessonTitle.setBounds(140, 30, 190, 70);
+
         header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lesson/lessonScreen_blank.png"))); // NOI18N
         getContentPane().add(header);
         header.setBounds(-10, -50, 380, 190);
@@ -76,20 +84,15 @@ public class Lesson extends javax.swing.JFrame {
         getContentPane().add(HeaderBackground);
         HeaderBackground.setBounds(0, 0, 360, 110);
 
-        lessonTitle.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        lessonTitle.setText("blank");
-        getContentPane().add(lessonTitle);
-        lessonTitle.setBounds(140, 40, 170, 80);
-
-        lessonDescription.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lessonDescription.setText("insert method desciptions here");
+        lessonDescription.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lessonDescription.setText("<insert desciptions here>");
         getContentPane().add(lessonDescription);
-        lessonDescription.setBounds(30, 360, 300, 90);
+        lessonDescription.setBounds(30, 360, 300, 260);
 
         lessonImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lessonImage.setText("<insert image here>");
         getContentPane().add(lessonImage);
-        lessonImage.setBounds(10, 180, 330, 140);
+        lessonImage.setBounds(10, 160, 330, 180);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -100,7 +103,7 @@ public class Lesson extends javax.swing.JFrame {
     }//GEN-LAST:event_backActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        lessonTitle.setFont(new java.awt.Font("Calibri", 0, 25));
+        
         CPR();
         
     }//GEN-LAST:event_formWindowActivated
