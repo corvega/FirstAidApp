@@ -51,6 +51,9 @@ public class Settings extends javax.swing.JFrame {
         Seperator1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(370, 640));
+        setMinimumSize(new java.awt.Dimension(370, 640));
+        setPreferredSize(new java.awt.Dimension(370, 640));
         getContentPane().setLayout(null);
 
         back.setBackground(new java.awt.Color(255, 51, 51));
@@ -240,21 +243,25 @@ public class Settings extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void DefaultColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DefaultColoursActionPerformed
+        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png")));
         defaultColoursSettings();
         //Set default colours across all screens here
     }//GEN-LAST:event_DefaultColoursActionPerformed
 
     private void DeuteranopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeuteranopiaColoursActionPerformed
+        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png")));
         DeuteranopiaColoursSettings();
         //Set Deutranopia colours across all screens here
     }//GEN-LAST:event_DeuteranopiaColoursActionPerformed
 
     private void ProtanopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProtanopiaColoursActionPerformed
+        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png")));
         ProtanopiaColoursSettings();
         //Set Protanopia colours across all screens here
     }//GEN-LAST:event_ProtanopiaColoursActionPerformed
 
     private void TritanopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TritanopiaColoursActionPerformed
+        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png")));
         TritanopiaColoursSettings();
         //Set Tritanopia colours across all screens here
     }//GEN-LAST:event_TritanopiaColoursActionPerformed
@@ -277,6 +284,7 @@ public class Settings extends javax.swing.JFrame {
     }//GEN-LAST:event_backActionPerformed
 
     public void defaultColoursSettings(){
+        back.setBackground(new Color(249, 6, 6));
         HeaderBackground.setBackground(new Color(249, 6, 6));
         RedColourTest.setBackground(new Color(249, 6, 6));
         GreenColourTest.setBackground(new Color(0, 128, 0));
@@ -287,6 +295,8 @@ public class Settings extends javax.swing.JFrame {
     }
     
     public void DeuteranopiaColoursSettings(){
+        back.setBackground(new Color(238, 43, 150));
+        HeaderBackground.setBackground(new Color(238, 43, 150));
         RedColourTest.setBackground(new Color(238, 43, 150));
         GreenColourTest.setBackground(new Color(0, 155, 33));
         BlueColourTest.setBackground(new Color(0, 64, 224));
@@ -296,6 +306,8 @@ public class Settings extends javax.swing.JFrame {
     }
     
     public void ProtanopiaColoursSettings(){
+        back.setBackground(new Color(250, 56, 143));
+        HeaderBackground.setBackground(new Color(250, 56, 143));
         RedColourTest.setBackground(new Color(250, 56, 143));
         GreenColourTest.setBackground(new Color(0, 128, 28));
         BlueColourTest.setBackground(new Color(6, 68, 224));
@@ -305,6 +317,8 @@ public class Settings extends javax.swing.JFrame {
     }
     
     public void TritanopiaColoursSettings(){
+        back.setBackground(new Color(255, 0, 0));
+        HeaderBackground.setBackground(new Color(255, 0, 0));
         RedColourTest.setBackground(new Color(255, 0, 0));
         GreenColourTest.setBackground(new Color(0, 179, 60));
         BlueColourTest.setBackground(new Color(0, 0, 196));
