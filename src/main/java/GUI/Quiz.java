@@ -18,6 +18,7 @@ public class Quiz extends javax.swing.JFrame {
     public Quiz() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255, 255, 255));
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -40,6 +41,7 @@ public class Quiz extends javax.swing.JFrame {
         userAnswer4 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jButton2.setText("Next");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -47,8 +49,12 @@ public class Quiz extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(319, 555, 55, 23);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Quiz/quizScreen.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 367, 170);
 
         jScrollPane1.setEnabled(false);
 
@@ -58,12 +64,17 @@ public class Quiz extends javax.swing.JFrame {
         jTextArea1.setText("Why is it important to move someone who is\nunresponsive and breathing onto their \nside?");
         jScrollPane1.setViewportView(jTextArea1);
 
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(10, 196, 379, 142);
+
         userAnswer1.setText("More comfortable sleeping position");
         userAnswer1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userAnswer1ActionPerformed(evt);
             }
         });
+        getContentPane().add(userAnswer1);
+        userAnswer1.setBounds(10, 374, 191, 23);
 
         userAnswer2.setText("You can check for injuries to their body");
         userAnswer2.addActionListener(new java.awt.event.ActionListener() {
@@ -71,6 +82,8 @@ public class Quiz extends javax.swing.JFrame {
                 userAnswer2ActionPerformed(evt);
             }
         });
+        getContentPane().add(userAnswer2);
+        userAnswer2.setBounds(10, 415, 213, 23);
 
         userAnswer3.setText("Moving the person may help wake them up");
         userAnswer3.addActionListener(new java.awt.event.ActionListener() {
@@ -78,6 +91,8 @@ public class Quiz extends javax.swing.JFrame {
                 userAnswer3ActionPerformed(evt);
             }
         });
+        getContentPane().add(userAnswer3);
+        userAnswer3.setBounds(10, 456, 231, 23);
 
         userAnswer4.setText("It helps to keep their airway clear and allows them to continue breathing normally");
         userAnswer4.addActionListener(new java.awt.event.ActionListener() {
@@ -85,50 +100,8 @@ public class Quiz extends javax.swing.JFrame {
                 userAnswer4ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(309, 309, 309)
-                        .addComponent(jButton2)
-                        .addGap(22, 70, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(userAnswer2)
-                                        .addComponent(userAnswer3))
-                                    .addGap(184, 184, 184))
-                                .addComponent(userAnswer4))
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(userAnswer1)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                .addComponent(userAnswer1)
-                .addGap(18, 18, 18)
-                .addComponent(userAnswer2)
-                .addGap(18, 18, 18)
-                .addComponent(userAnswer3)
-                .addGap(18, 18, 18)
-                .addComponent(userAnswer4)
-                .addGap(35, 35, 35)
-                .addComponent(jButton2)
-                .addGap(56, 56, 56))
-        );
+        getContentPane().add(userAnswer4);
+        userAnswer4.setBounds(10, 497, 415, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

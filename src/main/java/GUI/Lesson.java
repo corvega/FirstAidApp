@@ -16,6 +16,8 @@ public class Lesson extends javax.swing.JFrame {
      */
     public Lesson() {
         initComponents();
+        getContentPane().setBackground(new java.awt.Color(255, 255, 255));
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -27,44 +29,64 @@ public class Lesson extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel7 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        back = new javax.swing.JButton();
+        lessonTitle = new javax.swing.JLabel();
+        method = new javax.swing.JLabel();
+        lessonImage = new javax.swing.JLabel();
+        header = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lesson/lessonScreen.png"))); // NOI18N
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(-20, 0, 380, 170);
-
-        jButton2.setBackground(new java.awt.Color(255, 51, 51));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/back.png"))); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+        setPreferredSize(new java.awt.Dimension(370, 640));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(20, 40, 30, 60);
+        getContentPane().setLayout(null);
 
-        jLabel2.setText("insert method desciptions here");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(30, 360, 300, 90);
+        back.setBackground(new java.awt.Color(255, 51, 51));
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/back.png"))); // NOI18N
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
+        getContentPane().add(back);
+        back.setBounds(20, 40, 30, 60);
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("<insert image here>");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(10, 180, 330, 140);
+        lessonTitle.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lessonTitle.setText("blank");
+        getContentPane().add(lessonTitle);
+        lessonTitle.setBounds(140, 40, 170, 80);
+
+        method.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        method.setText("insert method desciptions here");
+        getContentPane().add(method);
+        method.setBounds(30, 360, 300, 90);
+
+        lessonImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lessonImage.setText("<insert image here>");
+        getContentPane().add(lessonImage);
+        lessonImage.setBounds(10, 180, 330, 140);
+
+        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lesson/lessonScreen_blank.png"))); // NOI18N
+        getContentPane().add(header);
+        header.setBounds(-10, -50, 380, 200);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        //    new Menu().setVisible(true);
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        new LessonList().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_backActionPerformed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        //lessonTitle.setFont(new java.awt.Font("Calibri", 0, 25));
+        //lessonTitle.setText();  //set the lesson title here
+        //lessonImage.setIcon(new javax.swing.ImageIcon(getClass().getResource()));
+        
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
@@ -102,9 +124,10 @@ public class Lesson extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JButton back;
+    private javax.swing.JLabel header;
+    private javax.swing.JLabel lessonImage;
+    private javax.swing.JLabel lessonTitle;
+    private javax.swing.JLabel method;
     // End of variables declaration//GEN-END:variables
 }
