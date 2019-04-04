@@ -5,6 +5,9 @@
  */
 package GUI;
 
+import java.awt.Color;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author up873711
@@ -16,10 +19,18 @@ public class Lesson extends javax.swing.JFrame {
      */
     public Lesson() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().setBackground(new Color(255, 255, 255));
         setLocationRelativeTo(null);
     }
 
+    public void CPR() {
+        lessonTitle.setText("CPR");
+        lessonImage.setText("");
+        lessonImage.setIcon(new ImageIcon(getClass().getResource("/Resources/lesson/how-to-do-CPR.png")));
+        lessonDescription.setText("<html>1) Open their airway</br>2) Check their breathing</br>3) Call for help and start CPR</BR>4) Start giving chest compressions</br>5) Start giving rescue breaths</html>");
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,7 +44,7 @@ public class Lesson extends javax.swing.JFrame {
         header = new javax.swing.JLabel();
         HeaderBackground = new javax.swing.JLabel();
         lessonTitle = new javax.swing.JLabel();
-        method = new javax.swing.JLabel();
+        lessonDescription = new javax.swing.JLabel();
         lessonImage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -70,10 +81,10 @@ public class Lesson extends javax.swing.JFrame {
         getContentPane().add(lessonTitle);
         lessonTitle.setBounds(140, 40, 170, 80);
 
-        method.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        method.setText("insert method desciptions here");
-        getContentPane().add(method);
-        method.setBounds(30, 360, 300, 90);
+        lessonDescription.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lessonDescription.setText("insert method desciptions here");
+        getContentPane().add(lessonDescription);
+        lessonDescription.setBounds(30, 360, 300, 90);
 
         lessonImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lessonImage.setText("<insert image here>");
@@ -89,9 +100,8 @@ public class Lesson extends javax.swing.JFrame {
     }//GEN-LAST:event_backActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        //lessonTitle.setFont(new java.awt.Font("Calibri", 0, 25));
-        //lessonTitle.setText();  //set the lesson title here
-        //lessonImage.setIcon(new javax.swing.ImageIcon(getClass().getResource()));
+        lessonTitle.setFont(new java.awt.Font("Calibri", 0, 25));
+        CPR();
         
     }//GEN-LAST:event_formWindowActivated
 
@@ -134,8 +144,8 @@ public class Lesson extends javax.swing.JFrame {
     private javax.swing.JLabel HeaderBackground;
     private javax.swing.JButton back;
     private javax.swing.JLabel header;
+    private javax.swing.JLabel lessonDescription;
     private javax.swing.JLabel lessonImage;
     private javax.swing.JLabel lessonTitle;
-    private javax.swing.JLabel method;
     // End of variables declaration//GEN-END:variables
 }

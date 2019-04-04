@@ -5,6 +5,8 @@
  */
 package GUI;
 
+import java.awt.Color;
+
 /**
  *
  * @author up839921
@@ -16,7 +18,7 @@ public class PreviewResultsList extends javax.swing.JFrame {
      */
     public PreviewResultsList() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(255,255,255));
+        getContentPane().setBackground(new Color(255,255,255));
         setLocationRelativeTo(null);
     }
 

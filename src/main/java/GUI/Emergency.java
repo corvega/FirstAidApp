@@ -1,6 +1,8 @@
 
 package GUI;
 
+import java.awt.Color;
+
 
 public class Emergency extends javax.swing.JFrame {
 
@@ -9,7 +11,7 @@ public class Emergency extends javax.swing.JFrame {
      */
     public Emergency() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().setBackground(new Color(255, 255, 255));
         setLocationRelativeTo(null);
     }
 
