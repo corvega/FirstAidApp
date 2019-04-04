@@ -16,7 +16,7 @@ public class Splashscreen extends javax.swing.JFrame {
      */
     public Splashscreen() {
         initComponents();
-        setLocationRelativeTo(null);
+        setLocationRelativeTo(null);  //Ensures the frame would open in the centre of the display
     }
 
     /**
@@ -59,11 +59,11 @@ public class Splashscreen extends javax.swing.JFrame {
                     Thread.sleep(5000);
                 }
                 
-                catch(Exception e){
+                catch(Exception e){  
                     
                 }
-        this.dispose();
-        new Menu().setVisible(true);
+        this.dispose();  //After a 5 seconds delay, turn off visibility for the splashscreen
+        new Menu().setVisible(true);  //Creates a new Menu frame
         
     }//GEN-LAST:event_formWindowActivated
 
@@ -97,7 +97,7 @@ public class Splashscreen extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Splashscreen().setVisible(true);
+                new Splashscreen().setVisible(true);  //Creates and show this frame
             }
         });
     }

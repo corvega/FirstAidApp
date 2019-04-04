@@ -9,7 +9,7 @@ import java.awt.Color;
 
 /**
  *
- * @author up839921
+ * @author James and Marwan
  */
 public class LessonList extends javax.swing.JFrame {
 
@@ -18,8 +18,8 @@ public class LessonList extends javax.swing.JFrame {
      */
     public LessonList() {
         initComponents();
-        getContentPane().setBackground(new Color(255,255,255));
-        setLocationRelativeTo(null);
+        getContentPane().setBackground(new Color(255,255,255));  //Sets background colour to white
+        setLocationRelativeTo(null);  //Ensures the frame would open in the centre of the display
     }
 
     /**
@@ -137,33 +137,33 @@ public class LessonList extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CPRButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CPRButtonActionPerformed
-        new Lesson().setVisible(true);
-        this.setVisible(false);
+        new Lesson().setVisible(true); //Creates a new Lesson screen
+        this.setVisible(false);   //Turn off visibility for this frame
     }//GEN-LAST:event_CPRButtonActionPerformed
 
     private void UnresponsiveBreathingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnresponsiveBreathingButtonActionPerformed
-        //new Lesson().setVisible(true);
+        //new Lesson().setVisible(true);     //Commented out for prototype purpose
         this.setVisible(false);
     }//GEN-LAST:event_UnresponsiveBreathingButtonActionPerformed
 
     private void HeavyBleedingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeavyBleedingButtonActionPerformed
-        //new Lesson().setVisible(true);
+        //new Lesson().setVisible(true);     //Commented out for prototype purpose
         this.setVisible(false);
     }//GEN-LAST:event_HeavyBleedingButtonActionPerformed
 
     private void BurnsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BurnsButtonActionPerformed
-        //new Lesson().setVisible(true);
+        //new Lesson().setVisible(true);     //Commented out for prototype purpose
         this.setVisible(false);
     }//GEN-LAST:event_BurnsButtonActionPerformed
 
     private void ChokingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChokingButtonActionPerformed
-        //new Lesson().setVisible(true);
+        //new Lesson().setVisible(true);     //Commented out for prototype purpose
         this.setVisible(false);
     }//GEN-LAST:event_ChokingButtonActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        new Menu().setVisible(true);
-        this.setVisible(false);
+        new Menu().setVisible(true);  //Creates a new Menu frame
+        this.setVisible(false);  //Turn off visibility for this frame
     }//GEN-LAST:event_backActionPerformed
 
     /**
@@ -196,7 +196,7 @@ public class LessonList extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LessonList().setVisible(true);
+                new LessonList().setVisible(true); //Creates and show this frame
             }
         });
     }

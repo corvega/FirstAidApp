@@ -9,7 +9,7 @@ import java.awt.Color;
 
 /**
  *
- * @author up839921
+ * @author James and Marwan
  */
 public class Results extends javax.swing.JFrame {
 
@@ -18,8 +18,8 @@ public class Results extends javax.swing.JFrame {
      */
     public Results() {
         initComponents();
-        getContentPane().setBackground(new Color(255,255,255));
-        setLocationRelativeTo(null);
+        getContentPane().setBackground(new Color(255,255,255));  //Sets the background colour to white
+        setLocationRelativeTo(null);  //Ensures the frame would open in the centre of the display
     }
 
     /**
@@ -177,16 +177,16 @@ public class Results extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Q2_4AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q2_4AnswerActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_Q2_4AnswerActionPerformed
 
     private void Q3_2AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q3_2AnswerActionPerformed
-        // TODO add your handling code here:
+  
     }//GEN-LAST:event_Q3_2AnswerActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        new PreviewResultsList().setVisible(true);
-        this.setVisible(false);
+        new PreviewResultsList().setVisible(true);  //Creates a new PreviewResultsList frame
+        this.setVisible(false);  //Turn off visibility for this frame
     }//GEN-LAST:event_backActionPerformed
 
     /**
@@ -220,7 +220,7 @@ public class Results extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Results().setVisible(true);
+                new Results().setVisible(true);  //Creates and show this frame
             }
         });
     }

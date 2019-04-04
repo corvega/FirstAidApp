@@ -7,7 +7,7 @@ package GUI;
 
 /**
  *
- * @author usman
+ * @author James, Marwan and Usman
  */
 public class QuizList extends javax.swing.JFrame {
 
@@ -16,8 +16,8 @@ public class QuizList extends javax.swing.JFrame {
      */
     public QuizList() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(255, 255, 255));
-        setLocationRelativeTo(null);
+        getContentPane().setBackground(new java.awt.Color(255, 255, 255));  //Sets background colour to white
+        setLocationRelativeTo(null);  //Ensures the frame would open in the centre of the display
     }
 
     /**
@@ -121,33 +121,33 @@ public class QuizList extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CPRButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CPRButtonActionPerformed
-        //new Quiz().setVisible(true);
+        //new Quiz().setVisible(true);    //Commented out for prototype purpose
         this.setVisible(false);
     }//GEN-LAST:event_CPRButtonActionPerformed
 
     private void UnresponsiveBreathingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnresponsiveBreathingButtonActionPerformed
-        new UnresQuiz().setVisible(true);
-        this.setVisible(false);
+        new UnresQuiz().setVisible(true);  //Creates a new UnresQuiz frame
+        this.setVisible(false);  //Turn off visibility for this frame
     }//GEN-LAST:event_UnresponsiveBreathingButtonActionPerformed
 
     private void HeavyBleedingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeavyBleedingButtonActionPerformed
-        //new Quiz().setVisible(true);
+        //new Quiz().setVisible(true);   //Commented out for prototype purpose
         this.setVisible(false);
     }//GEN-LAST:event_HeavyBleedingButtonActionPerformed
 
     private void BurnsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BurnsButtonActionPerformed
-        //new Quiz().setVisible(true);
+        //new Quiz().setVisible(true);   //Commented out for prototype purpose
         this.setVisible(false);
     }//GEN-LAST:event_BurnsButtonActionPerformed
 
     private void ChokingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChokingButtonActionPerformed
-        new ChokingQuiz().setVisible(true);
-        this.setVisible(false);
+        new ChokingQuiz().setVisible(true);  //Creates a new ChokingQuiz frame
+        this.setVisible(false);  //Turn off visibility for this frame
     }//GEN-LAST:event_ChokingButtonActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        new Menu().setVisible(true);
-        this.setVisible(false);
+        new Menu().setVisible(true);  //Creates a new Menu frame
+        this.setVisible(false);  //Turn off visibility for this frame
     }//GEN-LAST:event_backActionPerformed
 
     /**
@@ -180,7 +180,7 @@ public class QuizList extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                 new QuizList().setVisible(true);
+                 new QuizList().setVisible(true);  //Creates and show this frame
             }
         });
     }
