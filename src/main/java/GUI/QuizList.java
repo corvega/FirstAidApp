@@ -129,7 +129,7 @@ public class QuizList extends javax.swing.JFrame {
     }//GEN-LAST:event_HeavyBleedingButtonActionPerformed
 
     private void BurnsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BurnsButtonActionPerformed
-        //new Quiz().setVisible(true);
+        new BurnsQuiz().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_BurnsButtonActionPerformed
 
