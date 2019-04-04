@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,7 +20,7 @@ public class Quiz extends javax.swing.JFrame {
      */
     public Quiz() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().setBackground(new Color(255, 255, 255));
         setLocationRelativeTo(null);
     }
 
@@ -95,7 +96,7 @@ public class Quiz extends javax.swing.JFrame {
         getContentPane().add(HeaderBackground);
         HeaderBackground.setBounds(0, 0, 360, 110);
 
-        SubmitButton.setText("Sumbit");
+        SubmitButton.setText("Submit");
         SubmitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SubmitButtonActionPerformed(evt);
@@ -522,7 +523,7 @@ public class Quiz extends javax.swing.JFrame {
         this.calPoint();
         Scores obj=new Scores();
         obj.setVisible(true);
-        obj.getPoints(this.Points);
+        //obj.getPoints(this.Points);
         this.dispose();
         }
         catch(Exception e){

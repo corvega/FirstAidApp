@@ -20,7 +20,7 @@ public class Settings extends javax.swing.JFrame {
      */
     public Settings() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(255,255,255));
+        getContentPane().setBackground(new Color(255,255,255));
         setLocationRelativeTo(null);
     }
 
