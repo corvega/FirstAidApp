@@ -7,7 +7,7 @@ package GUI;
 
 /**
  *
- * @author James, Marwan and Usman
+ * @author James and Marwan
  */
 public class QuizList extends javax.swing.JFrame {
 
@@ -122,7 +122,7 @@ public class QuizList extends javax.swing.JFrame {
 
     private void CPRButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CPRButtonActionPerformed
         //new Quiz().setVisible(true);    //Commented out for prototype purpose
-        this.setVisible(false);
+        this.setVisible(false);  //Turn off visibility for this frame
     }//GEN-LAST:event_CPRButtonActionPerformed
 
     private void UnresponsiveBreathingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnresponsiveBreathingButtonActionPerformed
@@ -132,12 +132,12 @@ public class QuizList extends javax.swing.JFrame {
 
     private void HeavyBleedingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeavyBleedingButtonActionPerformed
         //new Quiz().setVisible(true);   //Commented out for prototype purpose
-        this.setVisible(false);
+        this.setVisible(false);  //Turn off visibility for this frame
     }//GEN-LAST:event_HeavyBleedingButtonActionPerformed
 
     private void BurnsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BurnsButtonActionPerformed
         //new Quiz().setVisible(true);   //Commented out for prototype purpose
-        this.setVisible(false);
+        this.setVisible(false);  //Turn off visibility for this frame
     }//GEN-LAST:event_BurnsButtonActionPerformed
 
     private void ChokingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChokingButtonActionPerformed

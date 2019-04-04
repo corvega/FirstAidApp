@@ -154,6 +154,7 @@ public class Menu extends javax.swing.JFrame {
         ScoresButton.setBackground(new Color(249, 6, 6));
         EmergencyButton.setBackground(new Color(249, 6, 6));
         SettingsButton.setBackground(new Color(249, 6, 6));
+        //Sets the colours back to the original default
     }
     
     public void DeuteranopiaColoursSettings(){
@@ -162,7 +163,8 @@ public class Menu extends javax.swing.JFrame {
         PreviewResultsButton.setBackground(new Color(238, 43, 150));
         ScoresButton.setBackground(new Color(238, 43, 150));
         EmergencyButton.setBackground(new Color(238, 43, 150));
-        SettingsButton.setBackground(new Color(238, 43, 150));
+        SettingsButton.setBackground(new Color(238, 43, 150));       
+        //Sets the colours to allow for easier reading for those who suffer from Deuteranopia colourblindness
 
     }
     
@@ -173,6 +175,7 @@ public class Menu extends javax.swing.JFrame {
         ScoresButton.setBackground(new Color(250, 56, 143));
         EmergencyButton.setBackground(new Color(250, 56, 143));
         SettingsButton.setBackground(new Color(250, 56, 143));
+        //Sets the colours to allow for easier reading for those who suffer from Protanopia colourblindness
     }
     
     public void TritanopiaColoursSettings(){
@@ -182,9 +185,9 @@ public class Menu extends javax.swing.JFrame {
         ScoresButton.setBackground(new Color(255, 0, 0));
         EmergencyButton.setBackground(new Color(255, 0, 0));
         SettingsButton.setBackground(new Color(255, 0, 0));
+        //Sets the colours to allow for easier reading for those who suffer from Tritanopia colourblindness
     }
-    
-    //Sets the icon and colour background for each button
+
     
 
     /**
@@ -224,7 +227,7 @@ public class Menu extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu().setVisible(true);
+                new Menu().setVisible(true);  //Creates and show this frame
             }
         });
     }
