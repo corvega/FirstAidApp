@@ -71,13 +71,13 @@ public class Settings extends javax.swing.JFrame {
         getContentPane().add(header);
         header.setBounds(-20, 0, 380, 120);
 
-        AccessibilityOptionsLabel.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
+        AccessibilityOptionsLabel.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         AccessibilityOptionsLabel.setText("Accessibility options");
         getContentPane().add(AccessibilityOptionsLabel);
-        AccessibilityOptionsLabel.setBounds(10, 116, 250, 37);
+        AccessibilityOptionsLabel.setBounds(10, 140, 270, 30);
 
         ColourblindSelector.add(DefaultColours);
-        DefaultColours.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
+        DefaultColours.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         DefaultColours.setSelected(true);
         DefaultColours.setText("Default");
         DefaultColours.addActionListener(new java.awt.event.ActionListener() {
@@ -86,9 +86,9 @@ public class Settings extends javax.swing.JFrame {
             }
         });
         getContentPane().add(DefaultColours);
-        DefaultColours.setBounds(10, 403, 115, 45);
+        DefaultColours.setBounds(10, 420, 190, 39);
 
-        MagnifyTextCheckBox.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
+        MagnifyTextCheckBox.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         MagnifyTextCheckBox.setText("Magnify Text");
         MagnifyTextCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,10 +96,10 @@ public class Settings extends javax.swing.JFrame {
             }
         });
         getContentPane().add(MagnifyTextCheckBox);
-        MagnifyTextCheckBox.setBounds(41, 167, 185, 45);
+        MagnifyTextCheckBox.setBounds(40, 190, 230, 39);
 
         ColourblindSelector.add(DeuteranopiaColours);
-        DeuteranopiaColours.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
+        DeuteranopiaColours.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         DeuteranopiaColours.setText("Deuteranopia");
         DeuteranopiaColours.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,9 +107,9 @@ public class Settings extends javax.swing.JFrame {
             }
         });
         getContentPane().add(DeuteranopiaColours);
-        DeuteranopiaColours.setBounds(10, 448, 193, 45);
+        DeuteranopiaColours.setBounds(10, 460, 240, 39);
 
-        CaptionImagesCheckBox.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
+        CaptionImagesCheckBox.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         CaptionImagesCheckBox.setText("Caption Images");
         CaptionImagesCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,10 +117,10 @@ public class Settings extends javax.swing.JFrame {
             }
         });
         getContentPane().add(CaptionImagesCheckBox);
-        CaptionImagesCheckBox.setBounds(41, 212, 215, 45);
+        CaptionImagesCheckBox.setBounds(40, 240, 230, 39);
 
         ColourblindSelector.add(ProtanopiaColours);
-        ProtanopiaColours.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
+        ProtanopiaColours.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         ProtanopiaColours.setText("Protanopia");
         ProtanopiaColours.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,10 +128,10 @@ public class Settings extends javax.swing.JFrame {
             }
         });
         getContentPane().add(ProtanopiaColours);
-        ProtanopiaColours.setBounds(10, 493, 161, 45);
+        ProtanopiaColours.setBounds(10, 510, 220, 39);
 
         ColourblindSelector.add(TritanopiaColours);
-        TritanopiaColours.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
+        TritanopiaColours.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         TritanopiaColours.setText("Tritanopia");
         TritanopiaColours.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,7 +139,7 @@ public class Settings extends javax.swing.JFrame {
             }
         });
         getContentPane().add(TritanopiaColours);
-        TritanopiaColours.setBounds(10, 538, 151, 45);
+        TritanopiaColours.setBounds(10, 560, 220, 39);
 
         RedColourTest.setBackground(new java.awt.Color(249, 6, 6));
         RedColourTest.setBorder(new javax.swing.border.SoftBevelBorder(50));
@@ -157,7 +157,7 @@ public class Settings extends javax.swing.JFrame {
         );
 
         getContentPane().add(RedColourTest);
-        RedColourTest.setBounds(52, 335, 50, 50);
+        RedColourTest.setBounds(50, 360, 50, 50);
 
         GreenColourTest.setBackground(new java.awt.Color(0, 128, 0));
         GreenColourTest.setBorder(new javax.swing.border.SoftBevelBorder(50));
@@ -175,7 +175,7 @@ public class Settings extends javax.swing.JFrame {
         );
 
         getContentPane().add(GreenColourTest);
-        GreenColourTest.setBounds(155, 335, 50, 50);
+        GreenColourTest.setBounds(160, 360, 50, 50);
 
         BlueColourTest.setBackground(new java.awt.Color(77, 77, 255));
         BlueColourTest.setBorder(new javax.swing.border.SoftBevelBorder(50));
@@ -193,7 +193,7 @@ public class Settings extends javax.swing.JFrame {
         );
 
         getContentPane().add(BlueColourTest);
-        BlueColourTest.setBounds(268, 335, 50, 50);
+        BlueColourTest.setBounds(270, 360, 50, 50);
 
         Seperator2.setBackground(new java.awt.Color(249, 6, 6));
         Seperator2.setPreferredSize(new java.awt.Dimension(300, 5));
@@ -210,12 +210,12 @@ public class Settings extends javax.swing.JFrame {
         );
 
         getContentPane().add(Seperator2);
-        Seperator2.setBounds(30, 285, 300, 5);
+        Seperator2.setBounds(30, 310, 300, 5);
 
-        ColourblindModeLabel.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
+        ColourblindModeLabel.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         ColourblindModeLabel.setText("Colourblind Mode:");
         getContentPane().add(ColourblindModeLabel);
-        ColourblindModeLabel.setBounds(10, 296, 231, 37);
+        ColourblindModeLabel.setBounds(10, 320, 270, 30);
 
         Seperator1.setBackground(new java.awt.Color(249, 6, 6));
         Seperator1.setPreferredSize(new java.awt.Dimension(300, 5));
@@ -232,7 +232,7 @@ public class Settings extends javax.swing.JFrame {
         );
 
         getContentPane().add(Seperator1);
-        Seperator1.setBounds(30, 155, 300, 5);
+        Seperator1.setBounds(30, 180, 300, 5);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

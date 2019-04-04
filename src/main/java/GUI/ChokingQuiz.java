@@ -35,6 +35,7 @@ public class ChokingQuiz extends javax.swing.JFrame {
         buttonGroup3 = new javax.swing.ButtonGroup();
         buttonGroup4 = new javax.swing.ButtonGroup();
         buttonGroup5 = new javax.swing.ButtonGroup();
+        back = new javax.swing.JButton();
         header = new javax.swing.JLabel();
         HeaderBackground = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -87,6 +88,16 @@ public class ChokingQuiz extends javax.swing.JFrame {
             }
         });
         getContentPane().setLayout(null);
+
+        back.setBackground(new java.awt.Color(255, 51, 51));
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/back.png"))); // NOI18N
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
+        getContentPane().add(back);
+        back.setBounds(20, 40, 30, 60);
 
         header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Quiz/quizScreen.png"))); // NOI18N
         getContentPane().add(header);
@@ -528,7 +539,7 @@ public class ChokingQuiz extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitButtonActionPerformed
-        Scores points = new Scores();
+        Score points = new Score();
         points.ProgressBar2(calculatePoints());
         points.setVisible(true);
     }//GEN-LAST:event_SubmitButtonActionPerformed
@@ -592,6 +603,11 @@ public class ChokingQuiz extends javax.swing.JFrame {
         jPanel3.repaint();
         jPanel3.revalidate();
     }//GEN-LAST:event_formWindowActivated
+
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        new QuizList().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_backActionPerformed
 
     
     
@@ -685,6 +701,7 @@ public class ChokingQuiz extends javax.swing.JFrame {
     private javax.swing.JButton Question4Button;
     private javax.swing.JButton Question5Button;
     private javax.swing.JButton SubmitButton;
+    private javax.swing.JButton back;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;

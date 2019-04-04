@@ -499,7 +499,7 @@ public class UBQuiz extends javax.swing.JFrame {
         
           try{
         this.calPoint();
-        Scores obj=new Scores();
+        Score obj=new Score();
         obj.setVisible(true);
         //obj.getPoints(this.Points);
         this.dispose();
