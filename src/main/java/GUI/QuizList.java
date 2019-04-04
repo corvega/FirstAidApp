@@ -17,7 +17,6 @@ public class QuizList extends javax.swing.JFrame {
     public QuizList() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255, 255, 255));
-        
     }
 
     /**
@@ -34,7 +33,6 @@ public class QuizList extends javax.swing.JFrame {
         HeavyBleedingButton = new javax.swing.JButton();
         BurnsButton = new javax.swing.JButton();
         ChokingButton = new javax.swing.JButton();
-        HeaderBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,15 +78,12 @@ public class QuizList extends javax.swing.JFrame {
             }
         });
 
-        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
-        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(CPRButton, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ChokingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -97,16 +92,12 @@ public class QuizList extends javax.swing.JFrame {
                             .addComponent(UnresponsiveBreathingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(HeavyBleedingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(BurnsButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(HeaderBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(HeaderBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addGap(75, 75, 75)
                 .addComponent(CPRButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(UnresponsiveBreathingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -116,7 +107,7 @@ public class QuizList extends javax.swing.JFrame {
                 .addComponent(BurnsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(ChokingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         pack();
@@ -128,7 +119,7 @@ public class QuizList extends javax.swing.JFrame {
     }//GEN-LAST:event_CPRButtonActionPerformed
 
     private void UnresponsiveBreathingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnresponsiveBreathingButtonActionPerformed
-        new UBQuiz().setVisible(true);
+        new Quiz().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_UnresponsiveBreathingButtonActionPerformed
 
@@ -186,7 +177,6 @@ public class QuizList extends javax.swing.JFrame {
     private javax.swing.JButton BurnsButton;
     private javax.swing.JButton CPRButton;
     private javax.swing.JButton ChokingButton;
-    private javax.swing.JLabel HeaderBackground;
     private javax.swing.JButton HeavyBleedingButton;
     private javax.swing.JButton UnresponsiveBreathingButton;
     // End of variables declaration//GEN-END:variables

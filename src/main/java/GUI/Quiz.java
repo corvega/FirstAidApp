@@ -5,6 +5,8 @@
  */
 package GUI;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author usman
@@ -18,7 +20,6 @@ public class Quiz extends javax.swing.JFrame {
     public Quiz() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255, 255, 255));
-        setLocationRelativeTo(null);
     }
 
     /**
@@ -31,112 +32,604 @@ public class Quiz extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jButton2 = new javax.swing.JButton();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
+        buttonGroup5 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        userAnswer1 = new javax.swing.JRadioButton();
-        userAnswer2 = new javax.swing.JRadioButton();
-        userAnswer3 = new javax.swing.JRadioButton();
-        userAnswer4 = new javax.swing.JRadioButton();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        SubmitButton = new javax.swing.JButton();
+        Question1Button = new javax.swing.JButton();
+        Question3Button = new javax.swing.JButton();
+        Question2Button = new javax.swing.JButton();
+        Question4Button = new javax.swing.JButton();
+        Question5Button = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        Q1Panel = new javax.swing.JPanel();
+        Q1Label = new javax.swing.JLabel();
+        Q1_1Answer = new javax.swing.JRadioButton();
+        Q1_2Answer = new javax.swing.JRadioButton();
+        Q1_3Answer = new javax.swing.JRadioButton();
+        Q1_4Answer = new javax.swing.JRadioButton();
+        Q2Panel = new javax.swing.JPanel();
+        Q2Label = new javax.swing.JLabel();
+        Q2_1Answer = new javax.swing.JRadioButton();
+        Q2_2Answer = new javax.swing.JRadioButton();
+        Q2_3Answer = new javax.swing.JRadioButton();
+        Q2_4Answer = new javax.swing.JRadioButton();
+        Q3Panel = new javax.swing.JPanel();
+        Q3Label = new javax.swing.JLabel();
+        Q3_1Answer = new javax.swing.JRadioButton();
+        Q3_2Answer = new javax.swing.JRadioButton();
+        Q3_3Answer = new javax.swing.JRadioButton();
+        Q3_4Answer = new javax.swing.JRadioButton();
+        Q4Panel = new javax.swing.JPanel();
+        Q4Label = new javax.swing.JLabel();
+        Q4_1Answer = new javax.swing.JRadioButton();
+        Q4_2Answer = new javax.swing.JRadioButton();
+        Q4_3Answer = new javax.swing.JRadioButton();
+        Q4_4Answer = new javax.swing.JRadioButton();
+        Q5Panel = new javax.swing.JPanel();
+        Q5Label = new javax.swing.JLabel();
+        Q5_1Answer = new javax.swing.JRadioButton();
+        Q5_2Answer = new javax.swing.JRadioButton();
+        Q5_3Answer = new javax.swing.JRadioButton();
+        Q5_4Answer = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(370, 680));
+        setMinimumSize(new java.awt.Dimension(370, 680));
+        setPreferredSize(new java.awt.Dimension(370, 680));
         getContentPane().setLayout(null);
-
-        jButton2.setText("Next");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(319, 555, 55, 23);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Quiz/quizScreen.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 367, 170);
+        jLabel1.setBounds(0, 0, 360, 185);
 
-        jScrollPane1.setEnabled(false);
-
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Why is it important to move someone who is\nunresponsive and breathing onto their \nside?");
-        jScrollPane1.setViewportView(jTextArea1);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 196, 379, 142);
-
-        userAnswer1.setText("More comfortable sleeping position");
-        userAnswer1.addActionListener(new java.awt.event.ActionListener() {
+        SubmitButton.setText("Sumbit");
+        SubmitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userAnswer1ActionPerformed(evt);
+                SubmitButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(userAnswer1);
-        userAnswer1.setBounds(10, 374, 191, 23);
 
-        userAnswer2.setText("You can check for injuries to their body");
-        userAnswer2.addActionListener(new java.awt.event.ActionListener() {
+        Question1Button.setText("Question 1");
+        Question1Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userAnswer2ActionPerformed(evt);
+                Question1ButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(userAnswer2);
-        userAnswer2.setBounds(10, 415, 213, 23);
 
-        userAnswer3.setText("Moving the person may help wake them up");
-        userAnswer3.addActionListener(new java.awt.event.ActionListener() {
+        Question3Button.setText("Question 3");
+        Question3Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userAnswer3ActionPerformed(evt);
+                Question3ButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(userAnswer3);
-        userAnswer3.setBounds(10, 456, 231, 23);
 
-        userAnswer4.setText("It helps to keep their airway clear and allows them to continue breathing normally");
-        userAnswer4.addActionListener(new java.awt.event.ActionListener() {
+        Question2Button.setText("Question 2");
+        Question2Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userAnswer4ActionPerformed(evt);
+                Question2ButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(userAnswer4);
-        userAnswer4.setBounds(10, 497, 415, 23);
+
+        Question4Button.setText("Question 4");
+        Question4Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Question4ButtonActionPerformed(evt);
+            }
+        });
+
+        Question5Button.setText("Question 5");
+        Question5Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Question5ButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Question1Button, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Question2Button, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Question5Button, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Question4Button, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Question3Button, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(SubmitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(Question1Button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Question2Button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Question3Button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                                .addComponent(Question5Button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Question4Button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(SubmitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())))
+        );
+
+        Q1Label.setText("<html>Why is it important to move someone who is unresponsive and breathing onto their  side?</html>");
+
+        buttonGroup1.add(Q1_1Answer);
+        Q1_1Answer.setText("More comfortable sleeping position");
+
+        buttonGroup1.add(Q1_2Answer);
+        Q1_2Answer.setText("You can check for injuries to their body");
+
+        buttonGroup1.add(Q1_3Answer);
+        Q1_3Answer.setText("<html>It helps to keep their airway clear and allows them to continue breathing normally</html>");
+        Q1_3Answer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Q1_3AnswerActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(Q1_4Answer);
+        Q1_4Answer.setText("Moving the person may help wake them up");
+        Q1_4Answer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Q1_4AnswerActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Q1PanelLayout = new javax.swing.GroupLayout(Q1Panel);
+        Q1Panel.setLayout(Q1PanelLayout);
+        Q1PanelLayout.setHorizontalGroup(
+            Q1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Q1PanelLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(Q1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Q1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Q1_1Answer)
+                    .addComponent(Q1_2Answer)
+                    .addComponent(Q1_3Answer, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Q1_4Answer, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+        Q1PanelLayout.setVerticalGroup(
+            Q1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Q1PanelLayout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addComponent(Q1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7)
+                .addComponent(Q1_1Answer)
+                .addGap(18, 18, 18)
+                .addComponent(Q1_2Answer)
+                .addGap(17, 17, 17)
+                .addComponent(Q1_3Answer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Q1_4Answer)
+                .addContainerGap())
+        );
+
+        Q2Label.setText("<html>After you have moved a person who is unresponsive  and breathing onto their side, you should do what?</html>");
+
+        buttonGroup2.add(Q2_1Answer);
+        Q2_1Answer.setText("<html>leave the person alone now they are comfortable, they will wake up soon</html>");
+
+        buttonGroup2.add(Q2_2Answer);
+        Q2_2Answer.setText("<html>stay with the person and keep checking their head is tilted back to allow them to keep breathing normally</html>");
+        Q2_2Answer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Q2_2AnswerActionPerformed(evt);
+            }
+        });
+
+        buttonGroup2.add(Q2_3Answer);
+        Q2_3Answer.setText("<html>sit with but do not touch the person again. If they move, it is just them starting to wake up</html>");
+
+        buttonGroup2.add(Q2_4Answer);
+        Q2_4Answer.setText("Offer them a drink to keep them hydrated");
+
+        javax.swing.GroupLayout Q2PanelLayout = new javax.swing.GroupLayout(Q2Panel);
+        Q2Panel.setLayout(Q2PanelLayout);
+        Q2PanelLayout.setHorizontalGroup(
+            Q2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Q2PanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Q2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Q2Label, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(Q2_4Answer)
+                    .addComponent(Q2_1Answer, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Q2_3Answer, javax.swing.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE)
+                    .addComponent(Q2_2Answer, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        Q2PanelLayout.setVerticalGroup(
+            Q2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Q2PanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Q2Label, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Q2_1Answer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Q2_2Answer, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Q2_3Answer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Q2_4Answer)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        Q3Label.setText("<html>If someone is unresponsive, which three senses can you use to tell if they are breathing?</html>");
+
+        buttonGroup3.add(Q3_1Answer);
+        Q3_1Answer.setText("Sound, smell, touch");
+
+        buttonGroup3.add(Q3_2Answer);
+        Q3_2Answer.setText("Sight, smell, sound");
+
+        buttonGroup3.add(Q3_3Answer);
+        Q3_3Answer.setText("Smell, touch, taste");
+
+        buttonGroup3.add(Q3_4Answer);
+        Q3_4Answer.setText("Sight, sound, touch");
+        Q3_4Answer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Q3_4AnswerActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Q3PanelLayout = new javax.swing.GroupLayout(Q3Panel);
+        Q3Panel.setLayout(Q3PanelLayout);
+        Q3PanelLayout.setHorizontalGroup(
+            Q3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Q3PanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Q3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Q3Label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(Q3_3Answer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(Q3PanelLayout.createSequentialGroup()
+                        .addGroup(Q3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Q3_4Answer)
+                            .addComponent(Q3_1Answer, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Q3_2Answer, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 34, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        Q3PanelLayout.setVerticalGroup(
+            Q3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Q3PanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Q3Label, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Q3_1Answer)
+                .addGap(18, 18, 18)
+                .addComponent(Q3_4Answer)
+                .addGap(18, 18, 18)
+                .addComponent(Q3_3Answer)
+                .addGap(18, 18, 18)
+                .addComponent(Q3_2Answer, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+
+        Q4Label.setText("<html>Why is it important to start chest compressions as quickly as possible, if someone is unresponsive and not breathing?</html>");
+
+        buttonGroup4.add(Q4_1Answer);
+        Q4_1Answer.setText("<html>The rhythmic action can be reassuring to a person who needs help</html>");
+        Q4_1Answer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Q4_1AnswerActionPerformed(evt);
+            }
+        });
+
+        buttonGroup4.add(Q4_2Answer);
+        Q4_2Answer.setText("To prevent choking ");
+
+        buttonGroup4.add(Q4_3Answer);
+        Q4_3Answer.setText("<html>You may wake them up, and they will start to breathe again</html>");
+
+        buttonGroup4.add(Q4_4Answer);
+        Q4_4Answer.setText("<html>A person’s brain and other vital organs cannot survive for long without a supply of blood</html>");
+
+        javax.swing.GroupLayout Q4PanelLayout = new javax.swing.GroupLayout(Q4Panel);
+        Q4Panel.setLayout(Q4PanelLayout);
+        Q4PanelLayout.setHorizontalGroup(
+            Q4PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Q4PanelLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(Q4PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Q4_3Answer, javax.swing.GroupLayout.DEFAULT_SIZE, 319, Short.MAX_VALUE)
+                    .addGroup(Q4PanelLayout.createSequentialGroup()
+                        .addGroup(Q4PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Q4_2Answer, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(Q4PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(Q4_4Answer, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                .addComponent(Q4_1Answer, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE))
+                            .addComponent(Q4Label, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+        );
+        Q4PanelLayout.setVerticalGroup(
+            Q4PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Q4PanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Q4Label, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Q4_1Answer, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Q4_4Answer, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Q4_3Answer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Q4_2Answer)
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+
+        Q5Label.setText("<html>If someone is unresponsive and not breathing, how long should you give chest compressions for?</html>");
+
+        buttonGroup5.add(Q5_1Answer);
+        Q5_1Answer.setText("<html>Until you think enough pressure has been applied</html>");
+
+        buttonGroup5.add(Q5_2Answer);
+        Q5_2Answer.setText("Until your arms get tired");
+
+        buttonGroup5.add(Q5_3Answer);
+        Q5_3Answer.setText("Until help arrives and someone else takes over");
+        Q5_3Answer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Q5_3AnswerActionPerformed(evt);
+            }
+        });
+
+        buttonGroup5.add(Q5_4Answer);
+        Q5_4Answer.setText("<html>Until you have done 100 compressions</html>");
+
+        javax.swing.GroupLayout Q5PanelLayout = new javax.swing.GroupLayout(Q5Panel);
+        Q5Panel.setLayout(Q5PanelLayout);
+        Q5PanelLayout.setHorizontalGroup(
+            Q5PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Q5PanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Q5PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Q5PanelLayout.createSequentialGroup()
+                        .addComponent(Q5_2Answer, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(Q5PanelLayout.createSequentialGroup()
+                        .addGroup(Q5PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Q5Label, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(Q5_1Answer)
+                            .addComponent(Q5_3Answer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Q5_4Answer, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addContainerGap())))
+        );
+        Q5PanelLayout.setVerticalGroup(
+            Q5PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Q5PanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Q5Label, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Q5_3Answer)
+                .addGap(18, 18, 18)
+                .addComponent(Q5_4Answer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Q5_2Answer, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Q5_1Answer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(Q1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Q2Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Q3Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Q4Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Q5Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Q1Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Q2Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Q3Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Q4Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Q5Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 160, 360, 480);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void userAnswer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userAnswer1ActionPerformed
+    private void SubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitButtonActionPerformed
         // TODO add your handling code here:
-        userAnswer = "1";
-    }//GEN-LAST:event_userAnswer1ActionPerformed
-
-    private void userAnswer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userAnswer2ActionPerformed
-        // TODO add your handling code here:
-        userAnswer = "2";
-    }//GEN-LAST:event_userAnswer2ActionPerformed
-
-    private void userAnswer3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userAnswer3ActionPerformed
-        // TODO add your handling code here:
-        userAnswer = "3";
-    }//GEN-LAST:event_userAnswer3ActionPerformed
-
-    private void userAnswer4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userAnswer4ActionPerformed
-        // TODO add your handling code here:
-        userAnswer = "4";
-    }//GEN-LAST:event_userAnswer4ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        int marks = 0;
-        if(userAnswer4.isSelected()){
-            marks++;
+             try{
+        this.calPoint();
+        Scores obj=new Scores();
+        obj.setVisible(true);
+        obj.getPoints(this.Points);
+        this.dispose();
         }
-        new Quiz2().setVisible(true);
-        this.setVisible(false);
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_SubmitButtonActionPerformed
 
+    private void Q1_4AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q1_4AnswerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Q1_4AnswerActionPerformed
+
+    private void Question1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question1ButtonActionPerformed
+        // TODO add your handling code here:
+        jPanel3.removeAll();
+        jPanel3.repaint();
+        jPanel3.revalidate();
+        
+        jPanel3.add(Q1Panel);
+        jPanel3.repaint();
+        jPanel3.revalidate();
+    }//GEN-LAST:event_Question1ButtonActionPerformed
+
+    private void Question2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question2ButtonActionPerformed
+        // TODO add your handling code here:
+        jPanel3.removeAll();
+        jPanel3.repaint();
+        jPanel3.revalidate();
+        
+        jPanel3.add(Q2Panel);
+       
+        jPanel3.repaint();
+        jPanel3.revalidate();
+    }//GEN-LAST:event_Question2ButtonActionPerformed
+
+    private void Question3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question3ButtonActionPerformed
+        // TODO add your handling code here:
+        jPanel3.removeAll();
+        jPanel3.repaint();
+        jPanel3.revalidate();
+        
+        jPanel3.add(Q3Panel);
+       
+        jPanel3.repaint();
+        jPanel3.revalidate();
+                              
+    }//GEN-LAST:event_Question3ButtonActionPerformed
+
+    private void Question4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question4ButtonActionPerformed
+        // TODO add your handling code here:
+         jPanel3.removeAll();
+        jPanel3.repaint();
+        jPanel3.revalidate();
+        
+        jPanel3.add(Q4Panel);
+       
+        jPanel3.repaint();
+        jPanel3.revalidate();
+                               
+    }//GEN-LAST:event_Question4ButtonActionPerformed
+
+    private void Question5ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question5ButtonActionPerformed
+        // TODO add your handling code here:
+         jPanel3.removeAll();
+        jPanel3.repaint();
+        jPanel3.revalidate();
+        
+        jPanel3.add(Q5Panel);
+       
+        jPanel3.repaint();
+        jPanel3.revalidate();
+                                
+    }//GEN-LAST:event_Question5ButtonActionPerformed
+
+    private void Q1_3AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q1_3AnswerActionPerformed
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_Q1_3AnswerActionPerformed
+
+    private void Q2_2AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q2_2AnswerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Q2_2AnswerActionPerformed
+
+    private void Q3_4AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q3_4AnswerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Q3_4AnswerActionPerformed
+
+    private void Q4_1AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q4_1AnswerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Q4_1AnswerActionPerformed
+
+    private void Q5_3AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q5_3AnswerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Q5_3AnswerActionPerformed
+public  double marks=0.0;
+      
+       public double Points=0.0;
+       public void calPoint(){
+           marks=0.0;
+           if(Q1_3Answer.isSelected()==true){
+               marks+=60.0;
+           }
+           if(Q2_2Answer.isSelected()==true){
+               marks+=60.0;
+           }
+           if(Q3_4Answer.isSelected()==true){
+              marks+=60.0;
+           } 
+           if(Q4_1Answer.isSelected()==true){
+              marks+=60.0;
+           }
+           if(Q5_3Answer.isSelected()==true){
+              marks+=60.0;
+           }
+           Points=marks;
+       }
     /**
      * @param args the command line arguments
      */
@@ -163,24 +656,74 @@ public class Quiz extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Quiz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+  
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Quiz().setVisible(true);
+                JOptionPane.showConfirmDialog(null, "Press OK to start Quiz");
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Q1Label;
+    private javax.swing.JPanel Q1Panel;
+    private javax.swing.JRadioButton Q1_1Answer;
+    private javax.swing.JRadioButton Q1_2Answer;
+    private javax.swing.JRadioButton Q1_3Answer;
+    private javax.swing.JRadioButton Q1_4Answer;
+    private javax.swing.JLabel Q2Label;
+    private javax.swing.JPanel Q2Panel;
+    private javax.swing.JRadioButton Q2_1Answer;
+    private javax.swing.JRadioButton Q2_2Answer;
+    private javax.swing.JRadioButton Q2_3Answer;
+    private javax.swing.JRadioButton Q2_4Answer;
+    private javax.swing.JLabel Q3Label;
+    private javax.swing.JPanel Q3Panel;
+    private javax.swing.JRadioButton Q3_1Answer;
+    private javax.swing.JRadioButton Q3_2Answer;
+    private javax.swing.JRadioButton Q3_3Answer;
+    private javax.swing.JRadioButton Q3_4Answer;
+    private javax.swing.JLabel Q4Label;
+    private javax.swing.JPanel Q4Panel;
+    private javax.swing.JRadioButton Q4_1Answer;
+    private javax.swing.JRadioButton Q4_2Answer;
+    private javax.swing.JRadioButton Q4_3Answer;
+    private javax.swing.JRadioButton Q4_4Answer;
+    private javax.swing.JLabel Q5Label;
+    private javax.swing.JPanel Q5Panel;
+    private javax.swing.JRadioButton Q5_1Answer;
+    private javax.swing.JRadioButton Q5_2Answer;
+    private javax.swing.JRadioButton Q5_3Answer;
+    private javax.swing.JRadioButton Q5_4Answer;
+    private javax.swing.JButton Question1Button;
+    private javax.swing.JButton Question2Button;
+    private javax.swing.JButton Question3Button;
+    private javax.swing.JButton Question4Button;
+    private javax.swing.JButton Question5Button;
+    private javax.swing.JButton SubmitButton;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
+    private javax.swing.ButtonGroup buttonGroup5;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JRadioButton userAnswer1;
-    private javax.swing.JRadioButton userAnswer2;
-    private javax.swing.JRadioButton userAnswer3;
-    private javax.swing.JRadioButton userAnswer4;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JRadioButton jRadioButton10;
+    private javax.swing.JRadioButton jRadioButton11;
+    private javax.swing.JRadioButton jRadioButton12;
+    private javax.swing.JRadioButton jRadioButton13;
+    private javax.swing.JRadioButton jRadioButton14;
+    private javax.swing.JRadioButton jRadioButton15;
+    private javax.swing.JRadioButton jRadioButton16;
+    private javax.swing.JRadioButton jRadioButton9;
     // End of variables declaration//GEN-END:variables
 }

@@ -13,58 +13,61 @@ import java.awt.Dimension;
  * @author up839921
  */
 public class Scores extends javax.swing.JFrame {
+    
+
 
     /**
      * Creates new form Scores
      */
     public Scores() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(255, 255, 255));
-        setLocationRelativeTo(null);
+        getContentPane().setBackground(new java.awt.Color(255,255,255));
     }
-    //double gp = 0.0;
-
+   double gp=0.0;
+    
+    
     public void ProgressBar1(int QuizValue) {
-        Session1Panel.setSize(new Dimension((QuizValue * 3), 30));
-        Session1ScoreLabel.setText(QuizValue + "%");
-        if (QuizValue < 40) {
+        Session1Panel.setSize(new Dimension((QuizValue*3), 30));
+        Session1ScoreLabel.setText(QuizValue+"%");
+        if (QuizValue<40) {
             Session1Panel.setBackground(new Color(249, 6, 6));
-        } else if (QuizValue > 80) {
+        } else if (QuizValue>80) {
             Session1Panel.setBackground(new Color(0, 128, 0));
         } else {
             Session1Panel.setBackground(new Color(255, 255, 102));
         }
-        //ProBar.setValue((int) this.gp);
-    }
+        ProBar.setValue((int)this.gp);
+    }   
 
-    //public void getPoints(double pts) {
-    //    gp = pts;
-    //}
-
+public void getPoints(double pts){
+   gp=pts;
+}
+    
+    
     public void ProgressBar2(int QuizValue) {
-        Session2Panel.setSize(new Dimension((QuizValue * 3), 30));
-        Session2ScoreLabel.setText(QuizValue + "%");
-        if (QuizValue < 40) {
+        Session2Panel.setSize(new Dimension((QuizValue*3), 30));
+        Session2ScoreLabel.setText(QuizValue+"%");
+        if (QuizValue<40) {
             Session2Panel.setBackground(new Color(249, 6, 6));
-        } else if (QuizValue > 80) {
+        } else if (QuizValue>80) {
             Session2Panel.setBackground(new Color(0, 128, 0));
         } else {
             Session2Panel.setBackground(new Color(255, 255, 102));
         }
     }
-
+    
     public void ProgressBar3(int QuizValue) {
-        Session3Panel.setSize(new Dimension((QuizValue * 3), 30));
-        Session3ScoreLabel.setText(QuizValue + "%");
-        if (QuizValue < 40) {
+        Session3Panel.setSize(new Dimension((QuizValue*3), 30));
+        Session3ScoreLabel.setText(QuizValue+"%");
+        if (QuizValue<40) {
             Session3Panel.setBackground(new Color(249, 6, 6));
-        } else if (QuizValue > 80) {
+        } else if (QuizValue>80) {
             Session3Panel.setBackground(new Color(0, 128, 0));
         } else {
             Session3Panel.setBackground(new Color(255, 255, 102));
         }
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -81,12 +84,16 @@ public class Scores extends javax.swing.JFrame {
         Session3ScoreLabel = new javax.swing.JLabel();
         Session1Panel = new javax.swing.JPanel();
         Session1ScoreLabel = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         Session2Panel = new javax.swing.JPanel();
         Session2ScoreLabel = new javax.swing.JLabel();
-        HeaderBackground = new javax.swing.JLabel();
+        ProBar = new javax.swing.JProgressBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setMaximumSize(new java.awt.Dimension(370, 680));
+        setMinimumSize(new java.awt.Dimension(370, 680));
+        setPreferredSize(new java.awt.Dimension(370, 680));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
@@ -139,17 +146,23 @@ public class Scores extends javax.swing.JFrame {
         Session1ScoreLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         Session1ScoreLabel.setText("No Data");
 
+        jLabel1.setText("jLabel1");
+
         javax.swing.GroupLayout Session1PanelLayout = new javax.swing.GroupLayout(Session1Panel);
         Session1Panel.setLayout(Session1PanelLayout);
         Session1PanelLayout.setHorizontalGroup(
             Session1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Session1PanelLayout.createSequentialGroup()
-                .addContainerGap(230, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
                 .addComponent(Session1ScoreLabel))
         );
         Session1PanelLayout.setVerticalGroup(
             Session1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Session1ScoreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(Session1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(Session1ScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                .addComponent(jLabel1))
         );
 
         getContentPane().add(Session1Panel);
@@ -178,10 +191,10 @@ public class Scores extends javax.swing.JFrame {
         getContentPane().add(Session2Panel);
         Session2Panel.setBounds(30, 342, 291, 30);
 
-        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
-        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
-        getContentPane().add(HeaderBackground);
-        HeaderBackground.setBounds(0, 0, 360, 110);
+        ProBar.setMaximum(300);
+        ProBar.setStringPainted(true);
+        getContentPane().add(ProBar);
+        ProBar.setBounds(30, 222, 297, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -191,7 +204,9 @@ public class Scores extends javax.swing.JFrame {
         ProgressBar2(67);
         ProgressBar3(32);
     }//GEN-LAST:event_formWindowActivated
-
+    
+    
+    
 //    public void colourChecker(String colour) {
 //        if (defaultColours=true) {
 //            defaultColoursScores(colour);
@@ -203,7 +218,9 @@ public class Scores extends javax.swing.JFrame {
 //            TritanopiaColoursScores(colour);
 //        }
 //    }
-    public void defaultColoursScores(String colour) {
+    
+    
+    public void defaultColoursScores(String colour){
         switch (colour) {
             case "Red":
                 System.out.println("new Color(249, 0, 0)");
@@ -213,8 +230,8 @@ public class Scores extends javax.swing.JFrame {
                 System.out.println("new Color(77, 77, 255)");
         }
     }
-
-    public void DeuteranopiaColoursScores(String colour) {
+    
+    public void DeuteranopiaColoursScores(String colour){
         switch (colour) {
             case "Red":
                 System.out.println("new Color(238, 43, 150)");
@@ -224,8 +241,8 @@ public class Scores extends javax.swing.JFrame {
                 System.out.println("new Color(0, 64, 224)");
         }
     }
-
-    public void ProtanopiaColoursScores(String colour) {
+    
+    public void ProtanopiaColoursScores(String colour){
         switch (colour) {
             case "Red":
                 System.out.println("new Color(250, 56, 143)");
@@ -236,7 +253,7 @@ public class Scores extends javax.swing.JFrame {
         }
     }
 
-    public void TritanopiaColoursScores(String colour) {
+    public void TritanopiaColoursScores(String colour){
         switch (colour) {
             case "Red":
                 System.out.println("new Color(255, 0, 0)");
@@ -284,7 +301,7 @@ public class Scores extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel HeaderBackground;
+    private javax.swing.JProgressBar ProBar;
     private javax.swing.JLabel Session1Label;
     private javax.swing.JPanel Session1Panel;
     private javax.swing.JLabel Session1ScoreLabel;
@@ -294,5 +311,6 @@ public class Scores extends javax.swing.JFrame {
     private javax.swing.JLabel Session3Label;
     private javax.swing.JPanel Session3Panel;
     private javax.swing.JLabel Session3ScoreLabel;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
