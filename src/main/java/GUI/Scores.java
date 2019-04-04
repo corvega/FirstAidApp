@@ -13,6 +13,7 @@ import java.awt.Dimension;
  * @author up839921
  */
 public class Scores extends javax.swing.JFrame {
+    
 
 
     /**
@@ -22,6 +23,7 @@ public class Scores extends javax.swing.JFrame {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255,255,255));
     }
+   double gp=0.0;
     
     
     public void ProgressBar1(int QuizValue) {
@@ -34,7 +36,13 @@ public class Scores extends javax.swing.JFrame {
         } else {
             Session1Panel.setBackground(new Color(255, 255, 102));
         }
-    }
+        ProBar.setValue((int)this.gp);
+    }   
+
+public void getPoints(double pts){
+   gp=pts;
+}
+    
     
     public void ProgressBar2(int QuizValue) {
         Session2Panel.setSize(new Dimension((QuizValue*3), 30));
@@ -76,8 +84,10 @@ public class Scores extends javax.swing.JFrame {
         Session3ScoreLabel = new javax.swing.JLabel();
         Session1Panel = new javax.swing.JPanel();
         Session1ScoreLabel = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         Session2Panel = new javax.swing.JPanel();
         Session2ScoreLabel = new javax.swing.JLabel();
+        ProBar = new javax.swing.JProgressBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -123,17 +133,23 @@ public class Scores extends javax.swing.JFrame {
         Session1ScoreLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         Session1ScoreLabel.setText("No Data");
 
+        jLabel1.setText("jLabel1");
+
         javax.swing.GroupLayout Session1PanelLayout = new javax.swing.GroupLayout(Session1Panel);
         Session1Panel.setLayout(Session1PanelLayout);
         Session1PanelLayout.setHorizontalGroup(
             Session1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Session1PanelLayout.createSequentialGroup()
-                .addGap(0, 230, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
                 .addComponent(Session1ScoreLabel))
         );
         Session1PanelLayout.setVerticalGroup(
             Session1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Session1ScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+            .addGroup(Session1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(Session1ScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                .addComponent(jLabel1))
         );
 
         Session2Panel.setBackground(new java.awt.Color(0, 153, 255));
@@ -156,28 +172,35 @@ public class Scores extends javax.swing.JFrame {
             .addComponent(Session2ScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
+        ProBar.setMaximum(300);
+        ProBar.setStringPainted(true);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(Session1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(Session1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(Session2Label))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(Session2Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(Session3Label, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(Session3Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(Session1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(Session1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(Session2Label))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(Session2Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(Session3Label, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(Session3Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(248, Short.MAX_VALUE))
+            .addComponent(ProBar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,7 +209,9 @@ public class Scores extends javax.swing.JFrame {
                 .addComponent(Session1Label)
                 .addGap(6, 6, 6)
                 .addComponent(Session1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(73, 73, 73)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ProBar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
                 .addComponent(Session2Label)
                 .addGap(14, 14, 14)
                 .addComponent(Session2Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -301,6 +326,7 @@ public class Scores extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JProgressBar ProBar;
     private javax.swing.JLabel Session1Label;
     private javax.swing.JPanel Session1Panel;
     private javax.swing.JLabel Session1ScoreLabel;
@@ -310,5 +336,6 @@ public class Scores extends javax.swing.JFrame {
     private javax.swing.JLabel Session3Label;
     private javax.swing.JPanel Session3Panel;
     private javax.swing.JLabel Session3ScoreLabel;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

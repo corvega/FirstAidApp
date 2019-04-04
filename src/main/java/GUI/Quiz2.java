@@ -5,17 +5,19 @@
  */
 package GUI;
 
+import GUI.*;
+
 /**
  *
  * @author usman
  */
-public class Quiz extends javax.swing.JFrame {
+public class Quiz2 extends javax.swing.JFrame {
 
     String userAnswer;
     /**
      * Creates new form Quiz
      */
-    public Quiz() {
+    public Quiz2() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255, 255, 255));
     }
@@ -55,31 +57,31 @@ public class Quiz extends javax.swing.JFrame {
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Why is it important to move someone who is\nunresponsive and breathing onto their \nside?");
+        jTextArea1.setText("After you’ve moved a person who is unresponsive and \nbreathing onto their side, you should…what?");
         jScrollPane1.setViewportView(jTextArea1);
 
-        userAnswer1.setText("More comfortable sleeping position");
+        userAnswer1.setText("leave the person alone now they are comfortable, they’ll wake up soon");
         userAnswer1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userAnswer1ActionPerformed(evt);
             }
         });
 
-        userAnswer2.setText("You can check for injuries to their body");
+        userAnswer2.setText("stay with the person and keep checking their head is tilted back to allow them to keep breathing normally");
         userAnswer2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userAnswer2ActionPerformed(evt);
             }
         });
 
-        userAnswer3.setText("Moving the person may help wake them up");
+        userAnswer3.setText("sit with but do not touch the person again. If they move, it is just them starting to wake up");
         userAnswer3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userAnswer3ActionPerformed(evt);
             }
         });
 
-        userAnswer4.setText("It helps to keep their airway clear and allows them to continue breathing normally");
+        userAnswer4.setText("give 50 grams of Vodka");
         userAnswer4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userAnswer4ActionPerformed(evt);
@@ -93,29 +95,28 @@ public class Quiz extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(309, 309, 309)
-                        .addComponent(jButton2)
-                        .addGap(22, 70, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(userAnswer2)
-                                        .addComponent(userAnswer3))
-                                    .addGap(184, 184, 184))
-                                .addComponent(userAnswer4))
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(userAnswer1)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                                .addComponent(userAnswer1)
+                                .addComponent(userAnswer2)
+                                .addComponent(userAnswer3))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(userAnswer4)
+                            .addGap(120, 120, 120))))
+                .addGap(0, 6, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(61, 61, 61))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(userAnswer1)
@@ -125,9 +126,9 @@ public class Quiz extends javax.swing.JFrame {
                 .addComponent(userAnswer3)
                 .addGap(18, 18, 18)
                 .addComponent(userAnswer4)
-                .addGap(35, 35, 35)
+                .addGap(26, 26, 26)
                 .addComponent(jButton2)
-                .addGap(56, 56, 56))
+                .addGap(58, 58, 58))
         );
 
         pack();
@@ -159,9 +160,8 @@ public class Quiz extends javax.swing.JFrame {
         if(userAnswer4.isSelected()){
             marks++;
         }
-        new Quiz2().setVisible(true);
+        new Quiz3().setVisible(true);
         this.setVisible(false);
-        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -181,20 +181,21 @@ public class Quiz extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Quiz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Quiz2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Quiz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Quiz2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Quiz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Quiz2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Quiz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Quiz2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Quiz().setVisible(true);
+                new Quiz2().setVisible(true);
             }
         });
     }

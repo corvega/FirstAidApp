@@ -27,33 +27,31 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="309" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="22" pref="70" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="userAnswer2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="userAnswer3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="184" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="userAnswer4" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" pref="367" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                      <Group type="103" alignment="1" groupAlignment="1" attributes="0">
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Component id="userAnswer1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="userAnswer2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="userAnswer3" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jLabel1" min="-2" pref="367" max="-2" attributes="0"/>
-                          <Component id="userAnswer1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" alignment="0" min="-2" pref="379" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" alignment="0" min="-2" pref="427" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="userAnswer4" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
+              <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -61,7 +59,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="142" max="-2" attributes="0"/>
               <EmptySpace pref="36" max="32767" attributes="0"/>
               <Component id="userAnswer1" min="-2" max="-2" attributes="0"/>
@@ -71,9 +69,9 @@
               <Component id="userAnswer3" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="userAnswer4" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -109,14 +107,14 @@
             <Property name="editable" type="boolean" value="false"/>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Why is it important to move someone who is&#xa;unresponsive and breathing onto their &#xa;side?"/>
+            <Property name="text" type="java.lang.String" value="After you&#x2019;ve moved a person who is unresponsive and &#xa;breathing onto their side, you should&#x2026;what?"/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
     <Component class="javax.swing.JRadioButton" name="userAnswer1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="More comfortable sleeping position"/>
+        <Property name="text" type="java.lang.String" value="leave the person alone now they are comfortable, they&#x2019;ll wake up soon"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userAnswer1ActionPerformed"/>
@@ -124,7 +122,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="userAnswer2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="You can check for injuries to their body"/>
+        <Property name="text" type="java.lang.String" value="stay with the person and keep checking their head is tilted back to allow them to keep breathing normally"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userAnswer2ActionPerformed"/>
@@ -132,7 +130,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="userAnswer3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Moving the person may help wake them up"/>
+        <Property name="text" type="java.lang.String" value="sit with but do not touch the person again. If they move, it is just them starting to wake up"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userAnswer3ActionPerformed"/>
@@ -140,7 +138,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="userAnswer4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="It helps to keep their airway clear and allows them to continue breathing normally"/>
+        <Property name="text" type="java.lang.String" value="give 50 grams of Vodka"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userAnswer4ActionPerformed"/>

@@ -119,7 +119,7 @@ public class QuizList extends javax.swing.JFrame {
     }//GEN-LAST:event_CPRButtonActionPerformed
 
     private void UnresponsiveBreathingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnresponsiveBreathingButtonActionPerformed
-        //new Quiz().setVisible(true);
+        new UBQuiz().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_UnresponsiveBreathingButtonActionPerformed
 
