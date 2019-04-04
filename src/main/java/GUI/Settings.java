@@ -372,7 +372,7 @@ public class Settings extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Settings().setVisible(true);
+                new Settings().setVisible(true); //Creates and show this frame
             }
         });
     }

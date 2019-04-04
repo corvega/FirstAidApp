@@ -669,7 +669,7 @@ public class ChokingQuiz extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ChokingQuiz().setVisible(true);
+                new ChokingQuiz().setVisible(true);   //Creates and show this frame
             }
         });
     }

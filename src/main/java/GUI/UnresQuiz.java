@@ -630,7 +630,7 @@ public class UnresQuiz extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new UnresQuiz().setVisible(true);
+                new UnresQuiz().setVisible(true);   //Creates and show this frame
             }
         });
     }
