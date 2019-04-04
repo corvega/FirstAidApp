@@ -41,6 +41,8 @@ public class LessonList extends javax.swing.JFrame {
         HeaderBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(360, 640));
+        setSize(new java.awt.Dimension(360, 640));
         getContentPane().setLayout(null);
 
         back.setBackground(new java.awt.Color(255, 51, 51));

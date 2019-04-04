@@ -28,10 +28,14 @@ public class Scores extends javax.swing.JFrame {
     public void ProgressBar1(int QuizValue) {
         Session1Panel.setSize(new Dimension((QuizValue*3), 30));
         Session1ScoreLabel.setText(QuizValue+"%");
-        if (QuizValue<40) {
+        if (QuizValue==0) {
+            Session1Panel.setSize(new Dimension((300), 30));
+            Session1Panel.setBackground(new Color(249, 6, 6));
+            Session1ScoreLabel.setText("0%");
+        } else if (QuizValue<40) {
             Session1Panel.setBackground(new Color(249, 6, 6));
         } else if (QuizValue>=80) {
-            Session1Panel.setBackground(new Color(0, 128, 0));
+            Session1Panel.setBackground(new Color(0, 128, 0)); 
         } else {
             Session1Panel.setBackground(new Color(255, 255, 102));
         }
@@ -40,10 +44,14 @@ public class Scores extends javax.swing.JFrame {
     public void ProgressBar2(int QuizValue) {
         Session2Panel.setSize(new Dimension((QuizValue*3), 30));
         Session2ScoreLabel.setText(QuizValue+"%");
-        if (QuizValue<40) {
+        if (QuizValue==0) {
+            Session1Panel.setSize(new Dimension((300), 30));
+            Session1Panel.setBackground(new Color(249, 6, 6));
+            Session1ScoreLabel.setText("0%");
+        } else if (QuizValue<40) {
             Session2Panel.setBackground(new Color(249, 6, 6));
         } else if (QuizValue>=80) {
-            Session2Panel.setBackground(new Color(0, 128, 0));
+            Session2Panel.setBackground(new Color(0, 128, 0));     
         } else {
             Session2Panel.setBackground(new Color(255, 255, 102));
         }
@@ -52,10 +60,15 @@ public class Scores extends javax.swing.JFrame {
     public void ProgressBar3(int QuizValue) {
         Session3Panel.setSize(new Dimension((QuizValue*3), 30));
         Session3ScoreLabel.setText(QuizValue+"%");
-        if (QuizValue<40) {
+        if (QuizValue==0) {
+            Session1Panel.setSize(new Dimension((300), 30));
+            Session1Panel.setBackground(new Color(249, 6, 6));
+            Session1ScoreLabel.setText("0%");
+        } else if (QuizValue<40) {
             Session3Panel.setBackground(new Color(249, 6, 6));
         } else if (QuizValue>=80) {
             Session3Panel.setBackground(new Color(0, 128, 0));
+         
         } else {
             Session3Panel.setBackground(new Color(255, 255, 102));
         }

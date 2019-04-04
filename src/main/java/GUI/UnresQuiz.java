@@ -81,6 +81,11 @@ public class UnresQuiz extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(370, 680));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
         getContentPane().setLayout(null);
 
         header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Quiz/quizScreen.png"))); // NOI18N
@@ -186,19 +191,9 @@ public class UnresQuiz extends javax.swing.JFrame {
 
         buttonGroup1.add(Q1_3Answer);
         Q1_3Answer.setText("<html>It helps to keep their airway clear and allows them to continue breathing normally</html>");
-        Q1_3Answer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Q1_3AnswerActionPerformed(evt);
-            }
-        });
 
         buttonGroup1.add(Q1_4Answer);
         Q1_4Answer.setText("Moving the person may help wake them up");
-        Q1_4Answer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Q1_4AnswerActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout Q1PanelLayout = new javax.swing.GroupLayout(Q1Panel);
         Q1Panel.setLayout(Q1PanelLayout);
@@ -236,11 +231,6 @@ public class UnresQuiz extends javax.swing.JFrame {
 
         buttonGroup2.add(Q2_2Answer);
         Q2_2Answer.setText("<html>stay with the person and keep checking their head is tilted back to allow them to keep breathing normally</html>");
-        Q2_2Answer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Q2_2AnswerActionPerformed(evt);
-            }
-        });
 
         buttonGroup2.add(Q2_3Answer);
         Q2_3Answer.setText("<html>sit with but do not touch the person again. If they move, it is just them starting to wake up</html>");
@@ -291,11 +281,6 @@ public class UnresQuiz extends javax.swing.JFrame {
 
         buttonGroup3.add(Q3_4Answer);
         Q3_4Answer.setText("Sight, sound, touch");
-        Q3_4Answer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Q3_4AnswerActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout Q3PanelLayout = new javax.swing.GroupLayout(Q3Panel);
         Q3Panel.setLayout(Q3PanelLayout);
@@ -334,11 +319,6 @@ public class UnresQuiz extends javax.swing.JFrame {
 
         buttonGroup4.add(Q4_1Answer);
         Q4_1Answer.setText("<html>The rhythmic action can be reassuring to a person who needs help</html>");
-        Q4_1Answer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Q4_1AnswerActionPerformed(evt);
-            }
-        });
 
         buttonGroup4.add(Q4_2Answer);
         Q4_2Answer.setText("To prevent choking ");
@@ -347,7 +327,7 @@ public class UnresQuiz extends javax.swing.JFrame {
         Q4_3Answer.setText("<html>You may wake them up, and they will start to breathe again</html>");
 
         buttonGroup4.add(Q4_4Answer);
-        Q4_4Answer.setText("<html>A person’s brain and other vital organs cannot survive for long without a supply of blood</html>");
+        Q4_4Answer.setText("<html>A person's brain and other vital organs cannot survive for long without a supply of blood</html>");
 
         javax.swing.GroupLayout Q4PanelLayout = new javax.swing.GroupLayout(Q4Panel);
         Q4Panel.setLayout(Q4PanelLayout);
@@ -392,19 +372,9 @@ public class UnresQuiz extends javax.swing.JFrame {
 
         buttonGroup5.add(Q5_3Answer);
         Q5_3Answer.setText("Until help arrives and someone else takes over");
-        Q5_3Answer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Q5_3AnswerActionPerformed(evt);
-            }
-        });
 
         buttonGroup5.add(Q5_4Answer);
         Q5_4Answer.setText("<html>Until you have done 100 compressions</html>");
-        Q5_4Answer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Q5_4AnswerActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout Q5PanelLayout = new javax.swing.GroupLayout(Q5Panel);
         Q5Panel.setLayout(Q5PanelLayout);
@@ -525,12 +495,7 @@ public class UnresQuiz extends javax.swing.JFrame {
         points.setVisible(true);
     }//GEN-LAST:event_SubmitButtonActionPerformed
 
-    private void Q1_4AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q1_4AnswerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Q1_4AnswerActionPerformed
-
     private void Question1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question1ButtonActionPerformed
-        // TODO add your handling code here:
         jPanel3.removeAll();
         jPanel3.repaint();
         jPanel3.revalidate();
@@ -541,91 +506,58 @@ public class UnresQuiz extends javax.swing.JFrame {
     }//GEN-LAST:event_Question1ButtonActionPerformed
 
     private void Question2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question2ButtonActionPerformed
-        // TODO add your handling code here:
         jPanel3.removeAll();
         jPanel3.repaint();
         jPanel3.revalidate();
         
         jPanel3.add(Q2Panel);
-       
         jPanel3.repaint();
         jPanel3.revalidate();
     }//GEN-LAST:event_Question2ButtonActionPerformed
 
     private void Question3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question3ButtonActionPerformed
-        // TODO add your handling code here:
         jPanel3.removeAll();
         jPanel3.repaint();
         jPanel3.revalidate();
         
         jPanel3.add(Q3Panel);
-       
         jPanel3.repaint();
-        jPanel3.revalidate();
-                              
+        jPanel3.revalidate();                       
     }//GEN-LAST:event_Question3ButtonActionPerformed
 
     private void Question4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question4ButtonActionPerformed
-        // TODO add your handling code here:
-         jPanel3.removeAll();
+        jPanel3.removeAll();
         jPanel3.repaint();
         jPanel3.revalidate();
         
         jPanel3.add(Q4Panel);
-       
         jPanel3.repaint();
-        jPanel3.revalidate();
-                               
+        jPanel3.revalidate();            
     }//GEN-LAST:event_Question4ButtonActionPerformed
 
     private void Question5ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question5ButtonActionPerformed
-        // TODO add your handling code here:
-         jPanel3.removeAll();
+        jPanel3.removeAll();
         jPanel3.repaint();
         jPanel3.revalidate();
         
         jPanel3.add(Q5Panel);
-       
         jPanel3.repaint();
-        jPanel3.revalidate();
-                                
+        jPanel3.revalidate();    
     }//GEN-LAST:event_Question5ButtonActionPerformed
 
-    private void Q1_3AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q1_3AnswerActionPerformed
-        // TODO add your handling code here:
-       
-    }//GEN-LAST:event_Q1_3AnswerActionPerformed
-
-    private void Q2_2AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q2_2AnswerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Q2_2AnswerActionPerformed
-
-    private void Q3_4AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q3_4AnswerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Q3_4AnswerActionPerformed
-
-    private void Q4_1AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q4_1AnswerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Q4_1AnswerActionPerformed
-
-    private void Q5_3AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q5_3AnswerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Q5_3AnswerActionPerformed
-
-<<<<<<< HEAD
-    private void Q5_4AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q5_4AnswerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Q5_4AnswerActionPerformed
-public  double marks=0.0;
-      
-       public double Points=0.0;
-       public void calPoint(){
-           marks=0.0;
-=======
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        jPanel3.removeAll();
+        jPanel3.repaint();
+        jPanel3.revalidate();
+        
+        jPanel3.add(Q1Panel);
+        jPanel3.repaint();
+        jPanel3.revalidate();
+    }//GEN-LAST:event_formWindowActivated
+   
     
-       public int Points=0;
        public int calculatePoints(){
->>>>>>> e92892ba5b0f6879e585fc06fd48de942d05e196
+           int Points=0;
            if(Q1_3Answer.isSelected()==true){
                Points+=20;
            }
@@ -643,6 +575,7 @@ public  double marks=0.0;
            }
            return Points;
        }
+           
     /**
      * @param args the command line arguments
      */

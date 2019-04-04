@@ -84,6 +84,7 @@ public class Lesson extends javax.swing.JFrame {
         getContentPane().add(HeaderBackground);
         HeaderBackground.setBounds(0, 0, 360, 110);
 
+        lessonDescription.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         lessonDescription.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lessonDescription.setText("<insert desciptions here>");
         getContentPane().add(lessonDescription);

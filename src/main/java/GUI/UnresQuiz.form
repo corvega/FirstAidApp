@@ -23,6 +23,9 @@
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowActivated" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowActivated"/>
+  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -342,9 +345,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;It helps to keep their airway clear and allows them to continue breathing normally&lt;/html&gt;"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Q1_3AnswerActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="Q1_4Answer">
                   <Properties>
@@ -353,9 +353,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Moving the person may help wake them up"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Q1_4AnswerActionPerformed"/>
-                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -416,9 +413,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;stay with the person and keep checking their head is tilted back to allow them to keep breathing normally&lt;/html&gt;"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Q2_2AnswerActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="Q2_3Answer">
                   <Properties>
@@ -516,9 +510,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Sight, sound, touch"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Q3_4AnswerActionPerformed"/>
-                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -577,9 +568,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;The rhythmic action can be reassuring to a person who needs help&lt;/html&gt;"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Q4_1AnswerActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="Q4_2Answer">
                   <Properties>
@@ -602,7 +590,7 @@
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="buttonGroup4"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;A person&#x2019;s brain and other vital organs cannot survive for long without a supply of blood&lt;/html&gt;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;A person&apos;s brain and other vital organs cannot survive for long without a supply of blood&lt;/html&gt;"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -679,9 +667,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Until help arrives and someone else takes over"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Q5_3AnswerActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="Q5_4Answer">
                   <Properties>
@@ -690,9 +675,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;Until you have done 100 compressions&lt;/html&gt;"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Q5_4AnswerActionPerformed"/>
-                  </Events>
                 </Component>
               </SubComponents>
             </Container>

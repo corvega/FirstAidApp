@@ -17,6 +17,7 @@ public class QuizList extends javax.swing.JFrame {
     public QuizList() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255, 255, 255));
+        setLocationRelativeTo(null);
     }
 
     /**

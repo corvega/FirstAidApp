@@ -96,6 +96,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lessonDescription">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="24" style="0"/>
+        </Property>
         <Property name="horizontalAlignment" type="int" value="2"/>
         <Property name="text" type="java.lang.String" value="&lt;insert desciptions here&gt;"/>
       </Properties>
