@@ -515,13 +515,13 @@ public  double marks=0.0;
        public void calPoint(){
            marks=0.0;
            if(userAnswer4.isSelected()==true){
-               marks+=33.33;
+               marks+=30;
            }
            if(userAnswer6.isSelected()==true){
-               marks+=33.33;
+               marks+=30;
            }
            if(userAnswer10.isSelected()==true){
-              marks+=33.34;
+              marks+=30;
            }
            Points=marks;
        }
