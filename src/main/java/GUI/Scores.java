@@ -20,7 +20,8 @@ public class Scores extends javax.swing.JFrame {
      */
     public Scores() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(255,255,255));
+        getContentPane().setBackground(new Color(255,255,255));
+        setLocationRelativeTo(null);
     }
     
     
@@ -33,8 +34,6 @@ public class Scores extends javax.swing.JFrame {
             Session1Panel.setBackground(new Color(0, 128, 0));
         } else if (QuizValue>40) {
             Session1Panel.setBackground(new Color(255, 255, 102));
-        } else {
-            Session1Panel.setBackground(null);
         }
     }
     
