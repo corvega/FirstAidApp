@@ -5,6 +5,8 @@
  */
 package GUI;
 
+import java.awt.Color;
+
 /**
  *
  * @author up839921
@@ -16,6 +18,8 @@ public class PreviewResultsList extends javax.swing.JFrame {
      */
     public PreviewResultsList() {
         initComponents();
+        getContentPane().setBackground(new Color(255, 255, 255));
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -28,6 +32,7 @@ public class PreviewResultsList extends javax.swing.JFrame {
     private void initComponents() {
 
         back = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         CPRButton = new javax.swing.JButton();
         UnresponsiveBreathingButton = new javax.swing.JButton();
         HeavyBleedingButton = new javax.swing.JButton();
@@ -38,6 +43,7 @@ public class PreviewResultsList extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setName("PreviewResultsList"); // NOI18N
+        setPreferredSize(new java.awt.Dimension(360, 640));
         setSize(new java.awt.Dimension(360, 640));
         getContentPane().setLayout(null);
 
@@ -50,6 +56,10 @@ public class PreviewResultsList extends javax.swing.JFrame {
         });
         getContentPane().add(back);
         back.setBounds(20, 40, 30, 60);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Results/resultsScreen.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(-10, 0, 370, 170);
 
         CPRButton.setBackground(new java.awt.Color(249, 6, 6));
         CPRButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/CPR LessonList.png"))); // NOI18N
@@ -131,7 +141,7 @@ public class PreviewResultsList extends javax.swing.JFrame {
     }//GEN-LAST:event_CPRButtonActionPerformed
 
     private void UnresponsiveBreathingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnresponsiveBreathingButtonActionPerformed
-        new Results().setVisible(true);
+        //new Results().setVisible(true);
         this.setVisible(false);;
     }//GEN-LAST:event_UnresponsiveBreathingButtonActionPerformed
 
@@ -146,7 +156,7 @@ public class PreviewResultsList extends javax.swing.JFrame {
     }//GEN-LAST:event_BurnsButtonActionPerformed
 
     private void ChokingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChokingButtonActionPerformed
-        //new Results().setVisible(true);
+        new Results().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_ChokingButtonActionPerformed
 
@@ -198,5 +208,6 @@ public class PreviewResultsList extends javax.swing.JFrame {
     private javax.swing.JButton HeavyBleedingButton;
     private javax.swing.JButton UnresponsiveBreathingButton;
     private javax.swing.JButton back;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
