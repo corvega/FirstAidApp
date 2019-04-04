@@ -54,11 +54,13 @@ public class Results extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(370, 640));
         setMinimumSize(new java.awt.Dimension(370, 640));
+        setName("Results"); // NOI18N
         setPreferredSize(new java.awt.Dimension(370, 640));
         getContentPane().setLayout(null);
 
         back.setBackground(new java.awt.Color(255, 51, 51));
         back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/back.png"))); // NOI18N
+        back.setName(""); // NOI18N
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backActionPerformed(evt);

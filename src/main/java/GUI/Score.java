@@ -101,6 +101,7 @@ public class Score extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(370, 640));
         setMinimumSize(new java.awt.Dimension(370, 640));
+        setName("Scores"); // NOI18N
         setPreferredSize(new java.awt.Dimension(370, 640));
         getContentPane().setLayout(null);
 

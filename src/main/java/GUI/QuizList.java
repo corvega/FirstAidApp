@@ -41,6 +41,7 @@ public class QuizList extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(370, 680));
         setMinimumSize(new java.awt.Dimension(370, 680));
+        setName("QuizList"); // NOI18N
         setPreferredSize(new java.awt.Dimension(370, 680));
         getContentPane().setLayout(null);
 

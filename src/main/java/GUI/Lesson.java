@@ -10,7 +10,7 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author up873711
+ * @author James and Marwan
  */
 public class Lesson extends javax.swing.JFrame {
 
@@ -19,8 +19,8 @@ public class Lesson extends javax.swing.JFrame {
      */
     public Lesson() {
         initComponents();
-        getContentPane().setBackground(new Color(255, 255, 255));
-        setLocationRelativeTo(null);
+        getContentPane().setBackground(new Color(255, 255, 255)); //Sets the background colour to white
+        setLocationRelativeTo(null);  //Ensures the frame would open in the centre of the display
     }
 
     public void CPR() {
@@ -49,7 +49,7 @@ public class Lesson extends javax.swing.JFrame {
         lessonImage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setName("lesson"); // NOI18N
+        setName("Lesson"); // NOI18N
         setPreferredSize(new java.awt.Dimension(370, 640));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
@@ -100,8 +100,8 @@ public class Lesson extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        new LessonList().setVisible(true);
-        this.setVisible(false);
+        new LessonList().setVisible(true);  //Creates a new Menu frame
+        this.setVisible(false);  //Turns off visibility for this frame
     }//GEN-LAST:event_backActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
@@ -140,7 +140,7 @@ public class Lesson extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Lesson().setVisible(true);
+                new Lesson().setVisible(true);  //Creates and show this frame
             }
         });
     }
