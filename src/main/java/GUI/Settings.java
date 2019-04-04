@@ -65,7 +65,7 @@ public class Settings extends javax.swing.JFrame {
 
         header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png"))); // NOI18N
         getContentPane().add(header);
-        header.setBounds(-20, 0, 380, 130);
+        header.setBounds(-20, 0, 380, 120);
 
         HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
         HeaderBackground.setOpaque(true);
@@ -277,6 +277,7 @@ public class Settings extends javax.swing.JFrame {
     }//GEN-LAST:event_backActionPerformed
 
     public void defaultColoursSettings(){
+        HeaderBackground.setBackground(new Color(249, 6, 6));
         RedColourTest.setBackground(new Color(249, 6, 6));
         GreenColourTest.setBackground(new Color(0, 128, 0));
         BlueColourTest.setBackground(new Color(77, 77, 255));
