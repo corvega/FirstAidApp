@@ -31,6 +31,7 @@ public class Results extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        back = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         HeaderBackground = new javax.swing.JLabel();
         Q1Panel = new javax.swing.JPanel();
@@ -41,9 +42,30 @@ public class Results extends javax.swing.JFrame {
         Q2Label = new javax.swing.JLabel();
         Q2_4Answer = new javax.swing.JRadioButton();
         jLabel3 = new javax.swing.JLabel();
+        Q3Panel = new javax.swing.JPanel();
+        Q3Label = new javax.swing.JLabel();
+        Q3_2Answer = new javax.swing.JRadioButton();
+        jLabel6 = new javax.swing.JLabel();
+        Q4Panel = new javax.swing.JPanel();
+        Q3Label1 = new javax.swing.JLabel();
+        Q3_2Answer1 = new javax.swing.JRadioButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(370, 640));
+        setMinimumSize(new java.awt.Dimension(370, 640));
+        setPreferredSize(new java.awt.Dimension(370, 640));
         getContentPane().setLayout(null);
+
+        back.setBackground(new java.awt.Color(255, 51, 51));
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/back.png"))); // NOI18N
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
+        getContentPane().add(back);
+        back.setBounds(20, 40, 30, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Results/resultsScreen.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -55,12 +77,14 @@ public class Results extends javax.swing.JFrame {
         getContentPane().add(HeaderBackground);
         HeaderBackground.setBounds(0, 0, 360, 110);
 
+        Q1Panel.setBackground(new java.awt.Color(255, 255, 255));
         Q1Panel.setLayout(null);
 
         Q1Label.setText("<html><b>1.</b> Why is it important to move someone who is unresponsive and breathing onto their  side?</html>");
         Q1Panel.add(Q1Label);
         Q1Label.setBounds(10, 11, 317, 51);
 
+        Q1_1Answer.setSelected(true);
         Q1_1Answer.setText("More comfortable sleeping position");
         Q1Panel.add(Q1_1Answer);
         Q1_1Answer.setBounds(10, 69, 191, 23);
@@ -69,17 +93,19 @@ public class Results extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/correct.png"))); // NOI18N
         jLabel2.setOpaque(true);
         Q1Panel.add(jLabel2);
-        jLabel2.setBounds(210, 70, 32, 30);
+        jLabel2.setBounds(260, 60, 32, 30);
 
         getContentPane().add(Q1Panel);
         Q1Panel.setBounds(10, 140, 340, 110);
 
+        Q2Panel.setBackground(new java.awt.Color(255, 255, 255));
         Q2Panel.setLayout(null);
 
         Q2Label.setText("<html><b>2.</b> After you have moved a person who is unresponsive  and breathing onto their side, you should do what?</html>");
         Q2Panel.add(Q2Label);
         Q2Label.setBounds(10, 11, 311, 33);
 
+        Q2_4Answer.setSelected(true);
         Q2_4Answer.setText("Offer them a drink to keep them hydrated");
         Q2_4Answer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,10 +119,57 @@ public class Results extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/wrong.png"))); // NOI18N
         jLabel3.setOpaque(true);
         Q2Panel.add(jLabel3);
-        jLabel3.setBounds(240, 60, 30, 30);
+        jLabel3.setBounds(260, 60, 30, 30);
 
         getContentPane().add(Q2Panel);
-        Q2Panel.setBounds(10, 260, 330, 110);
+        Q2Panel.setBounds(10, 250, 330, 110);
+
+        Q3Panel.setBackground(new java.awt.Color(255, 255, 255));
+        Q3Panel.setLayout(null);
+
+        Q3Label.setText("<html><b>4.</b> Why is it important to start chest compressions as quickly as possible, if someone is unresponsive and not breathing?</html>");
+        Q3Panel.add(Q3Label);
+        Q3Label.setBounds(10, 11, 320, 50);
+
+        Q3_2Answer.setSelected(true);
+        Q3_2Answer.setText("<html>You may wake them up, and they will start to breathe again</html>");
+        Q3_2Answer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Q3_2AnswerActionPerformed(evt);
+            }
+        });
+        Q3Panel.add(Q3_2Answer);
+        Q3_2Answer.setBounds(10, 60, 250, 37);
+
+        jLabel6.setBackground(new java.awt.Color(255, 0, 0));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/wrong.png"))); // NOI18N
+        jLabel6.setOpaque(true);
+        Q3Panel.add(jLabel6);
+        jLabel6.setBounds(260, 60, 30, 30);
+
+        getContentPane().add(Q3Panel);
+        Q3Panel.setBounds(10, 460, 340, 140);
+
+        Q4Panel.setBackground(new java.awt.Color(255, 255, 255));
+        Q4Panel.setLayout(null);
+
+        Q3Label1.setText("<html><b>3.</b> If someone is unresponsive, which three senses can you use to tell if they are breathing?</html>");
+        Q4Panel.add(Q3Label1);
+        Q3Label1.setBounds(10, 11, 320, 33);
+
+        Q3_2Answer1.setSelected(true);
+        Q3_2Answer1.setText("Sight, smell, sound");
+        Q4Panel.add(Q3_2Answer1);
+        Q3_2Answer1.setBounds(10, 50, 130, 37);
+
+        jLabel5.setBackground(new java.awt.Color(0, 204, 102));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/correct.png"))); // NOI18N
+        jLabel5.setOpaque(true);
+        Q4Panel.add(jLabel5);
+        jLabel5.setBounds(260, 50, 32, 30);
+
+        getContentPane().add(Q4Panel);
+        Q4Panel.setBounds(10, 360, 340, 100);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -104,6 +177,15 @@ public class Results extends javax.swing.JFrame {
     private void Q2_4AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q2_4AnswerActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Q2_4AnswerActionPerformed
+
+    private void Q3_2AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q3_2AnswerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Q3_2AnswerActionPerformed
+
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        new PreviewResultsList().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_backActionPerformed
 
     /**
      * @param args the command line arguments
@@ -149,8 +231,17 @@ public class Results extends javax.swing.JFrame {
     private javax.swing.JLabel Q2Label;
     private javax.swing.JPanel Q2Panel;
     private javax.swing.JRadioButton Q2_4Answer;
+    private javax.swing.JLabel Q3Label;
+    private javax.swing.JLabel Q3Label1;
+    private javax.swing.JPanel Q3Panel;
+    private javax.swing.JRadioButton Q3_2Answer;
+    private javax.swing.JRadioButton Q3_2Answer1;
+    private javax.swing.JPanel Q4Panel;
+    private javax.swing.JButton back;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }

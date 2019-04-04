@@ -31,24 +31,127 @@ public class PreviewResultsList extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        back = new javax.swing.JButton();
+        header = new javax.swing.JLabel();
+        HeaderBackground = new javax.swing.JLabel();
+        CPRButton = new javax.swing.JButton();
+        UnresponsiveBreathingButton = new javax.swing.JButton();
+        HeavyBleedingButton = new javax.swing.JButton();
+        BurnsButton = new javax.swing.JButton();
+        ChokingButton = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setLocationByPlatform(true);
-        setPreferredSize(new java.awt.Dimension(360, 640));
+        setMaximumSize(new java.awt.Dimension(370, 680));
+        setMinimumSize(new java.awt.Dimension(370, 680));
+        setPreferredSize(new java.awt.Dimension(370, 680));
+        getContentPane().setLayout(null);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 360, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 640, Short.MAX_VALUE)
-        );
+        back.setBackground(new java.awt.Color(255, 51, 51));
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/back.png"))); // NOI18N
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
+        getContentPane().add(back);
+        back.setBounds(20, 40, 30, 60);
+
+        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Results/resultsScreen.png"))); // NOI18N
+        getContentPane().add(header);
+        header.setBounds(-10, 0, 370, 170);
+
+        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
+        HeaderBackground.setOpaque(true);
+        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
+        getContentPane().add(HeaderBackground);
+        HeaderBackground.setBounds(0, 0, 360, 110);
+
+        CPRButton.setBackground(new java.awt.Color(249, 6, 6));
+        CPRButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/CPR LessonList.png"))); // NOI18N
+        CPRButton.setMaximumSize(new java.awt.Dimension(159, 169));
+        CPRButton.setMinimumSize(new java.awt.Dimension(159, 169));
+        CPRButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CPRButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(CPRButton);
+        CPRButton.setBounds(20, 120, 321, 87);
+
+        UnresponsiveBreathingButton.setBackground(new java.awt.Color(249, 6, 6));
+        UnresponsiveBreathingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Unresponsive-Breathing LessonList.png"))); // NOI18N
+        UnresponsiveBreathingButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UnresponsiveBreathingButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(UnresponsiveBreathingButton);
+        UnresponsiveBreathingButton.setBounds(20, 230, 321, 87);
+
+        HeavyBleedingButton.setBackground(new java.awt.Color(249, 6, 6));
+        HeavyBleedingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Heavy-Bleeding LessonList.png"))); // NOI18N
+        HeavyBleedingButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HeavyBleedingButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(HeavyBleedingButton);
+        HeavyBleedingButton.setBounds(20, 330, 319, 87);
+
+        BurnsButton.setBackground(new java.awt.Color(249, 6, 6));
+        BurnsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Burns LessonList.png"))); // NOI18N
+        BurnsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BurnsButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BurnsButton);
+        BurnsButton.setBounds(20, 440, 321, 87);
+
+        ChokingButton.setBackground(new java.awt.Color(249, 6, 6));
+        ChokingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Choking LessonList.png"))); // NOI18N
+        ChokingButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChokingButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ChokingButton);
+        ChokingButton.setBounds(20, 540, 321, 87);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        new Menu().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_backActionPerformed
+
+    private void CPRButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CPRButtonActionPerformed
+        //new Quiz().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_CPRButtonActionPerformed
+
+    private void UnresponsiveBreathingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnresponsiveBreathingButtonActionPerformed
+        new UnresQuiz().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_UnresponsiveBreathingButtonActionPerformed
+
+    private void HeavyBleedingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeavyBleedingButtonActionPerformed
+        //new Quiz().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_HeavyBleedingButtonActionPerformed
+
+    private void BurnsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BurnsButtonActionPerformed
+        //new Quiz().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BurnsButtonActionPerformed
+
+    private void ChokingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChokingButtonActionPerformed
+        new Results().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_ChokingButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -86,5 +189,13 @@ public class PreviewResultsList extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BurnsButton;
+    private javax.swing.JButton CPRButton;
+    private javax.swing.JButton ChokingButton;
+    private javax.swing.JLabel HeaderBackground;
+    private javax.swing.JButton HeavyBleedingButton;
+    private javax.swing.JButton UnresponsiveBreathingButton;
+    private javax.swing.JButton back;
+    private javax.swing.JLabel header;
     // End of variables declaration//GEN-END:variables
 }
