@@ -13,61 +13,57 @@ import java.awt.Dimension;
  * @author up839921
  */
 public class Scores extends javax.swing.JFrame {
-    
-
 
     /**
      * Creates new form Scores
      */
     public Scores() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(255,255,255));
+        getContentPane().setBackground(new java.awt.Color(255, 255, 255));
     }
-   double gp=0.0;
-    
-    
+    double gp = 0.0;
+
     public void ProgressBar1(int QuizValue) {
-        Session1Panel.setSize(new Dimension((QuizValue*3), 30));
-        Session1ScoreLabel.setText(QuizValue+"%");
-        if (QuizValue<40) {
+        Session1Panel.setSize(new Dimension((QuizValue * 3), 30));
+        Session1ScoreLabel.setText(QuizValue + "%");
+        if (QuizValue < 40) {
             Session1Panel.setBackground(new Color(249, 6, 6));
-        } else if (QuizValue>80) {
+        } else if (QuizValue > 80) {
             Session1Panel.setBackground(new Color(0, 128, 0));
         } else {
             Session1Panel.setBackground(new Color(255, 255, 102));
         }
-        ProBar.setValue((int)this.gp);
-    }   
+        ProBar.setValue((int) this.gp);
+    }
 
-public void getPoints(double pts){
-   gp=pts;
-}
-    
-    
+    public void getPoints(double pts) {
+        gp = pts;
+    }
+
     public void ProgressBar2(int QuizValue) {
-        Session2Panel.setSize(new Dimension((QuizValue*3), 30));
-        Session2ScoreLabel.setText(QuizValue+"%");
-        if (QuizValue<40) {
+        Session2Panel.setSize(new Dimension((QuizValue * 3), 30));
+        Session2ScoreLabel.setText(QuizValue + "%");
+        if (QuizValue < 40) {
             Session2Panel.setBackground(new Color(249, 6, 6));
-        } else if (QuizValue>80) {
+        } else if (QuizValue > 80) {
             Session2Panel.setBackground(new Color(0, 128, 0));
         } else {
             Session2Panel.setBackground(new Color(255, 255, 102));
         }
     }
-    
+
     public void ProgressBar3(int QuizValue) {
-        Session3Panel.setSize(new Dimension((QuizValue*3), 30));
-        Session3ScoreLabel.setText(QuizValue+"%");
-        if (QuizValue<40) {
+        Session3Panel.setSize(new Dimension((QuizValue * 3), 30));
+        Session3ScoreLabel.setText(QuizValue + "%");
+        if (QuizValue < 40) {
             Session3Panel.setBackground(new Color(249, 6, 6));
-        } else if (QuizValue>80) {
+        } else if (QuizValue > 80) {
             Session3Panel.setBackground(new Color(0, 128, 0));
         } else {
             Session3Panel.setBackground(new Color(255, 255, 102));
         }
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -185,9 +181,6 @@ public void getPoints(double pts){
                         .addGap(27, 27, 27)
                         .addComponent(Session1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(Session1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addComponent(Session2Label))
                     .addGroup(layout.createSequentialGroup()
@@ -198,9 +191,13 @@ public void getPoints(double pts){
                         .addComponent(Session3Label, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(Session3Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(248, Short.MAX_VALUE))
-            .addComponent(ProBar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+                        .addComponent(Session3Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ProBar, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Session1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,9 +226,7 @@ public void getPoints(double pts){
         ProgressBar2(67);
         ProgressBar3(32);
     }//GEN-LAST:event_formWindowActivated
-    
-    
-    
+
 //    public void colourChecker(String colour) {
 //        if (defaultColours=true) {
 //            defaultColoursScores(colour);
@@ -243,9 +238,7 @@ public void getPoints(double pts){
 //            TritanopiaColoursScores(colour);
 //        }
 //    }
-    
-    
-    public void defaultColoursScores(String colour){
+    public void defaultColoursScores(String colour) {
         switch (colour) {
             case "Red":
                 System.out.println("new Color(249, 0, 0)");
@@ -255,8 +248,8 @@ public void getPoints(double pts){
                 System.out.println("new Color(77, 77, 255)");
         }
     }
-    
-    public void DeuteranopiaColoursScores(String colour){
+
+    public void DeuteranopiaColoursScores(String colour) {
         switch (colour) {
             case "Red":
                 System.out.println("new Color(238, 43, 150)");
@@ -266,8 +259,8 @@ public void getPoints(double pts){
                 System.out.println("new Color(0, 64, 224)");
         }
     }
-    
-    public void ProtanopiaColoursScores(String colour){
+
+    public void ProtanopiaColoursScores(String colour) {
         switch (colour) {
             case "Red":
                 System.out.println("new Color(250, 56, 143)");
@@ -278,7 +271,7 @@ public void getPoints(double pts){
         }
     }
 
-    public void TritanopiaColoursScores(String colour){
+    public void TritanopiaColoursScores(String colour) {
         switch (colour) {
             case "Red":
                 System.out.println("new Color(255, 0, 0)");
