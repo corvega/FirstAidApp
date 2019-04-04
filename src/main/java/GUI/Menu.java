@@ -13,8 +13,8 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
-        getContentPane().setBackground(new Color(255, 255, 255));
-        setLocationRelativeTo(null);
+        getContentPane().setBackground(new Color(255, 255, 255));  //Sets the background colour to white
+        setLocationRelativeTo(null);  //Ensures the frame would open in the centre of the display
     }
     
     /**
@@ -118,33 +118,33 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void LessonButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LessonButtonActionPerformed
-        new LessonList().setVisible(true);
-        this.setVisible(false);
+        new LessonList().setVisible(true);  //Creates a new LessonList frame
+        this.setVisible(false);   //Turn off visibility for this frame
     }//GEN-LAST:event_LessonButtonActionPerformed
 
     private void QuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuizButtonActionPerformed
-        new QuizList().setVisible(true);
-        this.setVisible(false);
+        new QuizList().setVisible(true);  //Creates a new QuizList frame
+        this.setVisible(false);   //Turn off visibility for this frame
     }//GEN-LAST:event_QuizButtonActionPerformed
 
     private void ScoresButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScoresButtonActionPerformed
-        new Score().setVisible(true);
-        this.setVisible(false);
+        new Score().setVisible(true);  //Creates a new Score frame
+        this.setVisible(false);   //Turn off visibility for this frame
     }//GEN-LAST:event_ScoresButtonActionPerformed
 
     private void EmergencyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmergencyButtonActionPerformed
-        new Emergency().setVisible(true);
-        this.setVisible(false);
+        new Emergency().setVisible(true);  //Creates a new Emergency frame
+        this.setVisible(false);   //Turn off visibility for this frame
     }//GEN-LAST:event_EmergencyButtonActionPerformed
 
     private void PreviewResultsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreviewResultsButtonActionPerformed
-        new PreviewResultsList().setVisible(true);
-        this.setVisible(false);
+        new PreviewResultsList().setVisible(true);  //Creates a new PreviewResults frame
+        this.setVisible(false);   //Turn off visibility for this frame
     }//GEN-LAST:event_PreviewResultsButtonActionPerformed
 
     private void SettingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SettingsButtonActionPerformed
-        new Settings().setVisible(true);
-        this.setVisible(false);
+        new Settings().setVisible(true);  //Creates a new Settings frame
+        this.setVisible(false);   //Turn off visibility for this frame
     }//GEN-LAST:event_SettingsButtonActionPerformed
     
     public void defaultColoursSettings(){
@@ -183,6 +183,8 @@ public class Menu extends javax.swing.JFrame {
         EmergencyButton.setBackground(new Color(255, 0, 0));
         SettingsButton.setBackground(new Color(255, 0, 0));
     }
+    
+    //Sets the icon and colour background for each button
     
 
     /**

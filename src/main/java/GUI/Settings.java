@@ -50,6 +50,7 @@ public class Settings extends javax.swing.JFrame {
         Seperator1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(370, 640));
         setMinimumSize(new java.awt.Dimension(370, 640));
         setName("Settings"); // NOI18N

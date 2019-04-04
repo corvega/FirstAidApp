@@ -1,6 +1,12 @@
 
 package GUI;
 
+
+/**
+ *
+ * @author James and Marwan
+ */
+
 import java.awt.Color;
 
 
@@ -11,8 +17,8 @@ public class Emergency extends javax.swing.JFrame {
      */
     public Emergency() {
         initComponents();
-        getContentPane().setBackground(new Color(255, 255, 255));
-        setLocationRelativeTo(null);
+        getContentPane().setBackground(new Color(255, 255, 255));  //Sets the background colour to white
+        setLocationRelativeTo(null);  //Ensure the frame would open in the centre of the display
     }
 
     /**
@@ -39,6 +45,7 @@ public class Emergency extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setForeground(new java.awt.Color(0, 0, 0));
         setMinimumSize(new java.awt.Dimension(370, 640));
+        setName("Emergency"); // NOI18N
         setSize(new java.awt.Dimension(5, 5));
         getContentPane().setLayout(null);
 
@@ -115,8 +122,8 @@ public class Emergency extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        new Menu().setVisible(true);
-        this.setVisible(false);
+        new Menu().setVisible(true);   //Create a new Menu frame
+        this.setVisible(false);       //Turn off visibility for this frame
     }//GEN-LAST:event_backActionPerformed
 
     /**
@@ -150,7 +157,7 @@ public class Emergency extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Emergency().setVisible(true);
+                new Emergency().setVisible(true);  //Creates and shows this frame
             }
         });
     }
