@@ -5,17 +5,17 @@ import FirstAidApp.templates.relations.DescriptionImage;
 import java.io.File;
 import java.util.ArrayList;
 
-public class Lesson {
+public class LessonTemplate {
 
     String title;
     ArrayList<DescriptionImage> content;
 
-    public Lesson(String title, ArrayList<DescriptionImage> content) {
+    public LessonTemplate(String title, ArrayList<DescriptionImage> content) {
         this.title = title;
         this.content = content;
     }
 
-    public Lesson(String title, ArrayList<String> description, ArrayList<String> images, ArrayList<String> imageCaption) {
+    public LessonTemplate(String title, ArrayList<String> description, ArrayList<String> images, ArrayList<String> imageCaption) {
         if (description.size() != images.size() && images.size() != imageCaption.size()) throw new Error("The length of both images and description must be of the same size");
         this.title = title;
         this.content = new ArrayList();

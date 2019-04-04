@@ -1,6 +1,6 @@
 package FirstAidApp.templates;
 
-public class Settings {
+public class SettingsTemplate {
 
     boolean magnifyText;
     boolean captionImages;
@@ -10,13 +10,13 @@ public class Settings {
             DEFAULT, DEUTERANOPIA, PROTANOPIA, TRITANOPIA
     }
 
-    public Settings(boolean magnifyText, boolean captionImages, colorBlind colorBlind) {
+    public SettingsTemplate(boolean magnifyText, boolean captionImages, colorBlind colorBlind) {
         this.magnifyText = magnifyText;
         this.captionImages = captionImages;
         this.colorBlind = colorBlind;
     }
 
-    public Settings.colorBlind getColorBlind() {
+    public SettingsTemplate.colorBlind getColorBlind() {
         return colorBlind;
     }
 

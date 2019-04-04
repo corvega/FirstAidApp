@@ -8,15 +8,15 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public class LessonTest {
+public class LessonTemplateTest {
 
    @Test
     public void getTitle() {
         ArrayList<DescriptionImage> content= new ArrayList();
         content.add(new DescriptionImage("b","c", "d"));
 
-        Lesson lesson = new Lesson("a", content);
-        assertEquals(lesson.getTitle(), "a");
+        LessonTemplate lessonTemplate = new LessonTemplate("a", content);
+        assertEquals(lessonTemplate.getTitle(), "a");
     }
 
     @Test
@@ -24,8 +24,8 @@ public class LessonTest {
         ArrayList<DescriptionImage> content= new ArrayList();
         content.add(new DescriptionImage("b","c", "d"));
 
-        Lesson lesson = new Lesson("a", content);
-        assertEquals(lesson.getContent().get(0).getDescription(), "b");
+        LessonTemplate lessonTemplate = new LessonTemplate("a", content);
+        assertEquals(lessonTemplate.getContent().get(0).getDescription(), "b");
     }
 
     @Test
@@ -33,8 +33,8 @@ public class LessonTest {
         ArrayList<DescriptionImage> content= new ArrayList();
         content.add(new DescriptionImage("b","c", "d"));
 
-        Lesson lesson = new Lesson("a", content);
-        assertEquals(lesson.getContent().get(0).getImage(), new File("c"));
+        LessonTemplate lessonTemplate = new LessonTemplate("a", content);
+        assertEquals(lessonTemplate.getContent().get(0).getImage(), new File("c"));
     }
 
     @Test
@@ -42,7 +42,7 @@ public class LessonTest {
         ArrayList<DescriptionImage> content= new ArrayList();
         content.add(new DescriptionImage("b","c", "d"));
 
-        Lesson lesson = new Lesson("a", content);
-        assertEquals(lesson.getContent().get(0).getImageCaption(), "d");
+        LessonTemplate lessonTemplate = new LessonTemplate("a", content);
+        assertEquals(lessonTemplate.getContent().get(0).getImageCaption(), "d");
     }
 }

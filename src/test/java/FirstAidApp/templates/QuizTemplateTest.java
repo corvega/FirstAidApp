@@ -2,31 +2,28 @@ package FirstAidApp.templates;
 
 
 
-import FirstAidApp.templates.relations.Answers;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public class QuizTest {
+public class QuizTemplateTest {
     /* TODO: I don't know how to check if the class is correct because creating a new class gives it a different memory address */
 
     @Test
     public void getTitle() {
-        Quiz quiz = new Quiz("a", "b", "c", "d", "e", "f");
-        assertEquals(quiz.getTitle(), "a");
+        QuizTemplate quizTemplate = new QuizTemplate("a", "b", "c", "d", "e", "f");
+        assertEquals(quizTemplate.getTitle(), "a");
     }
 
     @Test
     public void getQuestion() {
-        Quiz quiz = new Quiz("a", "b", "c", "d", "e", "f");
-        assertEquals(quiz.getQuestion(), "b");
+        QuizTemplate quizTemplate = new QuizTemplate("a", "b", "c", "d", "e", "f");
+        assertEquals(quizTemplate.getQuestion(), "b");
     }
 
     @Test
     public void getFakeAnswer() {
-        Quiz quiz = new Quiz("a", "b", "c", "d", "e", "f");
-        assertEquals(quiz.getFakeAnswer(0), "d");
+        QuizTemplate quizTemplate = new QuizTemplate("a", "b", "c", "d", "e", "f");
+        assertEquals(quizTemplate.getFakeAnswer(0), "d");
     }
 }

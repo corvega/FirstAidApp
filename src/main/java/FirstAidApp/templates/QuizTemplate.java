@@ -4,25 +4,25 @@ import FirstAidApp.templates.relations.Answers;
 
 import java.util.ArrayList;
 
-public class Quiz {
+public class QuizTemplate {
     String title;
     String question;
     Answers answers;
 
-    public Quiz(String title, String question, Answers answers) {
+    public QuizTemplate(String title, String question, Answers answers) {
         this.title = title;
         this.question = question;
         this.answers = answers;
     }
 
-    public Quiz(String title, String question, String correctAnswer, ArrayList<String> fakeAnswers) {
+    public QuizTemplate(String title, String question, String correctAnswer, ArrayList<String> fakeAnswers) {
         if (fakeAnswers.size() != 3) throw new Error("Fake Answer array must be of length 3");
         this.title = title;
         this.question = question;
         this.answers = new Answers(correctAnswer, fakeAnswers);
     }
 
-    public Quiz(String title, String question, String correctAnswer, String fakeAnswer1, String fakeAnswer2, String fakeAnswer3) {
+    public QuizTemplate(String title, String question, String correctAnswer, String fakeAnswer1, String fakeAnswer2, String fakeAnswer3) {
         this.title = title;
         this.question = question;
         this.answers = new Answers(correctAnswer, fakeAnswer1, fakeAnswer2, fakeAnswer3);
