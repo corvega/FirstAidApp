@@ -22,6 +22,7 @@ public class Scores extends javax.swing.JFrame {
     public Scores() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255,255,255));
+        setLocationRelativeTo(null);
     }
    double gp=0.0;
     
@@ -77,6 +78,8 @@ public void getPoints(double pts){
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        header = new javax.swing.JLabel();
+        HeaderBackground = new javax.swing.JLabel();
         Session1Label = new javax.swing.JLabel();
         Session3Label = new javax.swing.JLabel();
         Session2Label = new javax.swing.JLabel();
@@ -100,6 +103,16 @@ public void getPoints(double pts){
             }
         });
         getContentPane().setLayout(null);
+
+        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Scores/scoreScreen.png"))); // NOI18N
+        getContentPane().add(header);
+        header.setBounds(-10, 0, 370, 170);
+
+        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
+        HeaderBackground.setOpaque(true);
+        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
+        getContentPane().add(HeaderBackground);
+        HeaderBackground.setBounds(0, 0, 360, 110);
 
         Session1Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session1Label.setText("Quiz - Session 1");
@@ -301,6 +314,7 @@ public void getPoints(double pts){
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel HeaderBackground;
     private javax.swing.JProgressBar ProBar;
     private javax.swing.JLabel Session1Label;
     private javax.swing.JPanel Session1Panel;
@@ -311,6 +325,7 @@ public void getPoints(double pts){
     private javax.swing.JLabel Session3Label;
     private javax.swing.JPanel Session3Panel;
     private javax.swing.JLabel Session3ScoreLabel;
+    private javax.swing.JLabel header;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
