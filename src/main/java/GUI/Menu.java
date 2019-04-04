@@ -39,6 +39,7 @@ public class Menu extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setLocationByPlatform(true);
         setMinimumSize(new java.awt.Dimension(360, 640));
+        setName("Menu"); // NOI18N
         setResizable(false);
         setSize(new java.awt.Dimension(360, 640));
         getContentPane().setLayout(null);
