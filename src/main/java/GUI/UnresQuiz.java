@@ -20,7 +20,7 @@ public class UnresQuiz extends javax.swing.JFrame {
     public UnresQuiz() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255, 255, 255)); //Sets the background colour to white
-        setLocationRelativeTo(null); // Ensure the frame would open in the centre of the display
+        setLocationRelativeTo(null); //Ensure the frame would open in the centre of the display
     }
 
     /**

@@ -7,7 +7,7 @@ package GUI;
 
 /**
  *
- * @author up873711
+ * @author James and Marwan
  */
 public class Splashscreen extends javax.swing.JFrame {
 

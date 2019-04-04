@@ -137,22 +137,22 @@ public class PreviewResultsList extends javax.swing.JFrame {
 
     private void CPRButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CPRButtonActionPerformed
         //new Results().setVisible(true);    //Commented out for prototype purpose
-        this.setVisible(false);
+        this.setVisible(false);  //Turn off visibility for this frame
     }//GEN-LAST:event_CPRButtonActionPerformed
 
     private void UnresponsiveBreathingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnresponsiveBreathingButtonActionPerformed
         //new Results().setVisible(true);    //Commented out for prototype purpose
-        this.setVisible(false);;
+        this.setVisible(false);;  //Turn off visibility for this frame
     }//GEN-LAST:event_UnresponsiveBreathingButtonActionPerformed
 
     private void HeavyBleedingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeavyBleedingButtonActionPerformed
         //new Results().setVisible(true);    //Commented out for prototype purpose
-        this.setVisible(false);
+        this.setVisible(false);  //Turn off visibility for this frame
     }//GEN-LAST:event_HeavyBleedingButtonActionPerformed
 
     private void BurnsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BurnsButtonActionPerformed
         //new Results().setVisible(true);    //Commented out for prototype purpose
-        this.setVisible(false);
+        this.setVisible(false);  //Turn off visibility for this frame
     }//GEN-LAST:event_BurnsButtonActionPerformed
 
     private void ChokingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChokingButtonActionPerformed

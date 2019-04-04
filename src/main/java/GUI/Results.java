@@ -109,11 +109,6 @@ public class Results extends javax.swing.JFrame {
 
         Q2_4Answer.setSelected(true);
         Q2_4Answer.setText("Offer them a drink to keep them hydrated");
-        Q2_4Answer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Q2_4AnswerActionPerformed(evt);
-            }
-        });
         Q2Panel.add(Q2_4Answer);
         Q2_4Answer.setBounds(10, 62, 227, 23);
 
@@ -135,11 +130,6 @@ public class Results extends javax.swing.JFrame {
 
         Q3_2Answer.setSelected(true);
         Q3_2Answer.setText("<html>You may wake them up, and they will start to breathe again</html>");
-        Q3_2Answer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Q3_2AnswerActionPerformed(evt);
-            }
-        });
         Q3Panel.add(Q3_2Answer);
         Q3_2Answer.setBounds(10, 60, 250, 37);
 
@@ -175,14 +165,6 @@ public class Results extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void Q2_4AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q2_4AnswerActionPerformed
-
-    }//GEN-LAST:event_Q2_4AnswerActionPerformed
-
-    private void Q3_2AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q3_2AnswerActionPerformed
-  
-    }//GEN-LAST:event_Q3_2AnswerActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
         new PreviewResultsList().setVisible(true);  //Creates a new PreviewResultsList frame
