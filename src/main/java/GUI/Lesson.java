@@ -5,9 +5,6 @@
  */
 package GUI;
 
-import java.awt.Color;
-import javax.swing.ImageIcon;
-
 /**
  *
  * @author up873711
@@ -19,17 +16,10 @@ public class Lesson extends javax.swing.JFrame {
      */
     public Lesson() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(255,255,255));
+        getContentPane().setBackground(new java.awt.Color(255, 255, 255));
         setLocationRelativeTo(null);
     }
 
-    
-    public void CPR() {
-        TextLabel.setText("<html>Place some relevant text here</html>");
-        TextLabel.setText("");
-        ImageLabel.setIcon(new ImageIcon(getClass().getResource("/Lesson/how-to-do-CPR.png")));
-    }
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -39,14 +29,14 @@ public class Lesson extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        StatusBar = new javax.swing.JLabel();
-        BackButton = new javax.swing.JButton();
-        TextLabel = new javax.swing.JLabel();
-        ImageLabel = new javax.swing.JLabel();
-        HeaderBackground = new javax.swing.JLabel();
-        HeaderBackground1 = new javax.swing.JLabel();
+        back = new javax.swing.JButton();
+        lessonTitle = new javax.swing.JLabel();
+        method = new javax.swing.JLabel();
+        lessonImage = new javax.swing.JLabel();
+        header = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(370, 640));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
@@ -54,69 +44,50 @@ public class Lesson extends javax.swing.JFrame {
         });
         getContentPane().setLayout(null);
 
-        StatusBar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lesson/lessonScreen.png"))); // NOI18N
-        getContentPane().add(StatusBar);
-        StatusBar.setBounds(-20, 0, 380, 170);
-
-        BackButton.setBackground(new java.awt.Color(255, 51, 51));
-        BackButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/back.png"))); // NOI18N
-        BackButton.addActionListener(new java.awt.event.ActionListener() {
+        back.setBackground(new java.awt.Color(255, 51, 51));
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/back.png"))); // NOI18N
+        back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BackButtonActionPerformed(evt);
+                backActionPerformed(evt);
             }
         });
-        getContentPane().add(BackButton);
-        BackButton.setBounds(20, 40, 30, 60);
+        getContentPane().add(back);
+        back.setBounds(20, 40, 30, 60);
 
-        TextLabel.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
-        TextLabel.setText("<html>insert method desciptions here</html>");
-        getContentPane().add(TextLabel);
-        TextLabel.setBounds(20, 340, 300, 90);
+        lessonTitle.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lessonTitle.setText("blank");
+        getContentPane().add(lessonTitle);
+        lessonTitle.setBounds(140, 40, 170, 80);
 
-        ImageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageLabel.setText("<insert image here>");
-        getContentPane().add(ImageLabel);
-        ImageLabel.setBounds(10, 180, 330, 140);
+        method.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        method.setText("insert method desciptions here");
+        getContentPane().add(method);
+        method.setBounds(30, 360, 300, 90);
 
-        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
-        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
-        getContentPane().add(HeaderBackground);
-        HeaderBackground.setBounds(0, 0, 360, 110);
+        lessonImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lessonImage.setText("<insert image here>");
+        getContentPane().add(lessonImage);
+        lessonImage.setBounds(10, 180, 330, 140);
 
-        HeaderBackground1.setBackground(new java.awt.Color(249, 6, 6));
-        HeaderBackground1.setPreferredSize(new java.awt.Dimension(360, 110));
-        getContentPane().add(HeaderBackground1);
-        HeaderBackground1.setBounds(0, 0, 360, 110);
+        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lesson/lessonScreen_blank.png"))); // NOI18N
+        getContentPane().add(header);
+        header.setBounds(-10, -50, 380, 200);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
-        new Menu().setVisible(true);
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        new LessonList().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_BackButtonActionPerformed
+    }//GEN-LAST:event_backActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        CPR();
+        //lessonTitle.setFont(new java.awt.Font("Calibri", 0, 25));
+        //lessonTitle.setText();  //set the lesson title here
+        //lessonImage.setIcon(new javax.swing.ImageIcon(getClass().getResource()));
+        
     }//GEN-LAST:event_formWindowActivated
 
-    
-    public void defaultColoursSettings(){
-        HeaderBackground.setBackground(new Color(249, 6, 6));
-    }
-    
-    public void DeuteranopiaColoursSettings(){
-        HeaderBackground.setBackground(new Color(238, 43, 150));
-    }
-    
-    public void ProtanopiaColoursSettings(){
-        HeaderBackground.setBackground(new Color(250, 56, 143));
-    }
-    
-    public void TritanopiaColoursSettings(){
-        HeaderBackground.setBackground(new Color(255, 0, 0));
-    }
-    
     /**
      * @param args the command line arguments
      */
@@ -153,11 +124,10 @@ public class Lesson extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BackButton;
-    private javax.swing.JLabel HeaderBackground;
-    private javax.swing.JLabel HeaderBackground1;
-    private javax.swing.JLabel ImageLabel;
-    private javax.swing.JLabel StatusBar;
-    private javax.swing.JLabel TextLabel;
+    private javax.swing.JButton back;
+    private javax.swing.JLabel header;
+    private javax.swing.JLabel lessonImage;
+    private javax.swing.JLabel lessonTitle;
+    private javax.swing.JLabel method;
     // End of variables declaration//GEN-END:variables
 }

@@ -22,17 +22,16 @@ public class Emergency extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        back = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         Seperator1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        HeaderBackground = new javax.swing.JLabel();
+        header = new javax.swing.JLabel();
+        scenario3 = new javax.swing.JLabel();
+        scenario1 = new javax.swing.JLabel();
+        scenario2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setForeground(new java.awt.Color(0, 0, 0));
@@ -40,15 +39,15 @@ public class Emergency extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(5, 5));
         getContentPane().setLayout(null);
 
-        jButton1.setBackground(new java.awt.Color(255, 51, 51));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/back.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        back.setBackground(new java.awt.Color(255, 51, 51));
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/back.png"))); // NOI18N
+        back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                backActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(20, 40, 30, 60);
+        getContentPane().add(back);
+        back.setBounds(20, 40, 30, 60);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel1.setText("<html>Call 999 or get someone nearby to help you</html>");
@@ -87,34 +86,29 @@ public class Emergency extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(200, 230, 102, 29);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Emergency/emergencyScreen_1.png"))); // NOI18N
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(-20, 0, 380, 170);
+        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Emergency/emergencyScreen_1.png"))); // NOI18N
+        getContentPane().add(header);
+        header.setBounds(-20, 0, 380, 170);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Emergency/emergency_3.png"))); // NOI18N
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(50, 480, 270, 80);
+        scenario3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Emergency/emergency_3.png"))); // NOI18N
+        getContentPane().add(scenario3);
+        scenario3.setBounds(50, 480, 270, 80);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Emergency/emergency_1.png"))); // NOI18N
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(50, 270, 270, 80);
+        scenario1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Emergency/emergency_1.png"))); // NOI18N
+        getContentPane().add(scenario1);
+        scenario1.setBounds(50, 270, 270, 80);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Emergency/emergency_2.png"))); // NOI18N
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(50, 370, 270, 80);
-
-        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
-        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
-        getContentPane().add(HeaderBackground);
-        HeaderBackground.setBounds(0, 0, 360, 110);
+        scenario2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Emergency/emergency_2.png"))); // NOI18N
+        getContentPane().add(scenario2);
+        scenario2.setBounds(50, 370, 270, 80);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
        // new Menu().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_backActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,16 +147,15 @@ public class Emergency extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel HeaderBackground;
     private javax.swing.JPanel Seperator1;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton back;
+    private javax.swing.JLabel header;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel scenario1;
+    private javax.swing.JLabel scenario2;
+    private javax.swing.JLabel scenario3;
     // End of variables declaration//GEN-END:variables
 }
