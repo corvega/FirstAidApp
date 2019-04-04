@@ -10,7 +10,7 @@ import java.awt.Font;
 
 /**
  *
- * @author up839921
+ * @author James and Marwan
  */
 public class Settings extends javax.swing.JFrame {
 
@@ -19,8 +19,8 @@ public class Settings extends javax.swing.JFrame {
      */
     public Settings() {
         initComponents();
-        getContentPane().setBackground(new Color(255,255,255));
-        setLocationRelativeTo(null);
+        getContentPane().setBackground(new Color(255,255,255)); //Sets the background colour to white
+        setLocationRelativeTo(null); // Ensure the frame would open in the centre of the display
     }
 
     /**
@@ -112,11 +112,6 @@ public class Settings extends javax.swing.JFrame {
 
         CaptionImagesCheckBox.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         CaptionImagesCheckBox.setText("Caption Images");
-        CaptionImagesCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CaptionImagesCheckBoxActionPerformed(evt);
-            }
-        });
         getContentPane().add(CaptionImagesCheckBox);
         CaptionImagesCheckBox.setBounds(40, 240, 230, 39);
 
@@ -240,22 +235,22 @@ public class Settings extends javax.swing.JFrame {
 
     private void DefaultColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DefaultColoursActionPerformed
         defaultColoursSettings();
-        //Set default colours across all screens here
+        //Set default colours across all screens
     }//GEN-LAST:event_DefaultColoursActionPerformed
 
     private void DeuteranopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeuteranopiaColoursActionPerformed
         DeuteranopiaColoursSettings();
-        //Set Deutranopia colours across all screens here
+        //Set Deutranopia colours across all screens
     }//GEN-LAST:event_DeuteranopiaColoursActionPerformed
 
     private void ProtanopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProtanopiaColoursActionPerformed
         ProtanopiaColoursSettings();      
-        //Set Protanopia colours across all screens here
+        //Set Protanopia colours across all screens
     }//GEN-LAST:event_ProtanopiaColoursActionPerformed
 
     private void TritanopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TritanopiaColoursActionPerformed
         TritanopiaColoursSettings();
-        //Set Tritanopia colours across all screens here
+        //Set Tritanopia colours across all screens
     }//GEN-LAST:event_TritanopiaColoursActionPerformed
 
     private void MagnifyTextCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MagnifyTextCheckBoxActionPerformed
@@ -264,15 +259,12 @@ public class Settings extends javax.swing.JFrame {
         } else {
             NormalTextSizeSettings();
         }
+        //Toggles between normal text size and enlarged
     }//GEN-LAST:event_MagnifyTextCheckBoxActionPerformed
 
-    private void CaptionImagesCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CaptionImagesCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CaptionImagesCheckBoxActionPerformed
-
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        new Menu().setVisible(true);
-        this.setVisible(false);
+        new Menu().setVisible(true); //Create a new Menu frame
+        this.setVisible(false); // Turn off visibility for this frame
     }//GEN-LAST:event_backActionPerformed
 
     public void defaultColoursSettings(){
@@ -284,6 +276,7 @@ public class Settings extends javax.swing.JFrame {
         
         Seperator1.setBackground(new Color(249, 6, 6));
         Seperator2.setBackground(new Color(249, 6, 6));
+        //Sets the colours back to the original default
     }
     
     public void DeuteranopiaColoursSettings(){
@@ -295,6 +288,7 @@ public class Settings extends javax.swing.JFrame {
         
         Seperator1.setBackground(new Color(238, 43, 150));
         Seperator2.setBackground(new Color(238, 43, 150));
+        //Sets the colours to allow for easier reading for those who suffer from Deuteranopia colourblindness
     }
     
     public void ProtanopiaColoursSettings(){
@@ -306,6 +300,7 @@ public class Settings extends javax.swing.JFrame {
         
         Seperator1.setBackground(new Color(250, 56, 143));
         Seperator2.setBackground(new Color(250, 56, 143));
+        //Sets the colours to allow for easier reading for those who suffer from Protanopia colourblindness
     }
     
     public void TritanopiaColoursSettings(){
@@ -317,6 +312,7 @@ public class Settings extends javax.swing.JFrame {
         
         Seperator1.setBackground(new Color(255, 0, 0));
         Seperator2.setBackground(new Color(255, 0, 0));
+        //Sets the colours to allow for easier reading for those who suffer from Tritanopia colourblindness
     }
     
     
@@ -330,6 +326,7 @@ public class Settings extends javax.swing.JFrame {
         DeuteranopiaColours.setFont(new Font("Calibri", Font.PLAIN, 30));
         ProtanopiaColours.setFont(new Font("Calibri", Font.PLAIN, 30));
         TritanopiaColours.setFont(new Font("Calibri", Font.PLAIN, 30));
+        //Sets the text size to 30 for easier reading
     }
     
     public void NormalTextSizeSettings() {
@@ -340,7 +337,8 @@ public class Settings extends javax.swing.JFrame {
         DefaultColours.setFont(new Font("Calibri", Font.PLAIN, 24));
         DeuteranopiaColours.setFont(new Font("Calibri", Font.PLAIN, 24));
         ProtanopiaColours.setFont(new Font("Calibri", Font.PLAIN, 24));
-        TritanopiaColours.setFont(new Font("Calibri", Font.PLAIN, 24));    
+        TritanopiaColours.setFont(new Font("Calibri", Font.PLAIN, 24));
+        //Sets the text to the default 24 which should be suitable for most
     }
     
     /**

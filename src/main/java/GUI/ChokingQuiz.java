@@ -7,7 +7,7 @@ package GUI;
 
 /**
  *
- * @author usman
+ * @author James and Marwan
  */
 public class ChokingQuiz extends javax.swing.JFrame {
 
@@ -17,8 +17,8 @@ public class ChokingQuiz extends javax.swing.JFrame {
      */
     public ChokingQuiz() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(255, 255, 255));
-        setLocationRelativeTo(null);
+        getContentPane().setBackground(new java.awt.Color(255, 255, 255)); //Sets the background colour to white
+        setLocationRelativeTo(null); //Ensure the frame would open in the centre of the display
     }
 
     /**
@@ -539,9 +539,9 @@ public class ChokingQuiz extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitButtonActionPerformed
-        Score points = new Score();
-        points.ProgressBar2(calculatePoints());
-        points.setVisible(true);
+        Score points = new Score(); //Create a new Score frame
+        points.ProgressBar2(calculatePoints()); //Calls the method storing the user's score and sends it to Score()
+        points.setVisible(true); // Turn off visibility for this frame
     }//GEN-LAST:event_SubmitButtonActionPerformed
 
     private void Question1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question1ButtonActionPerformed
@@ -552,6 +552,7 @@ public class ChokingQuiz extends javax.swing.JFrame {
         jPanel3.add(Q1Panel);
         jPanel3.repaint();
         jPanel3.revalidate();
+        //Shows Question 1 to the user by changing the panel visible
     }//GEN-LAST:event_Question1ButtonActionPerformed
 
     private void Question2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question2ButtonActionPerformed
@@ -562,6 +563,7 @@ public class ChokingQuiz extends javax.swing.JFrame {
         jPanel3.add(Q2Panel);
         jPanel3.repaint();
         jPanel3.revalidate();
+        //Shows Question 2 to the user by changing the panel visible
     }//GEN-LAST:event_Question2ButtonActionPerformed
 
     private void Question3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question3ButtonActionPerformed
@@ -572,6 +574,7 @@ public class ChokingQuiz extends javax.swing.JFrame {
         jPanel3.add(Q3Panel);
         jPanel3.repaint();
         jPanel3.revalidate();
+        //Shows Question 3 to the user by changing the panel visible
     }//GEN-LAST:event_Question3ButtonActionPerformed
 
     private void Question4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question4ButtonActionPerformed
@@ -582,6 +585,7 @@ public class ChokingQuiz extends javax.swing.JFrame {
         jPanel3.add(Q4Panel);
         jPanel3.repaint();
         jPanel3.revalidate();
+        //Shows Question 4 to the user by changing the panel visible
     }//GEN-LAST:event_Question4ButtonActionPerformed
 
     private void Question5ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question5ButtonActionPerformed
@@ -592,6 +596,7 @@ public class ChokingQuiz extends javax.swing.JFrame {
         jPanel3.add(Q5Panel);
         jPanel3.repaint();
         jPanel3.revalidate();
+        //Shows Question 5 to the user by changing the panel visible
     }//GEN-LAST:event_Question5ButtonActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
@@ -602,33 +607,34 @@ public class ChokingQuiz extends javax.swing.JFrame {
         jPanel3.add(Q1Panel);
         jPanel3.repaint();
         jPanel3.revalidate();
+        //Shows question 1 when the form is first opened
     }//GEN-LAST:event_formWindowActivated
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        new QuizList().setVisible(true);
-        this.setVisible(false);
+        new QuizList().setVisible(true); //Create a new QuizList frame
+        this.setVisible(false); // Turn off visibility for this frame
     }//GEN-LAST:event_backActionPerformed
 
     
     
        public int calculatePoints(){
-           int Points=0;
+           int Points=0; //Initialises Points
            if(Q1_1Answer.isSelected()==true){
-               Points+=20;
+               Points+=20; //Increase Points by its relative percentage worth
            }
            if(Q2_4Answer.isSelected()==true){
-               Points+=20;
+               Points+=20; //Increase Points by its relative percentage worth
            }
            if(Q3_2Answer.isSelected()==true){
-              Points+=20;
+              Points+=20; //Increase Points by its relative percentage worth
            } 
            if(Q4_1Answer.isSelected()==true){
-              Points+=20;
+              Points+=20; //Increase Points by its relative percentage worth
            }
            if(Q5_3Answer.isSelected()==true){
-              Points+=20;
+              Points+=20; //Increase Points by its relative percentage worth
            }
-           return Points;
+           return Points; //Returns the final percentage the user received
        }
     /**
      * @param args the command line arguments

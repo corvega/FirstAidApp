@@ -10,7 +10,7 @@ import java.awt.Dimension;
 
 /**
  *
- * @author up839921
+ * @author James and Marwan
  */
 public class Score extends javax.swing.JFrame {
 
@@ -20,57 +20,53 @@ public class Score extends javax.swing.JFrame {
      */
     public Score() {
         initComponents();
-        getContentPane().setBackground(new Color(255,255,255));
-        setLocationRelativeTo(null);
+        getContentPane().setBackground(new Color(255,255,255)); //Sets the background colour to white
+        setLocationRelativeTo(null); // Ensure the frame would open in the centre of the display
     }
     
     
     public void ProgressBar1(int QuizValue) {
-        Session1Panel.setSize(new Dimension((QuizValue*3), 30));
-        Session1ScoreLabel.setText(QuizValue+"%");
+        Session1Panel.setSize(new Dimension((QuizValue*3), 30)); //Sets the length of the progress bar based on the user's score across 300 pixels length
+        Session1ScoreLabel.setText(QuizValue+"%"); //Prints the user's percentage score
         if (QuizValue==0) {
-            Session1Panel.setSize(new Dimension((300), 30));
-            Session1Panel.setBackground(new Color(249, 6, 6));
-            Session1ScoreLabel.setText("0%");
+            Session1Panel.setSize(new Dimension((300), 30)); //Sets the progress bar to full size if they recieve 0 score so the text and colour is visible
+            Session1Panel.setBackground(new Color(249, 6, 6)); //Sets the progress bar to red
         } else if (QuizValue<40) {
-            Session1Panel.setBackground(new Color(249, 6, 6));
+            Session1Panel.setBackground(new Color(249, 6, 6)); //Sets the progress bar to red as they have less than 40% correct
         } else if (QuizValue>=80) {
-            Session1Panel.setBackground(new Color(0, 128, 0)); 
+            Session1Panel.setBackground(new Color(0, 128, 0)); //Sets the progress bar to green as they have 80% or more correct
         } else {
-            Session1Panel.setBackground(new Color(255, 255, 102));
+            Session1Panel.setBackground(new Color(255, 255, 102)); //Sets the progress bar to yellow for between 40% and 80% correct
         }
     }
     
     public void ProgressBar2(int QuizValue) {
-        Session2Panel.setSize(new Dimension((QuizValue*3), 30));
-        Session2ScoreLabel.setText(QuizValue+"%");
+        Session2Panel.setSize(new Dimension((QuizValue*3), 30)); //Sets the length of the progress bar based on the user's score across 300 pixels length
+        Session2ScoreLabel.setText(QuizValue+"%");  //Prints the user's percentage score
         if (QuizValue==0) {
-            Session1Panel.setSize(new Dimension((300), 30));
-            Session1Panel.setBackground(new Color(249, 6, 6));
-            Session1ScoreLabel.setText("0%");
+            Session2Panel.setSize(new Dimension((300), 30)); //Sets the progress bar to full size if they recieve 0 score so the text and colour is visible
+            Session2Panel.setBackground(new Color(249, 6, 6)); //Sets the progress bar to red
         } else if (QuizValue<40) {
-            Session2Panel.setBackground(new Color(249, 6, 6));
+            Session2Panel.setBackground(new Color(249, 6, 6)); //Sets the progress bar to red as they have less than 40% correct
         } else if (QuizValue>=80) {
-            Session2Panel.setBackground(new Color(0, 128, 0));     
+            Session2Panel.setBackground(new Color(0, 128, 0)); //Sets the progress bar to green as they have 80% or more correct
         } else {
-            Session2Panel.setBackground(new Color(255, 255, 102));
+            Session2Panel.setBackground(new Color(255, 255, 102)); //Sets the progress bar to yellow for between 40% and 80% correct
         }
     }
     
     public void ProgressBar3(int QuizValue) {
-        Session3Panel.setSize(new Dimension((QuizValue*3), 30));
-        Session3ScoreLabel.setText(QuizValue+"%");
+        Session3Panel.setSize(new Dimension((QuizValue*3), 30)); //Sets the length of the progress bar based on the user's score across 300 pixels length
+        Session3ScoreLabel.setText(QuizValue+"%"); //Prints the user's percentage score
         if (QuizValue==0) {
-            Session1Panel.setSize(new Dimension((300), 30));
-            Session1Panel.setBackground(new Color(249, 6, 6));
-            Session1ScoreLabel.setText("0%");
+            Session3Panel.setSize(new Dimension((300), 30)); //Sets the progress bar to full size if they recieve 0 score so the text and colour is visible
+            Session3Panel.setBackground(new Color(249, 6, 6)); //Sets the progress bar to red
         } else if (QuizValue<40) {
-            Session3Panel.setBackground(new Color(249, 6, 6));
+            Session3Panel.setBackground(new Color(249, 6, 6)); //Sets the progress bar to red as they have less than 40% correct
         } else if (QuizValue>=80) {
-            Session3Panel.setBackground(new Color(0, 128, 0));
-         
+            Session3Panel.setBackground(new Color(0, 128, 0)); //Sets the progress bar to green as they have 80% or more correct
         } else {
-            Session3Panel.setBackground(new Color(255, 255, 102));
+            Session3Panel.setBackground(new Color(255, 255, 102)); //Sets the progress bar to yellow for between 40% and 80% correct
         }
     }
    
@@ -215,10 +211,15 @@ public class Score extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        new Menu().setVisible(true);
-        this.setVisible(false);
+        new Menu().setVisible(true); //Create a new Menu frame
+        this.setVisible(false); // Turn off visibility for this frame
     }//GEN-LAST:event_backActionPerformed
 
+    //The below code is commented out for prototype purposes
+    //The code requires Red,Green or Blue to be passed to it and then detects which colourblindness setting is currently active
+    //It then outputs the colour inputted based on this setting
+    //It is designed to be used in the progress bar
+    //Example code: Session1Panel.setBackground(colourChecker("Red"));
     
 //    public void colourChecker(String colour) {
 //        if (defaultColours=true) {
@@ -263,18 +264,22 @@ public class Score extends javax.swing.JFrame {
     
     public void defaultColoursScores(String colour){
         HeaderBackground.setBackground(new Color(249, 6, 6));
+        //Sets the colours back to the original default
     }
     
     public void DeuteranopiaColoursScores(String colour){
         HeaderBackground.setBackground(new Color(238, 43, 150));
+        //Sets the colours to allow for easier reading for those who suffer from Deuteranopia colourblindness
     }
     
     public void ProtanopiaColoursScores(String colour){
         HeaderBackground.setBackground(new Color(250, 56, 143));
+        //Sets the colours to allow for easier reading for those who suffer from Protanopia colourblindness
     }
 
     public void TritanopiaColoursScores(String colour){
         HeaderBackground.setBackground(new Color(255, 0, 0));
+        //Sets the colours to allow for easier reading for those who suffer from Tritanopia colourblindness
     }
     
     /**
