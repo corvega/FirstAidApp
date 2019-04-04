@@ -45,7 +45,6 @@ public class Lesson extends javax.swing.JFrame {
         lessonDescription = new javax.swing.JLabel();
         lessonImage = new javax.swing.JLabel();
         header = new javax.swing.JLabel();
-        HeaderBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(370, 640));
@@ -69,7 +68,7 @@ public class Lesson extends javax.swing.JFrame {
         lessonTitle.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lessonTitle.setText("blank");
         getContentPane().add(lessonTitle);
-        lessonTitle.setBounds(140, 30, 170, 80);
+        lessonTitle.setBounds(140, 40, 170, 80);
 
         lessonDescription.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lessonDescription.setText("insert method desciptions here");
@@ -83,13 +82,7 @@ public class Lesson extends javax.swing.JFrame {
 
         header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lesson/lessonScreen_blank.png"))); // NOI18N
         getContentPane().add(header);
-        header.setBounds(-10, -50, 380, 190);
-
-        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
-        HeaderBackground.setOpaque(true);
-        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
-        getContentPane().add(HeaderBackground);
-        HeaderBackground.setBounds(0, 0, 360, 110);
+        header.setBounds(-10, -50, 380, 200);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -141,7 +134,6 @@ public class Lesson extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel HeaderBackground;
     private javax.swing.JButton back;
     private javax.swing.JLabel header;
     private javax.swing.JLabel lessonDescription;
