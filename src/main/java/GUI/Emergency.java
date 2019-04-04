@@ -23,12 +23,13 @@ public class Emergency extends javax.swing.JFrame {
     private void initComponents() {
 
         back = new javax.swing.JButton();
+        header = new javax.swing.JLabel();
+        HeaderBackground = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         Seperator1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        header = new javax.swing.JLabel();
         scenario3 = new javax.swing.JLabel();
         scenario1 = new javax.swing.JLabel();
         scenario2 = new javax.swing.JLabel();
@@ -48,6 +49,16 @@ public class Emergency extends javax.swing.JFrame {
         });
         getContentPane().add(back);
         back.setBounds(20, 40, 30, 60);
+
+        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Emergency/emergencyScreen_1.png"))); // NOI18N
+        getContentPane().add(header);
+        header.setBounds(-20, 0, 380, 170);
+
+        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
+        HeaderBackground.setOpaque(true);
+        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
+        getContentPane().add(HeaderBackground);
+        HeaderBackground.setBounds(0, 0, 360, 110);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel1.setText("<html>Call 999 or get someone nearby to help you</html>");
@@ -85,10 +96,6 @@ public class Emergency extends javax.swing.JFrame {
         jLabel4.setText("Response");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(200, 230, 102, 29);
-
-        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Emergency/emergencyScreen_1.png"))); // NOI18N
-        getContentPane().add(header);
-        header.setBounds(-20, 0, 380, 170);
 
         scenario3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Emergency/emergency_3.png"))); // NOI18N
         getContentPane().add(scenario3);
@@ -147,6 +154,7 @@ public class Emergency extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel HeaderBackground;
     private javax.swing.JPanel Seperator1;
     private javax.swing.JButton back;
     private javax.swing.JLabel header;

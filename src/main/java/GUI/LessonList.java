@@ -29,14 +29,31 @@ public class LessonList extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        back = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         CPRButton = new javax.swing.JButton();
         UnresponsiveBreathingButton = new javax.swing.JButton();
         HeavyBleedingButton = new javax.swing.JButton();
         BurnsButton = new javax.swing.JButton();
         ChokingButton = new javax.swing.JButton();
+        HeaderBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        back.setBackground(new java.awt.Color(255, 51, 51));
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/back.png"))); // NOI18N
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
+        getContentPane().add(back);
+        back.setBounds(20, 40, 30, 60);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Lesson/lessonScreen.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(-10, 0, 370, 170);
 
         CPRButton.setBackground(new java.awt.Color(249, 6, 6));
         CPRButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/CPR LessonList.png"))); // NOI18N
@@ -49,7 +66,7 @@ public class LessonList extends javax.swing.JFrame {
             }
         });
         getContentPane().add(CPRButton);
-        CPRButton.setBounds(33, 53, 290, 90);
+        CPRButton.setBounds(30, 120, 290, 90);
 
         UnresponsiveBreathingButton.setBackground(new java.awt.Color(249, 6, 6));
         UnresponsiveBreathingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Unresponsive-Breathing LessonList.png"))); // NOI18N
@@ -62,7 +79,7 @@ public class LessonList extends javax.swing.JFrame {
             }
         });
         getContentPane().add(UnresponsiveBreathingButton);
-        UnresponsiveBreathingButton.setBounds(33, 154, 290, 90);
+        UnresponsiveBreathingButton.setBounds(30, 220, 290, 90);
 
         HeavyBleedingButton.setBackground(new java.awt.Color(249, 6, 6));
         HeavyBleedingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Heavy-Bleeding LessonList.png"))); // NOI18N
@@ -75,7 +92,7 @@ public class LessonList extends javax.swing.JFrame {
             }
         });
         getContentPane().add(HeavyBleedingButton);
-        HeavyBleedingButton.setBounds(33, 255, 290, 90);
+        HeavyBleedingButton.setBounds(30, 320, 290, 90);
 
         BurnsButton.setBackground(new java.awt.Color(249, 6, 6));
         BurnsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Burns LessonList.png"))); // NOI18N
@@ -88,7 +105,7 @@ public class LessonList extends javax.swing.JFrame {
             }
         });
         getContentPane().add(BurnsButton);
-        BurnsButton.setBounds(33, 356, 290, 90);
+        BurnsButton.setBounds(30, 420, 290, 90);
 
         ChokingButton.setBackground(new java.awt.Color(249, 6, 6));
         ChokingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LessonList/Choking LessonList.png"))); // NOI18N
@@ -101,7 +118,13 @@ public class LessonList extends javax.swing.JFrame {
             }
         });
         getContentPane().add(ChokingButton);
-        ChokingButton.setBounds(33, 457, 290, 90);
+        ChokingButton.setBounds(30, 520, 290, 90);
+
+        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
+        HeaderBackground.setOpaque(true);
+        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
+        getContentPane().add(HeaderBackground);
+        HeaderBackground.setBounds(0, 0, 360, 110);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -130,6 +153,11 @@ public class LessonList extends javax.swing.JFrame {
         //new Lesson().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_ChokingButtonActionPerformed
+
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        new Menu().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_backActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,7 +198,10 @@ public class LessonList extends javax.swing.JFrame {
     private javax.swing.JButton BurnsButton;
     private javax.swing.JButton CPRButton;
     private javax.swing.JButton ChokingButton;
+    private javax.swing.JLabel HeaderBackground;
     private javax.swing.JButton HeavyBleedingButton;
     private javax.swing.JButton UnresponsiveBreathingButton;
+    private javax.swing.JButton back;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
