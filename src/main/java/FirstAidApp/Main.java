@@ -3,6 +3,11 @@
  */
 package FirstAidApp;
 
+import FirstAidApp.templates.LessonTemplate;
+import FirstAidApp.templates.QuizTemplate;
+import FirstAidApp.templates.SettingsTemplate;
+import FirstAidApp.templates.relations.DescriptionImage;
+
 import javax.swing.*;
 import java.util.ArrayList;
 
@@ -13,5 +18,35 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Running program...");
+        System.out.println("Running testData()");
+        testData();
+    }
+
+    public static void testData() {
+        ArrayList<DescriptionImage> content = new ArrayList();
+        content.add(new DescriptionImage("This is a test", "./root", "Just a test image"));
+        LessonTemplate lesson = new LessonTemplate("Title", content);
+        System.out.println(String.format("Lesson   -> title              -> %s", lesson.getTitle()));
+        System.out.println(String.format("         -> description        -> %s", lesson.getDescription(0)));
+        System.out.println(String.format("         -> image              -> %s", lesson.getImage(0)));
+        System.out.println(String.format("         -> image caption      -> %s", lesson.getImageCaption(0)));
+
+        SettingsTemplate settings = new SettingsTemplate(false, false, SettingsTemplate.colorBlind.DEUTERANOPIA);
+        System.out.println(String.format("Settings -> magnifyText        -> %s", settings.getMagnifyText()));
+        System.out.println(String.format("         -> captionImage       -> %s", settings.getCaptionImages()));
+        System.out.println(String.format("         -> Color blind option -> %s", settings.getColorBlind()));
+
+        QuizTemplate quiz = new QuizTemplate("Title", "Question", "CorrectAnswer", "FakeAnswer1", "FakeAnswer2", "FakeAnswer3");
+        System.out.println(String.format("Quiz     -> Title              -> %s", quiz.getTitle()));
+        System.out.println(String.format("         -> Fake Answer 3      -> %s", quiz.getFakeAnswer(0)));
+        System.out.println(String.format("         -> Correct Answer     -> %s", quiz.getCorrectAnswer()));
+
+        try {
+            ArrayList<String> fakeAnswers = new ArrayList();
+            fakeAnswers.add("test");
+            QuizTemplate badQuiz = new QuizTemplate("title", "Question", "CorrectAnswer", fakeAnswers);
+        } catch(Error e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
