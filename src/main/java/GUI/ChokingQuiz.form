@@ -16,19 +16,22 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[370, 680]"/>
+      <Dimension value="[370, 690]"/>
     </Property>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[370, 680]"/>
+      <Dimension value="[370, 690]"/>
     </Property>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[370, 680]"/>
+      <Dimension value="[370, 690]"/>
     </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowActivated" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowActivated"/>
+  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -96,9 +99,9 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="jPanel3" pref="281" max="32767" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   <Component id="jPanel2" min="-2" pref="233" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -229,10 +232,10 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <EmptySpace min="0" pref="373" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="16" max="32767" attributes="0"/>
                           <Component id="Q1Panel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace pref="17" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
@@ -269,10 +272,10 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <EmptySpace min="0" pref="281" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="33" max="32767" attributes="0"/>
                           <Component id="Q1Panel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
@@ -351,7 +354,7 @@
                           <Component id="Q1_3Answer" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="Q1_4Answer" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="17" max="32767" attributes="0"/>
+                          <EmptySpace pref="34" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -359,7 +362,7 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel2">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;You realise your dad is choking, what is your key action to help him?&lt;/html&gt;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.&lt;/b&gt; You realise your dad is choking, what is your key action to help him?&lt;/html&gt;"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="Q1_1Answer">
@@ -448,7 +451,7 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel3">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;If someone is choking, what do you need to help them do?&lt;/html&gt;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;2.&lt;/b&gt; If someone is choking, what do you need to help them do?&lt;/html&gt;"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="Q2_1Answer">
@@ -537,7 +540,7 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel4">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Which of the following statements is true if someone is choking?&lt;/html&gt;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;3.&lt;/b&gt; Which of the following statements is true if someone is choking?&lt;/html&gt;"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="Q3_1Answer">
@@ -553,7 +556,7 @@
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="buttonGroup3"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="They won&#x2019;t be able to speak, cough or breathe"/>
+                    <Property name="text" type="java.lang.String" value="They won&apos;t be able to speak, cough or breathe"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="Q3_3Answer">
@@ -623,7 +626,7 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel5">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;If someone is choking, you give back blows between their shoulder blades. What does this do?&lt;/html&gt;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;4.&lt;/b&gt; If someone is choking, you give back blows between their shoulder blades. What does this do?&lt;/html&gt;"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="Q4_1Answer">
@@ -712,7 +715,7 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel6">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;If a person is choking, which of the following should you use to give back blows?&lt;/html&gt;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;5.&lt;/b&gt; If a person is choking, which of the following should you use to give back blows?&lt;/html&gt;"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="Q5_1Answer">

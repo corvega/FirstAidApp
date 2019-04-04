@@ -92,7 +92,7 @@ public class UnresQuiz extends javax.swing.JFrame {
         getContentPane().add(HeaderBackground);
         HeaderBackground.setBounds(0, 0, 360, 110);
 
-        SubmitButton.setText("Sumbit");
+        SubmitButton.setText("Submit");
         SubmitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SubmitButtonActionPerformed(evt);
@@ -175,7 +175,7 @@ public class UnresQuiz extends javax.swing.JFrame {
                         .addContainerGap())))
         );
 
-        Q1Label.setText("<html>Why is it important to move someone who is unresponsive and breathing onto their  side?</html>");
+        Q1Label.setText("<html><b>1.</b> Why is it important to move someone who is unresponsive and breathing onto their  side?</html>");
 
         buttonGroup1.add(Q1_1Answer);
         Q1_1Answer.setText("More comfortable sleeping position");
@@ -228,7 +228,7 @@ public class UnresQuiz extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        Q2Label.setText("<html>After you have moved a person who is unresponsive  and breathing onto their side, you should do what?</html>");
+        Q2Label.setText("<html><b>2.</b> After you have moved a person who is unresponsive  and breathing onto their side, you should do what?</html>");
 
         buttonGroup2.add(Q2_1Answer);
         Q2_1Answer.setText("<html>leave the person alone now they are comfortable, they will wake up soon</html>");
@@ -277,7 +277,7 @@ public class UnresQuiz extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        Q3Label.setText("<html>If someone is unresponsive, which three senses can you use to tell if they are breathing?</html>");
+        Q3Label.setText("<html><b>3.</b> If someone is unresponsive, which three senses can you use to tell if they are breathing?</html>");
 
         buttonGroup3.add(Q3_1Answer);
         Q3_1Answer.setText("Sound, smell, touch");
@@ -329,7 +329,7 @@ public class UnresQuiz extends javax.swing.JFrame {
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
-        Q4Label.setText("<html>Why is it important to start chest compressions as quickly as possible, if someone is unresponsive and not breathing?</html>");
+        Q4Label.setText("<html><b>4.</b> Why is it important to start chest compressions as quickly as possible, if someone is unresponsive and not breathing?</html>");
 
         buttonGroup4.add(Q4_1Answer);
         Q4_1Answer.setText("<html>The rhythmic action can be reassuring to a person who needs help</html>");
@@ -381,7 +381,7 @@ public class UnresQuiz extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        Q5Label.setText("<html>If someone is unresponsive and not breathing, how long should you give chest compressions for?</html>");
+        Q5Label.setText("<html><b>5.</b> If someone is unresponsive and not breathing, how long should you give chest compressions for?</html>");
 
         buttonGroup5.add(Q5_1Answer);
         Q5_1Answer.setText("<html>Until you think enough pressure has been applied</html>");
@@ -399,6 +399,11 @@ public class UnresQuiz extends javax.swing.JFrame {
 
         buttonGroup5.add(Q5_4Answer);
         Q5_4Answer.setText("<html>Until you have done 100 compressions</html>");
+        Q5_4Answer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Q5_4AnswerActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Q5PanelLayout = new javax.swing.GroupLayout(Q5Panel);
         Q5Panel.setLayout(Q5PanelLayout);
@@ -504,11 +509,11 @@ public class UnresQuiz extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(32, 32, 32))
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 120, 360, 480);
+        jPanel1.setBounds(0, 120, 360, 510);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -613,6 +618,10 @@ public class UnresQuiz extends javax.swing.JFrame {
     private void Q5_3AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q5_3AnswerActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Q5_3AnswerActionPerformed
+
+    private void Q5_4AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q5_4AnswerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Q5_4AnswerActionPerformed
 public  double marks=0.0;
       
        public double Points=0.0;

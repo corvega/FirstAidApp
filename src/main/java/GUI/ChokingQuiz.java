@@ -79,9 +79,14 @@ public class ChokingQuiz extends javax.swing.JFrame {
         Q5_4Answer = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(370, 680));
-        setMinimumSize(new java.awt.Dimension(370, 680));
-        setPreferredSize(new java.awt.Dimension(370, 680));
+        setMaximumSize(new java.awt.Dimension(370, 690));
+        setMinimumSize(new java.awt.Dimension(370, 690));
+        setPreferredSize(new java.awt.Dimension(370, 690));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
         getContentPane().setLayout(null);
 
         header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Quiz/quizScreen.png"))); // NOI18N
@@ -182,7 +187,7 @@ public class ChokingQuiz extends javax.swing.JFrame {
         Q1Panel.setMaximumSize(new java.awt.Dimension(340, 235));
         Q1Panel.setMinimumSize(new java.awt.Dimension(340, 235));
 
-        jLabel2.setText("<html>You realise your dad is choking, what is your key action to help him?</html>");
+        jLabel2.setText("<html><b>1.</b> You realise your dad is choking, what is your key action to help him?</html>");
 
         buttonGroup1.add(Q1_1Answer);
         Q1_1Answer.setText("Give him back blows");
@@ -226,13 +231,13 @@ public class ChokingQuiz extends javax.swing.JFrame {
                 .addComponent(Q1_3Answer)
                 .addGap(18, 18, 18)
                 .addComponent(Q1_4Answer)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         Q2Panel.setMaximumSize(new java.awt.Dimension(340, 235));
         Q2Panel.setMinimumSize(new java.awt.Dimension(340, 235));
 
-        jLabel3.setText("<html>If someone is choking, what do you need to help them do?</html>");
+        jLabel3.setText("<html><b>2.</b> If someone is choking, what do you need to help them do?</html>");
 
         buttonGroup2.add(Q2_1Answer);
         Q2_1Answer.setText("Cool down");
@@ -282,13 +287,13 @@ public class ChokingQuiz extends javax.swing.JFrame {
         Q3Panel.setMaximumSize(new java.awt.Dimension(340, 235));
         Q3Panel.setMinimumSize(new java.awt.Dimension(340, 235));
 
-        jLabel4.setText("<html>Which of the following statements is true if someone is choking?</html>");
+        jLabel4.setText("<html><b>3.</b> Which of the following statements is true if someone is choking?</html>");
 
         buttonGroup3.add(Q3_1Answer);
         Q3_1Answer.setText("They will be able to breathe but not speak or cough");
 
         buttonGroup3.add(Q3_2Answer);
-        Q3_2Answer.setText("They won’t be able to speak, cough or breathe");
+        Q3_2Answer.setText("They won't be able to speak, cough or breathe");
 
         buttonGroup3.add(Q3_3Answer);
         Q3_3Answer.setText("They will be able to speak and cough but not breathe");
@@ -332,7 +337,7 @@ public class ChokingQuiz extends javax.swing.JFrame {
         Q4Panel.setMaximumSize(new java.awt.Dimension(340, 235));
         Q4Panel.setMinimumSize(new java.awt.Dimension(340, 235));
 
-        jLabel5.setText("<html>If someone is choking, you give back blows between their shoulder blades. What does this do?</html>");
+        jLabel5.setText("<html><b>4.</b> If someone is choking, you give back blows between their shoulder blades. What does this do?</html>");
 
         buttonGroup4.add(Q4_1Answer);
         Q4_1Answer.setText("<html>It creates a vibration and pressure, which pushes the oject out of their airway</html>");
@@ -380,7 +385,7 @@ public class ChokingQuiz extends javax.swing.JFrame {
         Q5Panel.setMaximumSize(new java.awt.Dimension(340, 235));
         Q5Panel.setMinimumSize(new java.awt.Dimension(340, 235));
 
-        jLabel6.setText("<html>If a person is choking, which of the following should you use to give back blows?</html>");
+        jLabel6.setText("<html><b>5.</b> If a person is choking, which of the following should you use to give back blows?</html>");
 
         buttonGroup5.add(Q5_1Answer);
         Q5_1Answer.setText("A hard object");
@@ -433,10 +438,10 @@ public class ChokingQuiz extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 373, Short.MAX_VALUE)
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                    .addContainerGap(16, Short.MAX_VALUE)
                     .addComponent(Q1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addContainerGap(17, Short.MAX_VALUE)))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -462,10 +467,10 @@ public class ChokingQuiz extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 281, Short.MAX_VALUE)
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                    .addContainerGap(33, Short.MAX_VALUE)
                     .addComponent(Q1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -501,9 +506,9 @@ public class ChokingQuiz extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addContainerGap()
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(24, 24, 24)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -581,6 +586,11 @@ public class ChokingQuiz extends javax.swing.JFrame {
         jPanel3.repaint();
         jPanel3.revalidate();
     }//GEN-LAST:event_Question5ButtonActionPerformed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        jPanel3.removeAll();
+        jPanel3.add(Q1Panel);
+    }//GEN-LAST:event_formWindowActivated
 
     public  double marks=0.0;
       

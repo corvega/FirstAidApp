@@ -35,7 +35,6 @@ public class Settings extends javax.swing.JFrame {
         ColourblindSelector = new javax.swing.ButtonGroup();
         back = new javax.swing.JButton();
         header = new javax.swing.JLabel();
-        HeaderBackground = new javax.swing.JLabel();
         AccessibilityOptionsLabel = new javax.swing.JLabel();
         DefaultColours = new javax.swing.JRadioButton();
         MagnifyTextCheckBox = new javax.swing.JCheckBox();
@@ -66,15 +65,11 @@ public class Settings extends javax.swing.JFrame {
         getContentPane().add(back);
         back.setBounds(20, 40, 30, 60);
 
+        header.setBackground(new java.awt.Color(249, 6, 6));
         header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png"))); // NOI18N
+        header.setOpaque(true);
         getContentPane().add(header);
         header.setBounds(-20, 0, 380, 120);
-
-        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
-        HeaderBackground.setOpaque(true);
-        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
-        getContentPane().add(HeaderBackground);
-        HeaderBackground.setBounds(0, 0, 360, 110);
 
         AccessibilityOptionsLabel.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
         AccessibilityOptionsLabel.setText("Accessibility options");
@@ -243,25 +238,21 @@ public class Settings extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void DefaultColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DefaultColoursActionPerformed
-        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png")));
         defaultColoursSettings();
         //Set default colours across all screens here
     }//GEN-LAST:event_DefaultColoursActionPerformed
 
     private void DeuteranopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeuteranopiaColoursActionPerformed
-        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png")));
         DeuteranopiaColoursSettings();
         //Set Deutranopia colours across all screens here
     }//GEN-LAST:event_DeuteranopiaColoursActionPerformed
 
     private void ProtanopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProtanopiaColoursActionPerformed
-        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png")));
-        ProtanopiaColoursSettings();
+        ProtanopiaColoursSettings();      
         //Set Protanopia colours across all screens here
     }//GEN-LAST:event_ProtanopiaColoursActionPerformed
 
     private void TritanopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TritanopiaColoursActionPerformed
-        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png")));
         TritanopiaColoursSettings();
         //Set Tritanopia colours across all screens here
     }//GEN-LAST:event_TritanopiaColoursActionPerformed
@@ -285,7 +276,7 @@ public class Settings extends javax.swing.JFrame {
 
     public void defaultColoursSettings(){
         back.setBackground(new Color(249, 6, 6));
-        HeaderBackground.setBackground(new Color(249, 6, 6));
+        header.setBackground(new Color(249, 6, 6));
         RedColourTest.setBackground(new Color(249, 6, 6));
         GreenColourTest.setBackground(new Color(0, 128, 0));
         BlueColourTest.setBackground(new Color(77, 77, 255));
@@ -296,7 +287,7 @@ public class Settings extends javax.swing.JFrame {
     
     public void DeuteranopiaColoursSettings(){
         back.setBackground(new Color(238, 43, 150));
-        HeaderBackground.setBackground(new Color(238, 43, 150));
+        header.setBackground(new Color(238, 43, 150));
         RedColourTest.setBackground(new Color(238, 43, 150));
         GreenColourTest.setBackground(new Color(0, 155, 33));
         BlueColourTest.setBackground(new Color(0, 64, 224));
@@ -307,7 +298,7 @@ public class Settings extends javax.swing.JFrame {
     
     public void ProtanopiaColoursSettings(){
         back.setBackground(new Color(250, 56, 143));
-        HeaderBackground.setBackground(new Color(250, 56, 143));
+        header.setBackground(new Color(250, 56, 143));
         RedColourTest.setBackground(new Color(250, 56, 143));
         GreenColourTest.setBackground(new Color(0, 128, 28));
         BlueColourTest.setBackground(new Color(6, 68, 224));
@@ -318,7 +309,7 @@ public class Settings extends javax.swing.JFrame {
     
     public void TritanopiaColoursSettings(){
         back.setBackground(new Color(255, 0, 0));
-        HeaderBackground.setBackground(new Color(255, 0, 0));
+        header.setBackground(new Color(255, 0, 0));
         RedColourTest.setBackground(new Color(255, 0, 0));
         GreenColourTest.setBackground(new Color(0, 179, 60));
         BlueColourTest.setBackground(new Color(0, 0, 196));
@@ -395,7 +386,6 @@ public class Settings extends javax.swing.JFrame {
     private javax.swing.JRadioButton DefaultColours;
     private javax.swing.JRadioButton DeuteranopiaColours;
     private javax.swing.JPanel GreenColourTest;
-    private javax.swing.JLabel HeaderBackground;
     private javax.swing.JCheckBox MagnifyTextCheckBox;
     private javax.swing.JRadioButton ProtanopiaColours;
     private javax.swing.JPanel RedColourTest;
