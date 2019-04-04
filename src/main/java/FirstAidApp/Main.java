@@ -11,17 +11,25 @@ import FirstAidApp.templates.relations.DescriptionImage;
 import javax.swing.*;
 import java.util.ArrayList;
 
-/* TODO: I need to somehow link all the different forms together. This is so one form can switch to another.
-    (For now I'm just going to have each panel from the menu generate it's own form.) */
 
+/**
+ * The main class that will run
+ */
 public class Main {
 
+    /**
+     * The method that gets executed at run time
+     * @param args System parameters
+     */
     public static void main(String[] args) {
         System.out.println("Running program...");
         System.out.println("Running testData()");
         testData();
     }
 
+    /**
+     * Used to just test data into the classes.
+     */
     public static void testData() {
         ArrayList<DescriptionImage> content = new ArrayList();
         content.add(new DescriptionImage("This is a test", "./root", "Just a test image"));
