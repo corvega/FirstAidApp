@@ -7,7 +7,6 @@ package GUI;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.event.ActionEvent;
 
 /**
  *
@@ -34,9 +33,6 @@ public class Settings extends javax.swing.JFrame {
     private void initComponents() {
 
         ColourblindSelector = new javax.swing.ButtonGroup();
-        back = new javax.swing.JButton();
-        header = new javax.swing.JLabel();
-        HeaderBackground = new javax.swing.JLabel();
         AccessibilityOptionsLabel = new javax.swing.JLabel();
         DefaultColours = new javax.swing.JRadioButton();
         MagnifyTextCheckBox = new javax.swing.JCheckBox();
@@ -50,37 +46,12 @@ public class Settings extends javax.swing.JFrame {
         Seperator2 = new javax.swing.JPanel();
         ColourblindModeLabel = new javax.swing.JLabel();
         Seperator1 = new javax.swing.JPanel();
+        HeaderBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(370, 640));
-        setMinimumSize(new java.awt.Dimension(370, 640));
-        setPreferredSize(new java.awt.Dimension(370, 640));
-        getContentPane().setLayout(null);
-
-        back.setBackground(new java.awt.Color(255, 51, 51));
-        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/back.png"))); // NOI18N
-        back.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backActionPerformed(evt);
-            }
-        });
-        getContentPane().add(back);
-        back.setBounds(20, 40, 30, 60);
-
-        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png"))); // NOI18N
-        getContentPane().add(header);
-        header.setBounds(-20, 0, 380, 120);
-
-        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
-        HeaderBackground.setOpaque(true);
-        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
-        getContentPane().add(HeaderBackground);
-        HeaderBackground.setBounds(0, 0, 360, 110);
 
         AccessibilityOptionsLabel.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
         AccessibilityOptionsLabel.setText("Accessibility options");
-        getContentPane().add(AccessibilityOptionsLabel);
-        AccessibilityOptionsLabel.setBounds(10, 116, 250, 37);
 
         ColourblindSelector.add(DefaultColours);
         DefaultColours.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
@@ -91,8 +62,6 @@ public class Settings extends javax.swing.JFrame {
                 DefaultColoursActionPerformed(evt);
             }
         });
-        getContentPane().add(DefaultColours);
-        DefaultColours.setBounds(10, 403, 115, 45);
 
         MagnifyTextCheckBox.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
         MagnifyTextCheckBox.setText("Magnify Text");
@@ -101,8 +70,6 @@ public class Settings extends javax.swing.JFrame {
                 MagnifyTextCheckBoxActionPerformed(evt);
             }
         });
-        getContentPane().add(MagnifyTextCheckBox);
-        MagnifyTextCheckBox.setBounds(41, 167, 185, 45);
 
         ColourblindSelector.add(DeuteranopiaColours);
         DeuteranopiaColours.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
@@ -112,8 +79,6 @@ public class Settings extends javax.swing.JFrame {
                 DeuteranopiaColoursActionPerformed(evt);
             }
         });
-        getContentPane().add(DeuteranopiaColours);
-        DeuteranopiaColours.setBounds(10, 448, 193, 45);
 
         CaptionImagesCheckBox.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
         CaptionImagesCheckBox.setText("Caption Images");
@@ -122,8 +87,6 @@ public class Settings extends javax.swing.JFrame {
                 CaptionImagesCheckBoxActionPerformed(evt);
             }
         });
-        getContentPane().add(CaptionImagesCheckBox);
-        CaptionImagesCheckBox.setBounds(41, 212, 215, 45);
 
         ColourblindSelector.add(ProtanopiaColours);
         ProtanopiaColours.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
@@ -133,8 +96,6 @@ public class Settings extends javax.swing.JFrame {
                 ProtanopiaColoursActionPerformed(evt);
             }
         });
-        getContentPane().add(ProtanopiaColours);
-        ProtanopiaColours.setBounds(10, 493, 161, 45);
 
         ColourblindSelector.add(TritanopiaColours);
         TritanopiaColours.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
@@ -144,8 +105,6 @@ public class Settings extends javax.swing.JFrame {
                 TritanopiaColoursActionPerformed(evt);
             }
         });
-        getContentPane().add(TritanopiaColours);
-        TritanopiaColours.setBounds(10, 538, 151, 45);
 
         RedColourTest.setBackground(new java.awt.Color(249, 6, 6));
         RedColourTest.setBorder(new javax.swing.border.SoftBevelBorder(50));
@@ -155,15 +114,12 @@ public class Settings extends javax.swing.JFrame {
         RedColourTest.setLayout(RedColourTestLayout);
         RedColourTestLayout.setHorizontalGroup(
             RedColourTestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGap(0, 44, Short.MAX_VALUE)
         );
         RedColourTestLayout.setVerticalGroup(
             RedColourTestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGap(0, 44, Short.MAX_VALUE)
         );
-
-        getContentPane().add(RedColourTest);
-        RedColourTest.setBounds(52, 335, 50, 50);
 
         GreenColourTest.setBackground(new java.awt.Color(0, 128, 0));
         GreenColourTest.setBorder(new javax.swing.border.SoftBevelBorder(50));
@@ -173,15 +129,12 @@ public class Settings extends javax.swing.JFrame {
         GreenColourTest.setLayout(GreenColourTestLayout);
         GreenColourTestLayout.setHorizontalGroup(
             GreenColourTestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGap(0, 44, Short.MAX_VALUE)
         );
         GreenColourTestLayout.setVerticalGroup(
             GreenColourTestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGap(0, 44, Short.MAX_VALUE)
         );
-
-        getContentPane().add(GreenColourTest);
-        GreenColourTest.setBounds(155, 335, 50, 50);
 
         BlueColourTest.setBackground(new java.awt.Color(77, 77, 255));
         BlueColourTest.setBorder(new javax.swing.border.SoftBevelBorder(50));
@@ -191,15 +144,12 @@ public class Settings extends javax.swing.JFrame {
         BlueColourTest.setLayout(BlueColourTestLayout);
         BlueColourTestLayout.setHorizontalGroup(
             BlueColourTestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGap(0, 44, Short.MAX_VALUE)
         );
         BlueColourTestLayout.setVerticalGroup(
             BlueColourTestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGap(0, 44, Short.MAX_VALUE)
         );
-
-        getContentPane().add(BlueColourTest);
-        BlueColourTest.setBounds(268, 335, 50, 50);
 
         Seperator2.setBackground(new java.awt.Color(249, 6, 6));
         Seperator2.setPreferredSize(new java.awt.Dimension(300, 5));
@@ -215,13 +165,8 @@ public class Settings extends javax.swing.JFrame {
             .addGap(0, 5, Short.MAX_VALUE)
         );
 
-        getContentPane().add(Seperator2);
-        Seperator2.setBounds(30, 285, 300, 5);
-
         ColourblindModeLabel.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
         ColourblindModeLabel.setText("Colourblind Mode:");
-        getContentPane().add(ColourblindModeLabel);
-        ColourblindModeLabel.setBounds(10, 296, 231, 37);
 
         Seperator1.setBackground(new java.awt.Color(249, 6, 6));
         Seperator1.setPreferredSize(new java.awt.Dimension(300, 5));
@@ -237,32 +182,97 @@ public class Settings extends javax.swing.JFrame {
             .addGap(0, 5, Short.MAX_VALUE)
         );
 
-        getContentPane().add(Seperator1);
-        Seperator1.setBounds(30, 155, 300, 5);
+        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
+        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(42, 42, 42)
+                                .addComponent(RedColourTest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(53, 53, 53)
+                                .addComponent(GreenColourTest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(63, 63, 63)
+                                .addComponent(BlueColourTest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ColourblindModeLabel)
+                            .addComponent(TritanopiaColours)
+                            .addComponent(ProtanopiaColours)
+                            .addComponent(DeuteranopiaColours)
+                            .addComponent(DefaultColours)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(AccessibilityOptionsLabel))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Seperator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(11, 11, 11)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(CaptionImagesCheckBox)
+                                    .addComponent(MagnifyTextCheckBox)))
+                            .addComponent(Seperator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(HeaderBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(HeaderBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(AccessibilityOptionsLabel)
+                .addGap(2, 2, 2)
+                .addComponent(Seperator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(MagnifyTextCheckBox)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(CaptionImagesCheckBox)
+                .addGap(28, 28, 28)
+                .addComponent(Seperator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ColourblindModeLabel)
+                .addGap(2, 2, 2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(RedColourTest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(GreenColourTest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BlueColourTest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(DefaultColours)
+                .addGap(0, 0, 0)
+                .addComponent(DeuteranopiaColours)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ProtanopiaColours)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TritanopiaColours)
+                .addGap(34, 34, 34))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void DefaultColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DefaultColoursActionPerformed
-        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png")));
         defaultColoursSettings();
         //Set default colours across all screens here
     }//GEN-LAST:event_DefaultColoursActionPerformed
 
     private void DeuteranopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeuteranopiaColoursActionPerformed
-        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png")));
         DeuteranopiaColoursSettings();
         //Set Deutranopia colours across all screens here
     }//GEN-LAST:event_DeuteranopiaColoursActionPerformed
 
     private void ProtanopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProtanopiaColoursActionPerformed
-        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png")));
         ProtanopiaColoursSettings();
         //Set Protanopia colours across all screens here
     }//GEN-LAST:event_ProtanopiaColoursActionPerformed
 
     private void TritanopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TritanopiaColoursActionPerformed
-        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png")));
         TritanopiaColoursSettings();
         //Set Tritanopia colours across all screens here
     }//GEN-LAST:event_TritanopiaColoursActionPerformed
@@ -279,14 +289,7 @@ public class Settings extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CaptionImagesCheckBoxActionPerformed
 
-    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        new Menu().setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_backActionPerformed
-
     public void defaultColoursSettings(){
-        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
-        back.setBackground(new java.awt.Color(249, 6, 6));
         RedColourTest.setBackground(new Color(249, 6, 6));
         GreenColourTest.setBackground(new Color(0, 128, 0));
         BlueColourTest.setBackground(new Color(77, 77, 255));
@@ -296,8 +299,6 @@ public class Settings extends javax.swing.JFrame {
     }
     
     public void DeuteranopiaColoursSettings(){
-        HeaderBackground.setBackground(new java.awt.Color(238, 43, 150));
-        back.setBackground(new java.awt.Color(238, 43, 150));
         RedColourTest.setBackground(new Color(238, 43, 150));
         GreenColourTest.setBackground(new Color(0, 155, 33));
         BlueColourTest.setBackground(new Color(0, 64, 224));
@@ -307,8 +308,6 @@ public class Settings extends javax.swing.JFrame {
     }
     
     public void ProtanopiaColoursSettings(){
-        HeaderBackground.setBackground(new java.awt.Color(250, 56, 143));
-        back.setBackground(new java.awt.Color(250, 56, 143));
         RedColourTest.setBackground(new Color(250, 56, 143));
         GreenColourTest.setBackground(new Color(0, 128, 28));
         BlueColourTest.setBackground(new Color(6, 68, 224));
@@ -318,8 +317,6 @@ public class Settings extends javax.swing.JFrame {
     }
     
     public void TritanopiaColoursSettings(){
-        HeaderBackground.setBackground(new java.awt.Color(255, 0, 0));
-        back.setBackground(new java.awt.Color(255, 0, 0));
         RedColourTest.setBackground(new Color(255, 0, 0));
         GreenColourTest.setBackground(new Color(0, 179, 60));
         BlueColourTest.setBackground(new Color(0, 0, 196));
@@ -403,7 +400,5 @@ public class Settings extends javax.swing.JFrame {
     private javax.swing.JPanel Seperator1;
     private javax.swing.JPanel Seperator2;
     private javax.swing.JRadioButton TritanopiaColours;
-    private javax.swing.JButton back;
-    private javax.swing.JLabel header;
     // End of variables declaration//GEN-END:variables
 }
