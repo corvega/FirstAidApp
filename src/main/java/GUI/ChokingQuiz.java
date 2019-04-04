@@ -5,8 +5,6 @@
  */
 package GUI;
 
-import GUI.*;
-
 /**
  *
  * @author usman
@@ -20,6 +18,7 @@ public class ChokingQuiz extends javax.swing.JFrame {
     public ChokingQuiz() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255, 255, 255));
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -515,20 +514,12 @@ public class ChokingQuiz extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitButtonActionPerformed
-        // TODO add your handling code here:
-        try {
-            this.calPoint();
-            Scores obj = new Scores();
-            obj.setVisible(true);
-//            obj.getPoints(this.Points);
-            this.dispose();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Scores points = new Scores();
+        points.ProgressBar2(calculatePoints());
+        points.setVisible(true);
     }//GEN-LAST:event_SubmitButtonActionPerformed
 
     private void Question1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question1ButtonActionPerformed
-        // TODO add your handling code here:
         jPanel3.removeAll();
         jPanel3.repaint();
         jPanel3.revalidate();
@@ -539,7 +530,6 @@ public class ChokingQuiz extends javax.swing.JFrame {
     }//GEN-LAST:event_Question1ButtonActionPerformed
 
     private void Question2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question2ButtonActionPerformed
-        // TODO add your handling code here:
         jPanel3.removeAll();
         jPanel3.repaint();
         jPanel3.revalidate();
@@ -550,7 +540,6 @@ public class ChokingQuiz extends javax.swing.JFrame {
     }//GEN-LAST:event_Question2ButtonActionPerformed
 
     private void Question3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question3ButtonActionPerformed
-        // TODO add your handling code here:
         jPanel3.removeAll();
         jPanel3.repaint();
         jPanel3.revalidate();
@@ -561,7 +550,6 @@ public class ChokingQuiz extends javax.swing.JFrame {
     }//GEN-LAST:event_Question3ButtonActionPerformed
 
     private void Question4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question4ButtonActionPerformed
-        // TODO add your handling code here:
         jPanel3.removeAll();
         jPanel3.repaint();
         jPanel3.revalidate();
@@ -572,7 +560,6 @@ public class ChokingQuiz extends javax.swing.JFrame {
     }//GEN-LAST:event_Question4ButtonActionPerformed
 
     private void Question5ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question5ButtonActionPerformed
-        // TODO add your handling code here:
         jPanel3.removeAll();
         jPanel3.repaint();
         jPanel3.revalidate();
@@ -581,28 +568,25 @@ public class ChokingQuiz extends javax.swing.JFrame {
         jPanel3.repaint();
         jPanel3.revalidate();
     }//GEN-LAST:event_Question5ButtonActionPerformed
-
-    public  double marks=0.0;
       
-       public double Points=0.0;
-       public void calPoint(){
-           marks=0.0;
+    public int Points=0;
+       public int calculatePoints(){
            if(Q1_1Answer.isSelected()==true){
-               marks+=60.0;
+               Points+=20;
            }
            if(Q2_4Answer.isSelected()==true){
-               marks+=60.0;
+               Points+=20;
            }
            if(Q3_2Answer.isSelected()==true){
-              marks+=60.0;
+              Points+=20;
            } 
            if(Q4_1Answer.isSelected()==true){
-              marks+=60.0;
+              Points+=20;
            }
            if(Q5_3Answer.isSelected()==true){
-              marks+=60.0;
+              Points+=20;
            }
-           Points=marks;
+           return Points;
        }
     /**
      * @param args the command line arguments

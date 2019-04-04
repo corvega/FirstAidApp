@@ -20,6 +20,7 @@ public class UnresQuiz extends javax.swing.JFrame {
     public UnresQuiz() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(255, 255, 255));
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -514,17 +515,9 @@ public class UnresQuiz extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitButtonActionPerformed
-        // TODO add your handling code here:
-             try{
-        this.calPoint();
-        Scores obj=new Scores();
-        obj.setVisible(true);
-//        obj.getPoints(this.Points);
-        this.dispose();
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
+        Scores points = new Scores();
+        points.ProgressBar1(calculatePoints());
+        points.setVisible(true);
     }//GEN-LAST:event_SubmitButtonActionPerformed
 
     private void Q1_4AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q1_4AnswerActionPerformed
@@ -613,27 +606,26 @@ public class UnresQuiz extends javax.swing.JFrame {
     private void Q5_3AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Q5_3AnswerActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Q5_3AnswerActionPerformed
-public  double marks=0.0;
-      
-       public double Points=0.0;
-       public void calPoint(){
-           marks=0.0;
+
+    
+       public int Points=0;
+       public int calculatePoints(){
            if(Q1_3Answer.isSelected()==true){
-               marks+=60.0;
+               Points+=20;
            }
            if(Q2_2Answer.isSelected()==true){
-               marks+=60.0;
+               Points+=0;
            }
            if(Q3_4Answer.isSelected()==true){
-              marks+=60.0;
+              Points+=20;
            } 
            if(Q4_1Answer.isSelected()==true){
-              marks+=60.0;
+              Points+=20;
            }
            if(Q5_3Answer.isSelected()==true){
-              marks+=60.0;
+              Points+=20;
            }
-           Points=marks;
+           return Points;
        }
     /**
      * @param args the command line arguments

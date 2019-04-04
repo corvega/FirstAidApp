@@ -30,9 +30,9 @@ public class Scores extends javax.swing.JFrame {
         Session1ScoreLabel.setText(QuizValue+"%");
         if (QuizValue<40) {
             Session1Panel.setBackground(new Color(249, 6, 6));
-        } else if (QuizValue>80) {
+        } else if (QuizValue>=80) {
             Session1Panel.setBackground(new Color(0, 128, 0));
-        } else if (QuizValue>40) {
+        } else {
             Session1Panel.setBackground(new Color(255, 255, 102));
         }
     }
@@ -42,7 +42,7 @@ public class Scores extends javax.swing.JFrame {
         Session2ScoreLabel.setText(QuizValue+"%");
         if (QuizValue<40) {
             Session2Panel.setBackground(new Color(249, 6, 6));
-        } else if (QuizValue>80) {
+        } else if (QuizValue>=80) {
             Session2Panel.setBackground(new Color(0, 128, 0));
         } else {
             Session2Panel.setBackground(new Color(255, 255, 102));
@@ -54,12 +54,13 @@ public class Scores extends javax.swing.JFrame {
         Session3ScoreLabel.setText(QuizValue+"%");
         if (QuizValue<40) {
             Session3Panel.setBackground(new Color(249, 6, 6));
-        } else if (QuizValue>80) {
+        } else if (QuizValue>=80) {
             Session3Panel.setBackground(new Color(0, 128, 0));
         } else {
             Session3Panel.setBackground(new Color(255, 255, 102));
         }
     }
+   
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -87,11 +88,6 @@ public class Scores extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(370, 640));
         setMinimumSize(new java.awt.Dimension(370, 640));
         setPreferredSize(new java.awt.Dimension(370, 640));
-        addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowActivated(java.awt.event.WindowEvent evt) {
-                formWindowActivated(evt);
-            }
-        });
         getContentPane().setLayout(null);
 
         header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Scores/scoreScreen.png"))); // NOI18N
@@ -116,6 +112,7 @@ public class Scores extends javax.swing.JFrame {
         Session3Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session3Panel.setMaximumSize(new java.awt.Dimension(300, 30));
         Session3Panel.setMinimumSize(new java.awt.Dimension(0, 30));
+        Session3Panel.setPreferredSize(new java.awt.Dimension(300, 30));
 
         Session3ScoreLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         Session3ScoreLabel.setText("No Data");
@@ -125,7 +122,7 @@ public class Scores extends javax.swing.JFrame {
         Session3PanelLayout.setHorizontalGroup(
             Session3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Session3PanelLayout.createSequentialGroup()
-                .addGap(0, 230, Short.MAX_VALUE)
+                .addGap(0, 239, Short.MAX_VALUE)
                 .addComponent(Session3ScoreLabel))
         );
         Session3PanelLayout.setVerticalGroup(
@@ -134,21 +131,22 @@ public class Scores extends javax.swing.JFrame {
         );
 
         getContentPane().add(Session3Panel);
-        Session3Panel.setBounds(30, 493, 291, 30);
+        Session3Panel.setBounds(30, 493, 300, 30);
 
-        Session1Panel.setBackground(new java.awt.Color(0, 153, 255));
+        Session1Panel.setBackground(new java.awt.Color(0, 128, 0));
         Session1Panel.setMaximumSize(new java.awt.Dimension(300, 30));
         Session1Panel.setMinimumSize(new java.awt.Dimension(0, 30));
+        Session1Panel.setPreferredSize(new java.awt.Dimension(300, 30));
 
         Session1ScoreLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        Session1ScoreLabel.setText("No Data");
+        Session1ScoreLabel.setText("80%");
 
         javax.swing.GroupLayout Session1PanelLayout = new javax.swing.GroupLayout(Session1Panel);
         Session1Panel.setLayout(Session1PanelLayout);
         Session1PanelLayout.setHorizontalGroup(
             Session1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Session1PanelLayout.createSequentialGroup()
-                .addGap(0, 230, Short.MAX_VALUE)
+                .addGap(0, 209, Short.MAX_VALUE)
                 .addComponent(Session1ScoreLabel))
         );
         Session1PanelLayout.setVerticalGroup(
@@ -157,21 +155,22 @@ public class Scores extends javax.swing.JFrame {
         );
 
         getContentPane().add(Session1Panel);
-        Session1Panel.setBounds(30, 181, 291, 30);
+        Session1Panel.setBounds(30, 181, 240, 30);
 
-        Session2Panel.setBackground(new java.awt.Color(0, 153, 255));
+        Session2Panel.setBackground(new java.awt.Color(255, 255, 102));
         Session2Panel.setMaximumSize(new java.awt.Dimension(300, 30));
         Session2Panel.setMinimumSize(new java.awt.Dimension(0, 30));
+        Session2Panel.setPreferredSize(new java.awt.Dimension(300, 30));
 
         Session2ScoreLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        Session2ScoreLabel.setText("No Data");
+        Session2ScoreLabel.setText("60%");
 
         javax.swing.GroupLayout Session2PanelLayout = new javax.swing.GroupLayout(Session2Panel);
         Session2Panel.setLayout(Session2PanelLayout);
         Session2PanelLayout.setHorizontalGroup(
             Session2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Session2PanelLayout.createSequentialGroup()
-                .addGap(0, 230, Short.MAX_VALUE)
+                .addGap(0, 149, Short.MAX_VALUE)
                 .addComponent(Session2ScoreLabel))
         );
         Session2PanelLayout.setVerticalGroup(
@@ -180,7 +179,7 @@ public class Scores extends javax.swing.JFrame {
         );
 
         getContentPane().add(Session2Panel);
-        Session2Panel.setBounds(30, 342, 291, 30);
+        Session2Panel.setBounds(30, 342, 180, 30);
 
         HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
         HeaderBackground.setOpaque(true);
@@ -191,12 +190,64 @@ public class Scores extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        ProgressBar1(86);
-        ProgressBar2(67);
-        ProgressBar3(32);
-    }//GEN-LAST:event_formWindowActivated
+    
+//    public void colourChecker(String colour) {
+//        if (defaultColours=true) {
+//            switch (colour) {
+//            case "Red":
+//                System.out.println("new Color(249, 6, 6)");
+//            case "Green":
+//                System.out.println("new Color(0, 128, 0)");
+//            case "Blue":
+//                System.out.println("new Color(77, 77, 255)");
+//            }
+//        } else if (DeutranaopiaColours=true) {
+//            switch (colour) {
+//            case "Red":
+//                System.out.println("new Color(238, 43, 150)");
+//            case "Green":
+//                System.out.println("new Color(0, 155, 33)");
+//            case "Blue":
+//                System.out.println("new Color(0, 64, 224)");
+//            }
+//        } else if (ProtanopiaColours=true) {
+//            switch (colour) {
+//            case "Red":
+//                System.out.println("new Color(250, 56, 143)");
+//            case "Green":
+//                System.out.println("new Color(0, 128, 28)");
+//            case "Blue":
+//                System.out.println("new Color(6, 68, 224)");
+//            }
+//        } else if (TritanopiaColours=true)
+//            switch (colour) {
+//            case "Red":
+//                System.out.println("new Color(255, 0, 0)");
+//            case "Green":
+//                System.out.println("new Color(0, 179, 60)");
+//            case "Blue":
+//                System.out.println("new Color(0, 0, 196)");
+//            }
+//        }
+//    }
+    
+    
+    public void defaultColoursScores(String colour){
+        HeaderBackground.setBackground(new Color(249, 6, 6));
+    }
+    
+    public void DeuteranopiaColoursScores(String colour){
+        HeaderBackground.setBackground(new Color(238, 43, 150));
+    }
+    
+    public void ProtanopiaColoursScores(String colour){
+        HeaderBackground.setBackground(new Color(250, 56, 143));
+    }
 
+    public void TritanopiaColoursScores(String colour){
+        HeaderBackground.setBackground(new Color(255, 0, 0));
+    }
+    
     /**
      * @param args the command line arguments
      */

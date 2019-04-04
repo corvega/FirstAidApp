@@ -7,6 +7,7 @@ package GUI;
 
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -21,6 +22,7 @@ public class Settings extends javax.swing.JFrame {
         initComponents();
         getContentPane().setBackground(new Color(255,255,255));
         setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -33,9 +35,8 @@ public class Settings extends javax.swing.JFrame {
     private void initComponents() {
 
         ColourblindSelector = new javax.swing.ButtonGroup();
-        back = new javax.swing.JButton();
         header = new javax.swing.JLabel();
-        HeaderBackground = new javax.swing.JLabel();
+        back = new javax.swing.JButton();
         AccessibilityOptionsLabel = new javax.swing.JLabel();
         DefaultColours = new javax.swing.JRadioButton();
         MagnifyTextCheckBox = new javax.swing.JCheckBox();
@@ -49,12 +50,25 @@ public class Settings extends javax.swing.JFrame {
         Seperator2 = new javax.swing.JPanel();
         ColourblindModeLabel = new javax.swing.JLabel();
         Seperator1 = new javax.swing.JPanel();
+        HeaderBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(370, 640));
         setMinimumSize(new java.awt.Dimension(370, 640));
         setPreferredSize(new java.awt.Dimension(370, 640));
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                formMouseClicked(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                formMouseReleased(evt);
+            }
+        });
         getContentPane().setLayout(null);
+
+        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png"))); // NOI18N
+        getContentPane().add(header);
+        header.setBounds(-20, 0, 380, 120);
 
         back.setBackground(new java.awt.Color(255, 51, 51));
         back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Main/back.png"))); // NOI18N
@@ -65,16 +79,6 @@ public class Settings extends javax.swing.JFrame {
         });
         getContentPane().add(back);
         back.setBounds(20, 40, 30, 60);
-
-        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png"))); // NOI18N
-        getContentPane().add(header);
-        header.setBounds(-20, 0, 380, 120);
-
-        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
-        HeaderBackground.setOpaque(true);
-        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
-        getContentPane().add(HeaderBackground);
-        HeaderBackground.setBounds(0, 0, 360, 110);
 
         AccessibilityOptionsLabel.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
         AccessibilityOptionsLabel.setText("Accessibility options");
@@ -116,11 +120,6 @@ public class Settings extends javax.swing.JFrame {
 
         CaptionImagesCheckBox.setFont(new java.awt.Font("Calibri", 0, 30)); // NOI18N
         CaptionImagesCheckBox.setText("Caption Images");
-        CaptionImagesCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CaptionImagesCheckBoxActionPerformed(evt);
-            }
-        });
         getContentPane().add(CaptionImagesCheckBox);
         CaptionImagesCheckBox.setBounds(41, 212, 215, 45);
 
@@ -239,29 +238,31 @@ public class Settings extends javax.swing.JFrame {
         getContentPane().add(Seperator1);
         Seperator1.setBounds(30, 155, 300, 5);
 
+        HeaderBackground.setBackground(new java.awt.Color(249, 6, 6));
+        HeaderBackground.setOpaque(true);
+        HeaderBackground.setPreferredSize(new java.awt.Dimension(360, 110));
+        getContentPane().add(HeaderBackground);
+        HeaderBackground.setBounds(0, 0, 360, 110);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void DefaultColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DefaultColoursActionPerformed
-        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png")));
         defaultColoursSettings();
         //Set default colours across all screens here
     }//GEN-LAST:event_DefaultColoursActionPerformed
 
     private void DeuteranopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeuteranopiaColoursActionPerformed
-        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png")));
         DeuteranopiaColoursSettings();
         //Set Deutranopia colours across all screens here
     }//GEN-LAST:event_DeuteranopiaColoursActionPerformed
 
     private void ProtanopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProtanopiaColoursActionPerformed
-        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png")));
         ProtanopiaColoursSettings();
         //Set Protanopia colours across all screens here
     }//GEN-LAST:event_ProtanopiaColoursActionPerformed
 
     private void TritanopiaColoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TritanopiaColoursActionPerformed
-        header.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Settings/settingsScreen.png")));
         TritanopiaColoursSettings();
         //Set Tritanopia colours across all screens here
     }//GEN-LAST:event_TritanopiaColoursActionPerformed
@@ -274,18 +275,22 @@ public class Settings extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_MagnifyTextCheckBoxActionPerformed
 
-    private void CaptionImagesCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CaptionImagesCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CaptionImagesCheckBoxActionPerformed
-
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
         new Menu().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_backActionPerformed
 
+    private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
+        
+    }//GEN-LAST:event_formMouseClicked
+
+    private void formMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseReleased
+        header.setIcon(new ImageIcon(getClass().getResource("/Settings/settingsScreen.png")));
+    }//GEN-LAST:event_formMouseReleased
+
     public void defaultColoursSettings(){
-        back.setBackground(new Color(249, 6, 6));
         HeaderBackground.setBackground(new Color(249, 6, 6));
+        back.setBackground(new Color(249, 6, 6));
         RedColourTest.setBackground(new Color(249, 6, 6));
         GreenColourTest.setBackground(new Color(0, 128, 0));
         BlueColourTest.setBackground(new Color(77, 77, 255));
@@ -295,8 +300,8 @@ public class Settings extends javax.swing.JFrame {
     }
     
     public void DeuteranopiaColoursSettings(){
-        back.setBackground(new Color(238, 43, 150));
         HeaderBackground.setBackground(new Color(238, 43, 150));
+        back.setBackground(new Color(238, 43, 150));
         RedColourTest.setBackground(new Color(238, 43, 150));
         GreenColourTest.setBackground(new Color(0, 155, 33));
         BlueColourTest.setBackground(new Color(0, 64, 224));
@@ -306,8 +311,8 @@ public class Settings extends javax.swing.JFrame {
     }
     
     public void ProtanopiaColoursSettings(){
-        back.setBackground(new Color(250, 56, 143));
         HeaderBackground.setBackground(new Color(250, 56, 143));
+        back.setBackground(new Color(250, 56, 143));
         RedColourTest.setBackground(new Color(250, 56, 143));
         GreenColourTest.setBackground(new Color(0, 128, 28));
         BlueColourTest.setBackground(new Color(6, 68, 224));
@@ -317,8 +322,8 @@ public class Settings extends javax.swing.JFrame {
     }
     
     public void TritanopiaColoursSettings(){
-        back.setBackground(new Color(255, 0, 0));
         HeaderBackground.setBackground(new Color(255, 0, 0));
+        back.setBackground(new Color(255, 0, 0));
         RedColourTest.setBackground(new Color(255, 0, 0));
         GreenColourTest.setBackground(new Color(0, 179, 60));
         BlueColourTest.setBackground(new Color(0, 0, 196));
