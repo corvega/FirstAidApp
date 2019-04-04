@@ -43,6 +43,7 @@ public class LessonList extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(360, 680));
         setMinimumSize(new java.awt.Dimension(360, 680));
+        setName("LessonsList"); // NOI18N
         setPreferredSize(new java.awt.Dimension(360, 680));
         setSize(new java.awt.Dimension(360, 640));
         getContentPane().setLayout(null);
