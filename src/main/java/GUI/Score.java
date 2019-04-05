@@ -128,7 +128,7 @@ public class Score extends javax.swing.JFrame {
         Session2Label.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         Session2Label.setText("Quiz - Session 2");
         getContentPane().add(Session2Label);
-        Session2Label.setBounds(27, 284, 227, 44);
+        Session2Label.setBounds(27, 284, 260, 44);
 
         Session3Panel.setBackground(new java.awt.Color(0, 153, 255));
         Session3Panel.setMaximumSize(new java.awt.Dimension(300, 30));
